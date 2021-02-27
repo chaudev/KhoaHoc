@@ -109,19 +109,19 @@ export default class AddClass extends React.Component {
       'courseId',
       'some default value',
     );
-    this.setState({ courseId: courseId });
+    this.setState({courseId: courseId});
 
     const thoiGianBatDau = this.props.navigation.getParam(
       'thoiGianBatDau',
       'some default value',
     );
-    this.setState({ thoiGianBatDau: thoiGianBatDau });
+    this.setState({thoiGianBatDau: thoiGianBatDau});
 
     const thoiGianKetThuc = this.props.navigation.getParam(
       'thoiGianKetThuc',
       'some default value',
     );
-    this.setState({ thoiGianKetThuc: thoiGianKetThuc });
+    this.setState({thoiGianKetThuc: thoiGianKetThuc});
 
     this.props.getBuildingRoomAction();
   }
@@ -131,10 +131,10 @@ export default class AddClass extends React.Component {
       if (this.props.data.type === 'GET_BUILDING_ROOM_ERROR') {
       } else if (this.props.data.type === 'GET_BUILDING_ROOM_SUCCESS') {
         var convertDataBuilding = this.props.data.data.map(function (obj) {
-          return { label: obj.buildingName, value: obj._id };
+          return {label: obj.buildingName, value: obj._id};
         });
 
-        this.setState({ dataBuilding: convertDataBuilding });
+        this.setState({dataBuilding: convertDataBuilding});
       }
     } else {
       console.log('addCourse componentDidUpdate -- revProp khong doi');
@@ -162,19 +162,19 @@ export default class AddClass extends React.Component {
             />
           </TouchableOpacity>
         </View>
-        <ScrollView style={{ backgroundColor: 'f4f7fc', paddingHorizontal: 10 }}>
+        <ScrollView style={{backgroundColor: 'f4f7fc', paddingHorizontal: 10}}>
           {/* Nhập tên lớp học */}
           <View>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Tên buổi học *</Text>
             </View>
             <TextInput
               style={styles.input}
               onFocus={() =>
-                this.setState({ isVisibleA: false, isVisibleB: false })
+                this.setState({isVisibleA: false, isVisibleB: false})
               }
               placeholder="Nhập tên khóa học"
-              onChangeText={(text) => this.setState({ className: text })}
+              onChangeText={(text) => this.setState({className: text})}
             />
           </View>
           {/* Báo lỗi khóa học */}
@@ -195,16 +195,16 @@ export default class AddClass extends React.Component {
 
           {/* Nhập tên giảng viên */}
           <View>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Tên giảng viên *</Text>
             </View>
             <TextInput
               style={styles.input}
               onFocus={() =>
-                this.setState({ isVisibleA: false, isVisibleB: false })
+                this.setState({isVisibleA: false, isVisibleB: false})
               }
               placeholder="Nhập tên giảng viên"
-              onChangeText={(text) => this.setState({ trainer: text })}
+              onChangeText={(text) => this.setState({trainer: text})}
             />
           </View>
           {/* Báo lỗi giảng viên */}
@@ -257,7 +257,7 @@ export default class AddClass extends React.Component {
                   name="down"
                   size={18}
                   color="black"
-                  style={{ marginLeft: 5, marginRight: 10 }}
+                  style={{marginLeft: 5, marginRight: 10}}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelDateVisible}
@@ -321,7 +321,7 @@ export default class AddClass extends React.Component {
                   name="down"
                   size={18}
                   color="black"
-                  style={{ marginLeft: 5, marginRight: 10 }}
+                  style={{marginLeft: 5, marginRight: 10}}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
@@ -362,7 +362,7 @@ export default class AddClass extends React.Component {
                   name="down"
                   size={18}
                   color="black"
-                  style={{ marginLeft: 5, marginRight: 10 }}
+                  style={{marginLeft: 5, marginRight: 10}}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
@@ -391,8 +391,8 @@ export default class AddClass extends React.Component {
           </View>
 
           {/* Chọn tòa nhà */}
-          <View style={{ zIndex: 999 }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Tòa nhà *</Text>
             </View>
             <DropDownPicker
@@ -408,9 +408,13 @@ export default class AddClass extends React.Component {
                 })
               }
               items={this.state.dataBuilding}
-              containerStyle={{ height: 50 }}
+              containerStyle={{height: 50}}
               placeholder="Chọn tòa nhà"
-              style={{ backgroundColor: '#FFF', borderColor: '#c2c2c2' }}
+              style={{
+                backgroundColor: '#FFF',
+                borderColor: '#c2c2c2',
+                zIndex: 100,
+              }}
               placeholderStyle={{
                 color: 'gray',
               }}
@@ -425,10 +429,11 @@ export default class AddClass extends React.Component {
                 marginBottom: 5,
                 paddingLeft: 10,
                 borderRadius: 5,
+                zIndex: 101,
               }}
-              labelStyle={{ color: 'black' }}
-              activeLabelStyle={{ color: 'blue' }}
-              dropDownStyle={{ backgroundColor: '#fff' }}
+              labelStyle={{color: 'black'}}
+              activeLabelStyle={{color: 'blue'}}
+              dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
             />
           </View>
@@ -450,8 +455,8 @@ export default class AddClass extends React.Component {
           </View>
 
           {/* Chọn phòng */}
-          <View style={{ zIndex: 99 }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Phòng *</Text>
             </View>
             <DropDownPicker
@@ -469,8 +474,12 @@ export default class AddClass extends React.Component {
               items={this.state.dataRoom}
               placeholder="Chọn phòng"
               controller={(instance) => (this.controller = instance)}
-              containerStyle={{ height: 50 }}
-              style={{ backgroundColor: '#FFF', borderColor: '#c2c2c2' }}
+              containerStyle={{height: 50}}
+              style={{
+                backgroundColor: '#FFF',
+                borderColor: '#c2c2c2',
+                zIndex: 98,
+              }}
               placeholderStyle={{
                 color: 'gray',
               }}
@@ -485,10 +494,11 @@ export default class AddClass extends React.Component {
                 marginBottom: 5,
                 paddingLeft: 10,
                 borderRadius: 5,
+                zIndex: 99,
               }}
-              labelStyle={{ color: 'black' }}
-              activeLabelStyle={{ color: 'blue' }}
-              dropDownStyle={{ backgroundColor: '#fff' }}
+              labelStyle={{color: 'black'}}
+              activeLabelStyle={{color: 'blue'}}
+              dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
           </View>
@@ -519,7 +529,7 @@ export default class AddClass extends React.Component {
               style={styles.button}
               onPress={() => this.onClickSave()}>
               <Icon name="save" size={18} color="#fff" />
-              <Text style={{ color: '#fff', marginLeft: 5, fontSize: Size.h32 }}>
+              <Text style={{color: '#fff', marginLeft: 5, fontSize: Size.h32}}>
                 LƯU
               </Text>
             </TouchableOpacity>
@@ -540,53 +550,53 @@ export default class AddClass extends React.Component {
 
   // Ngay
   showDatePicker() {
-    this.setState({ modelDateVisible: true });
+    this.setState({modelDateVisible: true});
   }
 
   hideDatePickerDate() {
-    this.setState({ modelDateVisible: false });
+    this.setState({modelDateVisible: false});
   }
 
   handleConfirmDate(datex) {
     this.hideDatePickerDate();
     const currentDate = datex || date;
-    this.setState({ date: currentDate });
-    this.setState({ stringDate: currentDate });
-    this.setState({ flagDate: 1 });
+    this.setState({date: currentDate});
+    this.setState({stringDate: currentDate});
+    this.setState({flagDate: 1});
   }
 
   // Bat Dau
   showTimePickerStart() {
-    this.setState({ modelStartVisible: true });
+    this.setState({modelStartVisible: true});
   }
 
   hideTimePickerStart() {
-    this.setState({ modelStartVisible: false });
+    this.setState({modelStartVisible: false});
   }
 
   handleConfirmStart(selectedTime) {
     this.hideTimePickerStart();
     const currentTime = selectedTime || startedTime;
-    this.setState({ startedTime: currentTime });
-    this.setState({ stringStartTime: formatTime(currentTime) });
-    this.setState({ flagStart: 1 });
+    this.setState({startedTime: currentTime});
+    this.setState({stringStartTime: formatTime(currentTime)});
+    this.setState({flagStart: 1});
   }
 
   // Ket thuc
   showTimePickerEnd() {
-    this.setState({ modelEndVisible: true });
+    this.setState({modelEndVisible: true});
   }
 
   hideTimePickerEnd() {
-    this.setState({ modelEndVisible: false });
+    this.setState({modelEndVisible: false});
   }
 
   handleConfirmEnd(selectedTime) {
     this.hideTimePickerEnd();
     const currentTime = selectedTime || endedTime;
-    this.setState({ endedTime: currentTime });
-    this.setState({ stringEndTime: formatTime(currentTime) });
-    this.setState({ flagEnd: 1 });
+    this.setState({endedTime: currentTime});
+    this.setState({stringEndTime: formatTime(currentTime)});
+    this.setState({flagEnd: 1});
   }
 
   //Check 2 khoảng trắng gần nhau
@@ -639,21 +649,21 @@ export default class AddClass extends React.Component {
     Alert.alert(
       'Tất cả dữ liệu đã nhập',
       'id khoa: ' +
-      this.state.courseId.trim() +
-      'id khoa: ' +
-      this.state.className.trim() +
-      '\ntrainer: ' +
-      this.state.trainer.trim() +
-      '\ndate: ' +
-      this.state.flagDate +
-      '\nstartedTime: ' +
-      this.state.flagStart +
-      '\nendedTime: ' +
-      this.state.flagEnd +
-      '\nbuildingId: ' +
-      this.state.buildingId +
-      '\nroomId: ' +
-      this.state.roomId,
+        this.state.courseId.trim() +
+        'id khoa: ' +
+        this.state.className.trim() +
+        '\ntrainer: ' +
+        this.state.trainer.trim() +
+        '\ndate: ' +
+        this.state.flagDate +
+        '\nstartedTime: ' +
+        this.state.flagStart +
+        '\nendedTime: ' +
+        this.state.flagEnd +
+        '\nbuildingId: ' +
+        this.state.buildingId +
+        '\nroomId: ' +
+        this.state.roomId,
     );
   }
 
@@ -682,22 +692,22 @@ export default class AddClass extends React.Component {
 
   // Kiểm tra đầy đủ thông tin
   checkAllInfo() {
-    this.setState({ strThieuTen: '' });
-    this.setState({ errorName: false });
+    this.setState({strThieuTen: ''});
+    this.setState({errorName: false});
 
-    this.setState({ strThieuGV: '' });
-    this.setState({ errorGV: false });
+    this.setState({strThieuGV: ''});
+    this.setState({errorGV: false});
 
-    this.setState({ strThieuToaNha: '' });
-    this.setState({ errorBuilding: false });
+    this.setState({strThieuToaNha: ''});
+    this.setState({errorBuilding: false});
 
-    this.setState({ strThieuPhong: '' });
-    this.setState({ errorRoom: false });
+    this.setState({strThieuPhong: ''});
+    this.setState({errorRoom: false});
 
-    this.setState({ strErrorTime: '' });
-    this.setState({ errorTime: false });
+    this.setState({strErrorTime: ''});
+    this.setState({errorTime: false});
 
-    this.setState({ errorDate: false });
+    this.setState({errorDate: false});
     if (
       this.state.className.trim() !== '' &&
       this.state.trainer.trim() !== '' &&
@@ -716,41 +726,41 @@ export default class AddClass extends React.Component {
 
   //Lưu khóa học
   onClickSave() {
-    this.setState({ isVisibleA: false, isVisibleB: false });
+    this.setState({isVisibleA: false, isVisibleB: false});
     if (this.checkAllInfo() === false) {
       if (this.state.className.trim() === '') {
-        this.setState({ strThieuTen: 'Tên buổi học không thể trống' });
-        this.setState({ errorName: true });
+        this.setState({strThieuTen: 'Tên buổi học không thể trống'});
+        this.setState({errorName: true});
       }
       if (this.state.trainer.trim() === '') {
-        this.setState({ strThieuGV: 'Tên giảng viên không thể trống' });
-        this.setState({ errorGV: true });
+        this.setState({strThieuGV: 'Tên giảng viên không thể trống'});
+        this.setState({errorGV: true});
       }
       if (this.state.buildingId.trim() === '') {
-        this.setState({ strThieuToaNha: 'Vui lòng chọn tòa nhà' });
-        this.setState({ errorBuilding: true });
+        this.setState({strThieuToaNha: 'Vui lòng chọn tòa nhà'});
+        this.setState({errorBuilding: true});
       }
       if (this.state.roomId.trim() === '') {
-        this.setState({ strThieuPhong: 'Vui lòng chọn phòng' });
-        this.setState({ errorRoom: true });
+        this.setState({strThieuPhong: 'Vui lòng chọn phòng'});
+        this.setState({errorRoom: true});
       }
       if (this.state.flagDate === 0) {
-        this.setState({ strThieuDate: 'Vui lòng chọn ngày' });
-        this.setState({ errorDate: true });
+        this.setState({strThieuDate: 'Vui lòng chọn ngày'});
+        this.setState({errorDate: true});
       }
       if (this.checkTimeStartEnd() === false) {
-        this.setState({ errorTime: true });
+        this.setState({errorTime: true});
         this.setState({
           strErrorTime: 'Giờ bắt đầu phải nhỏ hơn giờ kết thúc',
         });
       }
       if (this.state.flagEnd === 0) {
-        this.setState({ strErrorTime: 'Vui lòng chọn giờ kết thúc' });
-        this.setState({ errorTime: true });
+        this.setState({strErrorTime: 'Vui lòng chọn giờ kết thúc'});
+        this.setState({errorTime: true});
       }
       if (this.state.flagStart === 0) {
-        this.setState({ strErrorTime: 'Vui lòng chọn giờ bắt đầu' });
-        this.setState({ errorTime: true });
+        this.setState({strErrorTime: 'Vui lòng chọn giờ bắt đầu'});
+        this.setState({errorTime: true});
       }
     } else {
       this.props.postClassAction(
@@ -775,19 +785,19 @@ export default class AddClass extends React.Component {
   // Chọn toàn nhà
   onChangeDataBuilding(item) {
     if (this.state.buildingId !== item.value) {
-      this.setState({ buildingId: item.value }, () => {
+      this.setState({buildingId: item.value}, () => {
         this.controller.state.choice.label = null;
-        this.setState({ roomId: '' });
-        this.setState({ dataRoom: [] });
+        this.setState({roomId: ''});
+        this.setState({dataRoom: []});
         for (let i = 0; i < this.props.data.data.length; i++) {
           if (this.props.data.data[i]._id === this.state.buildingId) {
             var convertDataRoom = this.props.data.data[i].room.map(function (
               obj,
             ) {
-              return { label: obj.roomName, value: obj._id };
+              return {label: obj.roomName, value: obj._id};
             });
 
-            this.setState({ dataRoom: convertDataRoom });
+            this.setState({dataRoom: convertDataRoom});
           }
         }
       });
@@ -796,7 +806,7 @@ export default class AddClass extends React.Component {
 
   // Chọn phòng
   onChangeDataRoom(item) {
-    this.setState({ roomId: item.value });
+    this.setState({roomId: item.value});
   }
 }
 

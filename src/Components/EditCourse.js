@@ -94,34 +94,34 @@ export default class EditCourse extends React.Component {
     this.props.getBuildingRoomAction();
 
     const courseId = this.props.navigation.getParam('id', 'some default value');
-    this.setState({ courseId: courseId });
+    this.setState({courseId: courseId});
     const tenKhoaHoc = this.props.navigation.getParam(
       'title',
       'some default value',
     );
-    this.setState({ tenKhoaHoc: tenKhoaHoc });
+    this.setState({tenKhoaHoc: tenKhoaHoc});
     const tenGiangVien = this.props.navigation.getParam(
       'giangVien',
       'some default value',
     );
-    this.setState({ tenGiangVien: tenGiangVien });
+    this.setState({tenGiangVien: tenGiangVien});
     const dateStart = this.props.navigation.getParam(
       'thoiGianBatDau',
       'some default value',
     );
-    this.setState({ dateStart: new Date(dateStart) });
-    this.setState({ strDateStart: formatDate(new Date(dateStart)) });
+    this.setState({dateStart: new Date(dateStart)});
+    this.setState({strDateStart: formatDate(new Date(dateStart))});
     const dateEnd = this.props.navigation.getParam(
       'thoiGianKetThuc',
       'some default value',
     );
-    this.setState({ dateEnd: new Date(dateEnd) });
-    this.setState({ strDateEnd: formatDate(new Date(dateEnd)) });
+    this.setState({dateEnd: new Date(dateEnd)});
+    this.setState({strDateEnd: formatDate(new Date(dateEnd))});
     const toaNha = this.props.navigation.getParam(
       'toaNha',
       'some default value',
     );
-    this.setState({ buildingSelectedName: toaNha });
+    this.setState({buildingSelectedName: toaNha});
   }
 
   componentDidUpdate(prevProps) {
@@ -129,16 +129,16 @@ export default class EditCourse extends React.Component {
       if (this.props.data.type === 'GET_BUILDING_ROOM_ERROR') {
       } else if (this.props.data.type === 'GET_BUILDING_ROOM_SUCCESS') {
         var convertDataBuilding = this.props.data.data.map(function (obj) {
-          return { label: obj.buildingName, value: obj._id };
+          return {label: obj.buildingName, value: obj._id};
         });
 
-        this.setState({ dataBuilding: convertDataBuilding });
+        this.setState({dataBuilding: convertDataBuilding});
 
         const buildingId = this.props.navigation.getParam(
           'buildingId',
           'some default value',
         );
-        this.setState({ buildingSelected: buildingId }, () => this.getDataRom());
+        this.setState({buildingSelected: buildingId}, () => this.getDataRom());
       }
     } else {
       console.log('EditCourse componentDidUpdate -- revProp khong doi');
@@ -166,19 +166,19 @@ export default class EditCourse extends React.Component {
             />
           </TouchableOpacity>
         </View>
-        <ScrollView style={{ backgroundColor: 'f4f7fc', paddingHorizontal: 10 }}>
+        <ScrollView style={{backgroundColor: 'f4f7fc', paddingHorizontal: 10}}>
           {/* Nhập tên khóa học */}
           <View>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Tên khóa *</Text>
             </View>
             <TextInput
               style={styles.input}
               onFocus={() =>
-                this.setState({ isVisibleA: false, isVisibleB: false })
+                this.setState({isVisibleA: false, isVisibleB: false})
               }
               placeholder="Nhập tên khóa học"
-              onChangeText={(text) => this.setState({ tenKhoaHoc: text })}
+              onChangeText={(text) => this.setState({tenKhoaHoc: text})}
               value={this.state.tenKhoaHoc}
             />
           </View>
@@ -200,16 +200,16 @@ export default class EditCourse extends React.Component {
 
           {/* Nhập tên giảng viên */}
           <View>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Giảng viên *</Text>
             </View>
             <TextInput
               style={styles.input}
               onFocus={() =>
-                this.setState({ isVisibleA: false, isVisibleB: false })
+                this.setState({isVisibleA: false, isVisibleB: false})
               }
               placeholder="Nhập tên giảng viên"
-              onChangeText={(text) => this.setState({ tenGiangVien: text })}
+              onChangeText={(text) => this.setState({tenGiangVien: text})}
               value={this.state.tenGiangVien}
             />
           </View>
@@ -311,7 +311,7 @@ export default class EditCourse extends React.Component {
                   name="down"
                   size={18}
                   color="black"
-                  style={{ marginLeft: 5, marginRight: 10 }}
+                  style={{marginLeft: 5, marginRight: 10}}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
@@ -341,8 +341,8 @@ export default class EditCourse extends React.Component {
           </View>
 
           {/* Chọn tòa nhà */}
-          <View style={{ zIndex: 999 }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Tòa nhà *</Text>
             </View>
             <DropDownPicker
@@ -358,10 +358,14 @@ export default class EditCourse extends React.Component {
                 })
               }
               items={this.state.dataBuilding}
-              containerStyle={{ height: 50 }}
+              containerStyle={{height: 50}}
               defaultValue={this.state.buildingSelected}
               placeholder="Chọn tòa nhà"
-              style={{ backgroundColor: '#FFF', borderColor: '#c2c2c2' }}
+              style={{
+                backgroundColor: '#FFF',
+                borderColor: '#c2c2c2',
+                zIndex: 100,
+              }}
               placeholderStyle={{
                 color: 'gray',
               }}
@@ -376,10 +380,11 @@ export default class EditCourse extends React.Component {
                 marginBottom: 5,
                 paddingLeft: 10,
                 borderRadius: 5,
+                zIndex: 101,
               }}
-              labelStyle={{ color: 'black' }}
-              activeLabelStyle={{ color: 'blue' }}
-              dropDownStyle={{ backgroundColor: '#fff' }}
+              labelStyle={{color: 'black'}}
+              activeLabelStyle={{color: 'blue'}}
+              dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
             />
           </View>
@@ -400,8 +405,8 @@ export default class EditCourse extends React.Component {
           </View>
 
           {/* Chọn phòng */}
-          <View style={{ zIndex: 99 }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.text}>Phòng *</Text>
             </View>
             <DropDownPicker
@@ -420,8 +425,12 @@ export default class EditCourse extends React.Component {
               placeholder="Chọn phòng"
               defaultValue={this.state.defaultRoom}
               controller={(instance) => (this.controller = instance)}
-              containerStyle={{ height: 50 }}
-              style={{ backgroundColor: '#FFF', borderColor: '#c2c2c2' }}
+              containerStyle={{height: 50}}
+              style={{
+                backgroundColor: '#FFF',
+                borderColor: '#c2c2c2',
+                zIndex: 98,
+              }}
               placeholderStyle={{
                 color: 'gray',
               }}
@@ -436,10 +445,11 @@ export default class EditCourse extends React.Component {
                 marginBottom: 5,
                 paddingLeft: 10,
                 borderRadius: 5,
+                zIndex: 99,
               }}
-              labelStyle={{ color: 'black' }}
-              activeLabelStyle={{ color: 'blue' }}
-              dropDownStyle={{ backgroundColor: '#fff' }}
+              labelStyle={{color: 'black'}}
+              activeLabelStyle={{color: 'blue'}}
+              dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
           </View>
@@ -470,7 +480,7 @@ export default class EditCourse extends React.Component {
               style={styles.button}
               onPress={() => this.onClickSave()}>
               <Icon name="save" size={18} color="#fff" />
-              <Text style={{ color: '#fff', marginLeft: 5, fontSize: Size.h32 }}>
+              <Text style={{color: '#fff', marginLeft: 5, fontSize: Size.h32}}>
                 LƯU
               </Text>
             </TouchableOpacity>
@@ -492,37 +502,37 @@ export default class EditCourse extends React.Component {
   // Ngay bat dau
   showDatePickerStart() {
     console.log('showDatePickerTest : chay');
-    this.setState({ modelStartVisible: true });
+    this.setState({modelStartVisible: true});
   }
 
   hideDatePickerStart() {
     console.log('hideDatePickertest : chay');
-    this.setState({ modelStartVisible: false });
+    this.setState({modelStartVisible: false});
   }
 
   handleConfirmStart(date) {
     this.hideDatePickerStart();
     const currentDate = date || dateStart;
-    this.setState({ dateStart: currentDate });
-    this.setState({ strDateStart: formatDate(currentDate) });
-    this.setState({ flagDateStart: 1 });
+    this.setState({dateStart: currentDate});
+    this.setState({strDateStart: formatDate(currentDate)});
+    this.setState({flagDateStart: 1});
   }
 
   // Ngay ket thuc
   showDatePickerEnd() {
-    this.setState({ modelEndVisible: true });
+    this.setState({modelEndVisible: true});
   }
 
   hideDatePickerEnd() {
-    this.setState({ modelEndVisible: false });
+    this.setState({modelEndVisible: false});
   }
 
   handleConfirmEnd(date) {
     this.hideDatePickerEnd();
     const currentDate = date || dateStart;
-    this.setState({ dateEnd: currentDate });
-    this.setState({ strDateEnd: formatDate(currentDate) });
-    this.setState({ flagDateEnd: 1 });
+    this.setState({dateEnd: currentDate});
+    this.setState({strDateEnd: formatDate(currentDate)});
+    this.setState({flagDateEnd: 1});
   }
 
   //Check 2 khoảng trắng gần nhau
@@ -557,17 +567,17 @@ export default class EditCourse extends React.Component {
     Alert.alert(
       'Tất cả dữ liệu đã nhập',
       'Ten khoa: ' +
-      this.superTrim(this.state.tenKhoaHoc) +
-      '\nTen Giang Vien: ' +
-      this.state.tenGiangVien.trim() +
-      '\nTu ngay: ' +
-      this.state.dateStart +
-      '\nDen ngay: ' +
-      this.state.dateEnd +
-      '\nToa nha: ' +
-      this.state.buildingSelected +
-      '\nPhong: ' +
-      this.state.roomSelected,
+        this.superTrim(this.state.tenKhoaHoc) +
+        '\nTen Giang Vien: ' +
+        this.state.tenGiangVien.trim() +
+        '\nTu ngay: ' +
+        this.state.dateStart +
+        '\nDen ngay: ' +
+        this.state.dateEnd +
+        '\nToa nha: ' +
+        this.state.buildingSelected +
+        '\nPhong: ' +
+        this.state.roomSelected,
     );
   }
 
@@ -582,21 +592,21 @@ export default class EditCourse extends React.Component {
 
   // Kiểm tra đầy đủ thông tin
   checkAllInfo() {
-    this.setState({ strThieuTen: '' });
-    this.setState({ errorName: false });
+    this.setState({strThieuTen: ''});
+    this.setState({errorName: false});
 
-    this.setState({ strThieuGV: '' });
-    this.setState({ errorGV: false });
+    this.setState({strThieuGV: ''});
+    this.setState({errorGV: false});
 
-    this.setState({ strThieuToaNha: '' });
-    this.setState({ errorRoom: false });
+    this.setState({strThieuToaNha: ''});
+    this.setState({errorRoom: false});
 
-    this.setState({ strThieuPhong: '' });
-    this.setState({ errorBuilding: false });
+    this.setState({strThieuPhong: ''});
+    this.setState({errorBuilding: false});
 
-    this.setState({ errorDate: false });
-    this.setState({ colorStart: 'black' });
-    this.setState({ colorEnd: 'black' });
+    this.setState({errorDate: false});
+    this.setState({colorStart: 'black'});
+    this.setState({colorEnd: 'black'});
 
     if (
       this.state.tenKhoaHoc.trim() !== '' &&
@@ -613,27 +623,27 @@ export default class EditCourse extends React.Component {
 
   // Lưu khóa học
   onClickSave() {
-    this.setState({ isVisibleA: false, isVisibleB: false });
+    this.setState({isVisibleA: false, isVisibleB: false});
     if (this.checkAllInfo() === false) {
       if (this.state.tenKhoaHoc.trim() === '') {
-        this.setState({ strThieuTen: 'Tên khóa học không thể trống' });
-        this.setState({ errorName: true });
+        this.setState({strThieuTen: 'Tên khóa học không thể trống'});
+        this.setState({errorName: true});
       }
       if (this.state.tenGiangVien.trim() === '') {
-        this.setState({ strThieuGV: 'Tên giảng viên không thể trống' });
-        this.setState({ errorGV: true });
+        this.setState({strThieuGV: 'Tên giảng viên không thể trống'});
+        this.setState({errorGV: true});
       }
       if (this.state.buildingSelected.trim() === '') {
-        this.setState({ strThieuToaNha: 'Vui lòng chọn tòa nhà' });
-        this.setState({ errorBuilding: true });
+        this.setState({strThieuToaNha: 'Vui lòng chọn tòa nhà'});
+        this.setState({errorBuilding: true});
       }
       if (this.state.roomSelected.trim() === '') {
-        this.setState({ strThieuPhong: 'Vui lòng chọn phòng' });
-        this.setState({ errorRoom: true });
+        this.setState({strThieuPhong: 'Vui lòng chọn phòng'});
+        this.setState({errorRoom: true});
       } else if (this.checkTimeStartEnd() === false) {
-        this.setState({ errorDate: true });
-        this.setState({ colorEnd: 'red' });
-        this.setState({ colorStart: 'red' });
+        this.setState({errorDate: true});
+        this.setState({colorEnd: 'red'});
+        this.setState({colorStart: 'red'});
         this.setState({
           errorText: 'Ngày bắt đầu không được sau ngày kết thúc',
         });
@@ -660,26 +670,26 @@ export default class EditCourse extends React.Component {
   // Lấy dữ liệu phòng và tự chọn khi mới vào
   getDataRom() {
     this.controller.state.choice.label = null;
-    this.setState({ roomSelected: '' });
-    this.setState({ dataRoom: [] });
+    this.setState({roomSelected: ''});
+    this.setState({dataRoom: []});
     for (let i = 0; i < this.props.data.data.length; i++) {
       if (this.props.data.data[i]._id === this.state.buildingSelected) {
         var convertDataRoom = this.props.data.data[i].room.map(function (obj) {
-          return { label: obj.roomName, value: obj._id };
+          return {label: obj.roomName, value: obj._id};
         });
 
-        this.setState({ dataRoom: convertDataRoom });
+        this.setState({dataRoom: convertDataRoom});
       }
     }
 
     if (this.state.flag === 0) {
-      this.setState({ flag: 1 });
+      this.setState({flag: 1});
       const roomId = this.props.navigation.getParam(
         'roomId',
         'some default value',
       );
-      this.setState({ roomSelected: roomId }, () => {
-        this.setState({ defaultRoom: roomId });
+      this.setState({roomSelected: roomId}, () => {
+        this.setState({defaultRoom: roomId});
       });
     }
   }
@@ -687,7 +697,7 @@ export default class EditCourse extends React.Component {
   // Chọn tòa nhà
   onChangeDataBuilding(item) {
     if (this.state.buildingSelected !== item.value) {
-      this.setState({ buildingSelected: item.value }, () => {
+      this.setState({buildingSelected: item.value}, () => {
         this.getDataRom();
       });
     }
@@ -695,7 +705,7 @@ export default class EditCourse extends React.Component {
 
   // Chọn phòng
   onChangeDataRoom(item) {
-    this.setState({ roomSelected: item.value });
+    this.setState({roomSelected: item.value});
   }
 }
 
