@@ -234,6 +234,7 @@ export default class AddCourse extends React.Component {
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="date"
+                  date={this.state.dateStart}
                   onConfirm={(date) => this.handleConfirmStart(date)}
                   onCancel={() => this.hideDatePickerStart()}
                 />
@@ -276,6 +277,7 @@ export default class AddCourse extends React.Component {
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
                   mode="date"
+                  date={this.state.dateEnd}
                   minimumDate={this.state.dateStart}
                   onConfirm={(date) => this.handleConfirmEnd(date)}
                   onCancel={() => this.hideDatePickerEnd()}
