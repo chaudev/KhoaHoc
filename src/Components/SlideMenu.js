@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { NavigationActions } from 'react-navigation';
+import React, {Component} from 'react';
+import {NavigationActions} from 'react-navigation';
 import {
   ScrollView,
   Text,
@@ -11,8 +11,9 @@ import {
   Image,
   AsyncStorage,
 } from 'react-native';
-import { user_profile } from './config';
+import {user_profile} from './config';
 import Size from '../res/Size';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default class SideMenu extends Component {
   constructor(props) {
@@ -33,7 +34,6 @@ export default class SideMenu extends Component {
 
   render() {
     return (
-
       <View style={styles.container}>
         <SafeAreaView />
         <View style={styles.avtView}>
@@ -42,10 +42,17 @@ export default class SideMenu extends Component {
             source={require('../res/images/ic_avatar.png')}
           />
           <Text
-            style={{ fontSize: Size.h30, fontWeight: '600', marginTop: '5%' }}>
+            style={{
+              fontSize: Size.h34,
+              fontWeight: '600',
+              marginTop: '5%',
+              color: '#335271',
+            }}>
             {user_profile.fullName}
           </Text>
-          <Text style={{ fontSize: Size.h24 }}>{user_profile.email}</Text>
+          <Text style={{fontSize: Size.h28, color: '#335271'}}>
+            {user_profile.email}
+          </Text>
           <Image
             style={styles.stripe}
             source={require('../res/images/stripe.png')}
@@ -57,28 +64,31 @@ export default class SideMenu extends Component {
               style={styles.Item}
               onPress={() => this.props.navigation.navigate('InfoApp')}>
               <Image
-                style={{ width: 25, height: 25, marginVertical: '5%' }}
+                style={{width: 25, height: 25, marginVertical: '5%'}}
                 source={require('../res/images/info.png')}
               />
               <Text
                 style={{
-                  fontSize: Size.h30,
+                  fontSize: Size.h32,
                   marginLeft: '5%',
                   marginVertical: '5%',
+                  color: '#335271',
                 }}>
                 Thông tin ứng dụng
               </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.ItemEnd}>
-              <Image
-                style={{ width: 25, height: 25, marginVertical: '5%' }}
+              {/* <Image
+                style={{width: 25, height: 25, marginVertical: '5%'}}
                 source={require('../res/images/logout.png')}
-              />
+              /> */}
+              <MaterialIcons name="logout" color="#335271" size={Size.h52} />
               <Text
                 style={{
-                  fontSize: Size.h30,
+                  fontSize: Size.h32,
                   marginLeft: '5%',
                   marginVertical: '5%',
+                  color: '#335271',
                 }}
                 onPress={() => {
                   this.Logout();
@@ -145,6 +155,7 @@ const styles = StyleSheet.create({
   },
   ItemEnd: {
     flexDirection: 'row',
+    alignItems: 'center',
   },
   scroll: {},
 });

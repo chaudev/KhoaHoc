@@ -17,10 +17,11 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import IconAcc from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-import { user_profile } from './config';
+import {user_profile} from './config';
 // import {} from '@react-native-async-storage/async-storage';
 import Size from '../res/Size';
-import { SafeAreaView } from 'react-navigation';
+import {SafeAreaView} from 'react-navigation';
+import Sizes from '../res/Size';
 
 export default class LoginComponent extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export default class LoginComponent extends React.Component {
       userName: '',
       passWord: '',
       sttShowPass: true,
-      show: 'eye-off-outline',
+      show: 'eye-slash',
       thongBaoLoi: '',
       data: [],
       check: 'circle',
@@ -55,16 +56,16 @@ export default class LoginComponent extends React.Component {
     });
 
     if (this.state.userName !== '' && this.state.passWord !== '') {
-      this.setState({ sttCheck: true });
+      this.setState({sttCheck: true});
       this.checkRemember();
     }
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.data !== this.props.data) {
-      this.setState({ data: this.props.data });
+      this.setState({data: this.props.data});
       if (this.props.data.resultCode === -1) {
-        this.setState({ thongBaoLoi: this.props.data.message });
+        this.setState({thongBaoLoi: this.props.data.message});
         Alert.alert(
           'Đăng nhập thất bại',
           '\nNhập sai tài khoản hoặc mật khẩu \n\nVui lòng kiểm tra và nhập lại!',
@@ -96,16 +97,16 @@ export default class LoginComponent extends React.Component {
               style={{
                 resizeMode: 'contain',
                 height: undefined,
-                aspectRatio: 4.5,
+                aspectRatio: 6,
                 marginTop: '10%',
               }}
             />
             {/* Dòng chữ */}
             <Text
               style={{
-                fontSize: Size.h40,
+                fontSize: Size.h42,
                 fontWeight: 'bold',
-                color: '#586d86',
+                color: '#335271',
                 marginTop: '5%',
               }}>
               FIS INSIGHT PORTAL
@@ -116,16 +117,16 @@ export default class LoginComponent extends React.Component {
               style={{
                 resizeMode: 'contain',
                 height: undefined,
-                aspectRatio: 60,
+                aspectRatio: 70,
                 marginVertical: '4%',
               }}
             />
             {/* Chữ đăng nhập hệ thống */}
             <Text
               style={{
-                fontSize: Size.h34,
+                fontSize: Size.h38,
                 fontWeight: 'bold',
-                color: '#f27228',
+                color: '#ff9f24',
                 marginBottom: '4%',
               }}>
               ĐĂNG NHẬP HỆ THỐNG
@@ -134,47 +135,93 @@ export default class LoginComponent extends React.Component {
           <View style={style.inputContainer}>
             {/* Khung nhập tài khoản*/}
             <View style={style.textInputContainer}>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginLeft: '3%',
+                  // backgroundColor: 'red',
+                }}>
+                <FontAwesome5
+                  style={style.icon}
+                  name={'user'}
+                  solid
+                  color="#b2bcc6"
+                  size={Sizes.h34}
+                />
+              </View>
+
               <TextInput
                 value={this.state.userName}
                 placeholder="Tài khoản"
-                onChangeText={(text) => this.setState({ userName: text })}
+                placeholderTextColor="#335271"
+                onChangeText={(text) => this.setState({userName: text})}
                 style={[style.textInput]}
               />
-              <IconAcc
-                style={style.icon}
-                name="account"
-                solid
-                color="gray"
-                size={20}
-              />
-              <IconAcc
-                style={style.showHidePassword}
-                name={this.state.show}
-                color="transparent"
-                size={20}
-              />
+              {/* </View> */}
+              <View
+                style={{
+                  flex: 1,
+                  alignItems: 'center',
+                  // backgroundColor: 'red',
+                }}>
+                <FontAwesome5
+                  style={style.showHidePassword}
+                  name={this.state.show}
+                  solid
+                  color="transparent"
+                  size={Sizes.h34}
+                />
+              </View>
             </View>
 
             {/* Khung nhập mật khẩu */}
             <View style={style.textInputContainer}>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginLeft: '3%',
+                }}>
+                <FontAwesome5
+                  style={style.icon}
+                  name={'lock'}
+                  color="#b2bcc6"
+                  size={Sizes.h34}
+                />
+              </View>
+
               <TextInput
                 keyboardType="default"
                 secureTextEntry={this.state.sttShowPass}
                 placeholder="Mật khẩu"
-                onChangeText={(text) => this.setState({ passWord: text })}
+                placeholderTextColor="#335271"
+                onChangeText={(text) => this.setState({passWord: text})}
                 style={[style.textInput]}
                 value={this.state.passWord}
               />
-              <IconAcc style={style.icon} name="lock" size={20} color="gray" />
-              <IconAcc
-                onPress={() => {
-                  this.ClickShowPass();
-                }}
-                style={style.showHidePassword}
-                name={this.state.show}
-                color="gray"
-                size={20}
-              />
+              {/* </View> */}
+
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  // marginRight: '2%'
+                }}>
+                <FontAwesome5
+                  onPress={() => {
+                    this.ClickShowPass();
+                  }}
+                  style={style.showHidePassword}
+                  name={this.state.show}
+                  solid
+                  color="#b2bcc6"
+                  size={Sizes.h34}
+                />
+              </View>
             </View>
           </View>
           <View>
@@ -189,23 +236,26 @@ export default class LoginComponent extends React.Component {
                 onPress={() => {
                   this.ClickCheckBox(this.state.sttCheck);
                 }}
-                style={{ marginRight: '2%', flexDirection: 'row', alignItems: 'center' }}>
+                style={{
+                  marginRight: '2%',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
                 <FontAwesome5
                   name={this.checkRememberIcon()}
-                  color="#f27228"
+                  color="#ff9335"
                   size={Size.h40}
                 />
                 <Text
                   style={{
                     fontSize: Size.h30,
-                    color: '#f27228',
+                    color: '#ff9335',
                     fontStyle: 'italic',
-                    marginLeft: '2%'
+                    marginLeft: '4%',
                   }}>
-                  Nhớ đăng nhập
-              </Text>
+                  Ghi nhớ đăng nhập
+                </Text>
               </TouchableOpacity>
-
             </View>
 
             {/* Nút đăng nhập */}
@@ -215,11 +265,13 @@ export default class LoginComponent extends React.Component {
               <Text
                 style={{
                   color: '#fff',
-                  fontSize: Size.h30,
-                  paddingVertical: 14,
+                  fontSize: Size.h32,
+                  paddingVertical: 12,
                   fontWeight: 'bold',
+                  textAlign: 'center',
+                  // backgroundColor: 'red',
                 }}>
-                Đăng nhập
+                ĐĂNG NHẬP
               </Text>
             </TouchableOpacity>
           </View>
@@ -267,22 +319,22 @@ export default class LoginComponent extends React.Component {
   }
 
   ClickShowPass() {
-    if (this.state.show == 'eye-off-outline') {
-      this.setState({ show: 'eye-outline' });
-      this.setState({ sttShowPass: false });
+    if (this.state.show == 'eye-slash') {
+      this.setState({show: 'eye'});
+      this.setState({sttShowPass: false});
     } else {
-      this.setState({ show: 'eye-off-outline' });
-      this.setState({ sttShowPass: true });
+      this.setState({show: 'eye-slash'});
+      this.setState({sttShowPass: true});
     }
   }
 
   ClickCheckBox(stt) {
     if (stt == false) {
-      this.setState({ check: 'check-circle' });
-      this.setState({ sttCheck: true });
+      this.setState({check: 'check-circle'});
+      this.setState({sttCheck: true});
     } else {
-      this.setState({ check: 'circle' });
-      this.setState({ sttCheck: false });
+      this.setState({check: 'circle'});
+      this.setState({sttCheck: false});
     }
   }
 
@@ -349,23 +401,29 @@ const style = StyleSheet.create({
     justifyContent: 'flex-end',
     width: '80%',
     flexDirection: 'column',
+    // backgroundColor:'red'
   },
   textInput: {
-    color: '#3d3f42',
+    flex: 8,
+    color: '#335271',
     textAlign: 'center',
-    paddingVertical: 13,
-    flex: 1,
-    fontSize: Size.h30,
+    paddingVertical: 10,
+    // paddingHorizontal: 80,
+    fontSize: Size.h36,
+    // backgroundColor: 'green',
   },
   button: {
     alignItems: 'center',
-    backgroundColor: '#f27228',
+    backgroundColor: '#ff9335',
     borderRadius: 5,
-
+    // paddingVertical: 1,
   },
   copyRight: {
     color: '#adb3bc',
-    fontSize: Size.h24,
+    fontSize: Size.h26,
+    marginBottom: '2%',
+    // backgroundColor: 'red',
+    textAlign: 'center',
   },
   failText: {
     textAlign: 'center',
@@ -402,18 +460,18 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: '4%',
     alignItems: 'center',
-    borderWidth: 1,
-    borderRadius: 5,
-    backgroundColor: '#e8e9ec',
+    borderRadius: 3,
+    backgroundColor: '#e6eaed',
   },
   icon: {
     position: 'absolute',
-    backgroundColor: 'transparent',
-    marginLeft: '1%',
+    // backgroundColor: 'transparent',
+    // backgroundColor: 'blue',
+    marginLeft: '3%',
   },
   showHidePassword: {
     position: 'relative',
-    backgroundColor: 'transparent',
-    marginRight: '1%',
+    // backgroundColor: 'red',
+    marginRight: '3%',
   },
 });

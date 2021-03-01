@@ -17,6 +17,7 @@ import {
   TouchableOpacity,
 } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import Icon from 'react-native-vector-icons/AntDesign';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
@@ -230,12 +231,13 @@ export default class EditClass extends React.Component {
           <TouchableOpacity
             style={styles.Menu}
             onPress={() => this.props.navigation.goBack()}>
-            <Image
+            {/* <Image
               source={require('../res/images/back.png')}
               style={styles.Image}
-            />
+            /> */}
+            <Ionicons name="chevron-back" color="#d4d5d8" size={Size.h52} />
           </TouchableOpacity>
-          <Text style={styles.Title}>Sửa Buổi Học</Text>
+          <Text style={styles.Title}>SỬA BUỔI HỌC</Text>
           <TouchableOpacity style={styles.Plus}>
             <Image
               source={require('../res/images/ao.png')}
@@ -247,7 +249,8 @@ export default class EditClass extends React.Component {
           {/* Nhập tên lớp học */}
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={styles.text}>Tên buổi học *</Text>
+              <Text style={styles.text}>Tên buổi học</Text>
+              <Text style={styles.text1}> *</Text>
             </View>
             <TextInput
               style={styles.input}
@@ -278,7 +281,8 @@ export default class EditClass extends React.Component {
           {/* Nhập tên giảng viên */}
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={styles.text}>Tên giảng viên *</Text>
+              <Text style={styles.text}>Tên giảng viên </Text>
+              <Text style={styles.text1}> *</Text>
             </View>
             <TextInput
               style={styles.input}
@@ -316,7 +320,10 @@ export default class EditClass extends React.Component {
                 width: '50%',
                 paddingRight: '1%',
               }}>
-              <Text style={styles.text}>Ngày *</Text>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Text style={styles.text}>Chọn ngày</Text>
+                <Text style={styles.text1}> *</Text>
+              </View>
               <TouchableOpacity
                 onPress={() => this.showDatePicker()}
                 style={{
@@ -332,16 +339,17 @@ export default class EditClass extends React.Component {
                   style={{
                     flex: 1,
                     textAlign: 'center',
-                    fontSize: Size.h32,
+                    fontSize: Size.h30,
+                    color: '#3b556d',
                   }}>
                   {this.checkDate(this.state.date)}
                 </Text>
-                <Icon
+                {/* <Icon
                   name="down"
                   size={18}
                   color="black"
                   style={{marginLeft: 5, marginRight: 10}}
-                />
+                /> */}
                 <DateTimePickerModal
                   isVisible={this.state.modelDateVisible}
                   mode="date"
@@ -380,7 +388,10 @@ export default class EditClass extends React.Component {
                 width: '50%',
                 paddingRight: '1%',
               }}>
-              <Text style={styles.text}>Giờ bắt đầu *</Text>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Text style={styles.text}>Chọn giờ bắt đầu</Text>
+                <Text style={styles.text1}> *</Text>
+              </View>
               <TouchableOpacity
                 onPress={() => this.showTimePickerStart()}
                 style={{
@@ -396,16 +407,17 @@ export default class EditClass extends React.Component {
                   style={{
                     flex: 1,
                     textAlign: 'center',
-                    fontSize: Size.h32,
+                    fontSize: Size.h30,
+                    color: '#3b556d',
                   }}>
                   {this.checkTime(this.state.startedTime)}
                 </Text>
-                <Icon
+                {/* <Icon
                   name="down"
                   size={18}
                   color="black"
                   style={{marginLeft: 5, marginRight: 10}}
-                />
+                /> */}
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="time"
@@ -422,7 +434,10 @@ export default class EditClass extends React.Component {
                 width: '50%',
                 paddingLeft: '1%',
               }}>
-              <Text style={styles.text}>Giờ kết thúc *</Text>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Text style={styles.text}>Chọn giờ kết thúc</Text>
+                <Text style={styles.text1}> *</Text>
+              </View>
               <TouchableOpacity
                 onPress={() => this.showTimePickerEnd()}
                 style={{
@@ -438,16 +453,17 @@ export default class EditClass extends React.Component {
                   style={{
                     flex: 1,
                     textAlign: 'center',
-                    fontSize: Size.h32,
+                    fontSize: Size.h30,
+                    color: '#3b556d',
                   }}>
                   {this.checkTime(this.state.endedTime)}
                 </Text>
-                <Icon
+                {/* <Icon
                   name="down"
                   size={18}
                   color="black"
                   style={{marginLeft: 5, marginRight: 10}}
-                />
+                /> */}
               </TouchableOpacity>
               <DateTimePickerModal
                 isVisible={this.state.modelEndVisible}
@@ -474,11 +490,20 @@ export default class EditClass extends React.Component {
             )}
           </View>
 
-          {/* Chọn tòa nhà*/}
-          <View>
+          {/* Chọn tòa nhà */}
+          <View
+            style={{
+              ...Platform.select({
+                ios: {
+                  zIndex: 999,
+                },
+                android: {},
+                default: {},
+              }),
+            }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={styles.text}>Tòa nhà *</Text>
-              <Text style={styles.textError}>{this.state.strThieuToaNha}</Text>
+              <Text style={styles.text}>Tòa nhà</Text>
+              <Text style={styles.text1}> *</Text>
             </View>
             <DropDownPicker
               isVisible={this.state.isVisibleA}
@@ -496,16 +521,18 @@ export default class EditClass extends React.Component {
               containerStyle={{height: 50}}
               placeholder="Chọn tòa nhà"
               style={{
-                backgroundColor: '#FFF',
+                backgroundColor: '#fff',
                 borderColor: '#c2c2c2',
                 zIndex: 100,
+                fontSize: Size.h30,
               }}
               placeholderStyle={{
                 color: 'gray',
+                fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#000',
-                fontSize: Size.h32,
+                color: '#3b556d',
+                fontSize: Size.h30,
               }}
               itemStyle={{
                 justifyContent: 'flex-start',
@@ -514,15 +541,20 @@ export default class EditClass extends React.Component {
                 marginBottom: 5,
                 paddingLeft: 10,
                 borderRadius: 5,
+                fontSize: Size.h30,
+                color: '#3b556d',
                 zIndex: 101,
               }}
-              labelStyle={{color: 'black'}}
+              labelStyle={{
+                color: '#3b556d',
+                fontSize: Size.h30,
+              }}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
-              defaultValue={this.state.buildingId}
             />
           </View>
+
           {/* Báo lỗi tòa nhà */}
           <View>
             {this.state.errorBuilding && (
@@ -540,9 +572,19 @@ export default class EditClass extends React.Component {
           </View>
 
           {/* Chọn phòng */}
-          <View>
+          <View
+            style={{
+              ...Platform.select({
+                ios: {
+                  zIndex: 99,
+                },
+                android: {},
+                default: {},
+              }),
+            }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Text style={styles.text}>Phòng *</Text>
+              <Text style={styles.text}>Phòng</Text>
+              <Text style={styles.text1}> *</Text>
             </View>
             <DropDownPicker
               isVisible={this.state.isVisibleB}
@@ -558,20 +600,20 @@ export default class EditClass extends React.Component {
               }
               items={this.state.dataRoom}
               placeholder="Chọn phòng"
-              defaultValue={this.state.defaultRoom}
               controller={(instance) => (this.controller = instance)}
               containerStyle={{height: 50}}
               style={{
                 backgroundColor: '#FFF',
                 borderColor: '#c2c2c2',
                 zIndex: 98,
+                fontSize: Size.h30,
               }}
               placeholderStyle={{
                 color: 'gray',
               }}
               selectedLabelStyle={{
                 color: '#000',
-                fontSize: Size.h32,
+                fontSize: Size.h30,
               }}
               itemStyle={{
                 justifyContent: 'flex-start',
@@ -581,13 +623,22 @@ export default class EditClass extends React.Component {
                 paddingLeft: 10,
                 borderRadius: 5,
                 zIndex: 99,
+                fontSize: Size.h30,
+                color: '#3b556d',
               }}
-              labelStyle={{color: 'black'}}
+              dropDownStyle={{
+                backgroundColor: '#fff',
+              }}
+              labelStyle={{
+                // color: 'black',
+                color: '#3b556d',
+                fontSize: Size.h30,
+              }}
               activeLabelStyle={{color: 'blue'}}
-              dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
           </View>
+
           {/* Báo lỗi phòng */}
           <View>
             {this.state.errorRoom && (
@@ -897,26 +948,34 @@ export default class EditClass extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f4f7fc',
+    backgroundColor: '#fff',
   },
   text: {
-    fontSize: Size.h34,
+    fontSize: Size.h36,
     fontWeight: 'bold',
-    color: 'darkslategrey',
+    color: '#094c8d',
+    marginTop: 10,
+    marginBottom: 5,
+  },
+  text1: {
+    fontSize: Size.h36,
+    fontWeight: 'bold',
+    color: '#ff0303',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
     borderRadius: 5,
+    color: '#3b556d',
     borderColor: '#c2c2c2',
-    fontSize: Size.h32,
+    fontSize: Size.h30,
     paddingLeft: 15,
     paddingVertical: 13,
     backgroundColor: '#FFF',
   },
   button: {
-    backgroundColor: '#f27228',
+    backgroundColor: '#ffa600',
     borderRadius: 5,
     marginTop: '5%',
     paddingVertical: 7,
@@ -997,9 +1056,9 @@ const styles = StyleSheet.create({
   Title: {
     flex: 1,
     textAlign: 'center',
-    fontSize: Size.h40,
+    fontSize: Size.h38,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#3b556d',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },
@@ -1012,10 +1071,11 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 1,
     },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-    elevation: 8,
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
 });

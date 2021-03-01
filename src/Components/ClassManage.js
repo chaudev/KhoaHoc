@@ -17,6 +17,7 @@ import Menu from './ItemMenu';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {ScrollView} from 'react-native-gesture-handler';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const formatDate = (value) => {
   let day = new Date(value);
@@ -86,7 +87,6 @@ export default class ClassManage extends React.Component {
     this.setState({TenKH: TenKH});
 
     this.props.getClassAction(courseId);
-
   }
 
   componentWillUnmount() {
@@ -126,17 +126,18 @@ export default class ClassManage extends React.Component {
   render() {
     return (
       <View style={styles.containerx}>
-      <SafeAreaView/>
+        <SafeAreaView />
         <View style={styles.ContainerMenu}>
           <TouchableOpacity
             style={styles.Menu}
             onPress={() => this.props.navigation.goBack()}>
-            <Image
+            {/* <Image
               source={require('../res/images/back.png')}
               style={{width: 20, height: 20}}
-            />
+            /> */}
+            <Ionicons name="chevron-back" color="#d4d5d8" size={Size.h52} />
           </TouchableOpacity>
-          <Text style={styles.Title}>Quản Lý Buổi Học</Text>
+          <Text style={styles.Title}>QUẢN LÝ BUỔI HỌC</Text>
           <TouchableOpacity
             style={styles.Plus}
             onPress={() => {
@@ -146,9 +147,15 @@ export default class ClassManage extends React.Component {
                 thoiGianKetThuc: this.state.thoiGianKetThuc,
               });
             }}>
-            <Image
+            {/* <Image
               source={require('../res/images/ic_plus.png')}
               style={{width: 20, height: 20}}
+            /> */}
+            <FontAwesome5
+              name={'plus'}
+              color="#d4d5d8"
+              size={Size.h40}
+              // style={[styles.Image]}
             />
           </TouchableOpacity>
         </View>
@@ -215,6 +222,7 @@ export default class ClassManage extends React.Component {
                 color: 'darkslategrey',
                 flex: 15,
                 marginRight: 50,
+                color: '#394e65',
               }}>
               {className}
             </Text>
@@ -250,11 +258,13 @@ export default class ClassManage extends React.Component {
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Giảng viên: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
+              Giảng viên:{' '}
+            </Text>
             <Text
               numberOfLines={1}
               style={{
-                color: '#0000FF',
+                color: '#0a8dc3',
                 fontSize: Size.h32,
                 flex: 1,
                 marginRight: 50,
@@ -271,10 +281,12 @@ export default class ClassManage extends React.Component {
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Cán bộ quản lý: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
+              Cán bộ quản lý:{' '}
+            </Text>
             <Text
               style={{
-                color: '#f27228',
+                color: '#f19440',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -289,10 +301,10 @@ export default class ClassManage extends React.Component {
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Ngày: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>Ngày: </Text>
             <Text
               style={{
-                color: 'darkslategrey',
+                color: '#364966',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -303,23 +315,33 @@ export default class ClassManage extends React.Component {
             style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
             <AntDesign
               name={'clockcircleo'}
-              color="#FF00FF"
+              color="#d43648"
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Thời gian: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
+              Thời gian:{' '}
+            </Text>
             <Text
               style={{
-                color: '#ee10e1',
+                color: '#d43648',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
               {startedTime}
             </Text>
-            <Text style={{fontSize: Size.h32, fontWeight: 'bold'}}> - </Text>
             <Text
               style={{
-                color: '#ee10e1',
+                color: '#d43648',
+                fontSize: Size.h32,
+                fontWeight: 'bold',
+              }}>
+              {' '}
+              -{' '}
+            </Text>
+            <Text
+              style={{
+                color: '#d43648',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -334,10 +356,12 @@ export default class ClassManage extends React.Component {
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Tòa nhà: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
+              Tòa nhà:{' '}
+            </Text>
             <Text
               style={{
-                color: 'darkslategrey',
+                color: '#364966',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -352,10 +376,10 @@ export default class ClassManage extends React.Component {
               size={Size.h40}
               style={[styles.icon]}
             />
-            <Text style={{fontSize: Size.h32}}>Phòng: </Text>
+            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>Phòng: </Text>
             <Text
               style={{
-                color: 'darkslategrey',
+                color: '#364966',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -366,14 +390,14 @@ export default class ClassManage extends React.Component {
             style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
             <FontAwesome5
               name={'wifi'}
-              color="#1DBD8F"
+              color="#14bb87"
               size={Size.h40}
               style={[styles.icon]}
             />
             <Text
               style={{
                 flex: 10,
-                color: 'darkslategrey',
+                color: '#364966',
                 fontSize: Size.h32,
                 fontWeight: 'bold',
               }}>
@@ -393,7 +417,7 @@ export default class ClassManage extends React.Component {
                   paddingVertical: 7,
                   borderRadius: 50,
                   backgroundColor: '#e7ebee',
-                  color: '#f27228',
+                  color: '#d67e3e',
                 }}>
                 {code}
               </Text>
@@ -408,25 +432,27 @@ export default class ClassManage extends React.Component {
 const styles = StyleSheet.create({
   containerx: {
     flex: 1,
-    backgroundColor: '#f4f7fc',
+    backgroundColor: '#fff',
   },
   container: {
     flex: 1,
   },
   item: {
     backgroundColor: '#fff',
-    padding: 20,
+    padding: '5%',
     marginVertical: '2%',
     marginHorizontal: '4%',
-    shadowColor: '#000',
     borderRadius: 10,
+
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 3,
+      height: 1,
     },
-    elevation: 5,
-    shadowOpacity: 0.5,
-    shadowRadius: 15,
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   title: {
     fontSize: Size.h34,
@@ -450,11 +476,12 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: 4,
+      height: 1,
     },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-    elevation: 8,
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   Image: {
     width: 5,
@@ -476,14 +503,15 @@ const styles = StyleSheet.create({
   Title: {
     flex: 1,
     textAlign: 'center',
-    fontSize: Size.h40,
+    fontSize: Size.h38,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#1f4b68',
     paddingVertical: '4%',
+    // backgroundColor: 'red',
   },
   TenKH: {
     fontSize: Size.h34,
-    color: '#0000FF',
+    color: '#0a8dc3',
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: '2%',
