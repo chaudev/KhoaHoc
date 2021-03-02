@@ -397,6 +397,7 @@ export default class EditCourse extends React.Component {
                 color: '#3b556d',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.buildingSelected}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
@@ -458,9 +459,10 @@ export default class EditCourse extends React.Component {
               }}
               placeholderStyle={{
                 color: 'gray',
+                fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#000',
+                color: '#3b556d',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -482,6 +484,7 @@ export default class EditCourse extends React.Component {
                 color: '#3b556d',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.defaultRoom}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />

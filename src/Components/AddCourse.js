@@ -431,9 +431,10 @@ export default class AddCourse extends React.Component {
               }}
               placeholderStyle={{
                 color: 'gray',
+                fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#000',
+                color: '#3b556d',
                 fontSize: Size.h30,
               }}
               itemStyle={{

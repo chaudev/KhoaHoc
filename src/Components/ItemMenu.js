@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import { TouchableOpacity, Alert, Image, Text } from 'react-native';
+import React, {PureComponent} from 'react';
+import {TouchableOpacity, Alert, Image, Text} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Menu, { MenuItem } from 'react-native-material-menu';
+import Menu, {MenuItem} from 'react-native-material-menu';
 import Sizes from '../res/Size';
 
 import More from '../res/images/more.png';
@@ -49,12 +49,12 @@ export default class menu extends PureComponent {
     return (
       <TouchableOpacity
         style={[
-          { alignItems: 'center', justifyContent: 'flex-start' },
+          {alignItems: 'center', justifyContent: 'flex-start'},
           this.props.style,
         ]}>
         <Menu
           style={{
-            shadowColor: "#000",
+            shadowColor: '#000',
             shadowOffset: {
               width: 0,
               height: 2,
@@ -67,14 +67,18 @@ export default class menu extends PureComponent {
           ref={this.setMenuRef}
           button={
             <TouchableOpacity
-              style={{ alignItems: 'center' }}
+              style={{alignItems: 'center'}}
               onPress={this.showMenu}>
               {/* <FontAwesome5  name={'ellipsis-v'} color="darkslategrey" size={Sizes.h48} /> */}
-              <Image style={{ width: 25, height: 25 }} source={More} />
+              <Image style={{width: 25, height: 25}} source={More} />
             </TouchableOpacity>
           }>
-          <MenuItem onPress={this.changeMenu}><Text style={{ fontSize: Sizes.h30 }}>Sửa</Text></MenuItem>
-          <MenuItem onPress={this.xoaOption}><Text style={{ fontSize: Sizes.h30 }}>Xóa</Text></MenuItem>
+          <MenuItem onPress={this.changeMenu}>
+            <Text style={{fontSize: Sizes.h30, color: '#3b556d'}}>Sửa</Text>
+          </MenuItem>
+          <MenuItem onPress={this.xoaOption}>
+            <Text style={{fontSize: Sizes.h30, color: '#3b556d'}}>Xóa</Text>
+          </MenuItem>
         </Menu>
       </TouchableOpacity>
     );

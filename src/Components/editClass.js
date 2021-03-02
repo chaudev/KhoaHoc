@@ -549,6 +549,7 @@ export default class EditClass extends React.Component {
                 color: '#3b556d',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.buildingId}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
@@ -626,14 +627,15 @@ export default class EditClass extends React.Component {
                 fontSize: Size.h30,
                 color: '#3b556d',
               }}
-              dropDownStyle={{
-                backgroundColor: '#fff',
+              placeholderStyle={{
+                color: 'gray',
+                fontSize: Size.h30,
               }}
-              labelStyle={{
-                // color: 'black',
+              selectedLabelStyle={{
                 color: '#3b556d',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.defaultRoom}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />

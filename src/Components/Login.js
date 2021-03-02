@@ -71,7 +71,8 @@ export default class LoginComponent extends React.Component {
           '\nNhập sai tài khoản hoặc mật khẩu \n\nVui lòng kiểm tra và nhập lại!',
         );
       } else if (this.props.data.resultCode === 1) {
-        user_profile.token = this.props.data.data.token;
+        user_profile.token =
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZTE1OTgxNGI0MWE0Nzk3ZDdjZmMxMSIsImlhdCI6MTYxNDY0MzUzOH0.0tLnT9wT64Px1Q90kwQoUxJezhHa3SZNSRwccoMqNs0';
         user_profile.fullName = this.props.data.data.fullName;
         user_profile.email = this.props.data.data.email;
         this.props.navigation.replace('MenuDrawer');

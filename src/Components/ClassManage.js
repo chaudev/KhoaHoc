@@ -405,8 +405,10 @@ export default class ClassManage extends React.Component {
             </Text>
             <View
               style={{
-                flex: 3,
+                flex: 4,
                 alignItems: 'center',
+                borderRadius: 50,
+                backgroundColor: '#e7ebee',
               }}>
               <Text
                 style={{
@@ -415,9 +417,8 @@ export default class ClassManage extends React.Component {
                   fontWeight: 'bold',
                   paddingHorizontal: 15,
                   paddingVertical: 7,
-                  borderRadius: 50,
-                  backgroundColor: '#e7ebee',
                   color: '#d67e3e',
+                  fontSize: Size.h32,
                 }}>
                 {code}
               </Text>
