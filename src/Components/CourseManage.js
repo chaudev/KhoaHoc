@@ -57,12 +57,18 @@ export default class QLKhoaHocComp extends React.Component {
       dayEnd: new Date(),
       key: 1,
       refreshing: false,
+      buildingSelected: '',
+      roomSelected: '',
+      dataBuilding: [],
+      dataRoom: '',
+      Location: '',
     };
   }
 
   componentDidMount() {
     const {navigation} = this.props;
     this.focusListener = navigation.addListener('didFocus', () => {
+      this.props.getBuildingRoomAction();
       this.props.getCourseAction();
     });
 
@@ -86,6 +92,12 @@ export default class QLKhoaHocComp extends React.Component {
       }
     }
 
+    if (this.props.dataBuilding.type === 'GET_BUILDING_ROOM_SUCCESS') {
+      console.log('GET_BUILDING_ROOM_SUCCESS');
+      // console.log(this.props.dataBuilding);
+      // this.setState({dataBuilding: []});
+      // this.setState({dataBuilding: this.props.dataBuilding.data});
+    }
     if (prevProps.dataDelete !== this.props.dataDelete) {
       if (this.props.dataDelete === 'DELETE_COURSE_ERROR') {
         Alert.alert('Lỗi rồi!!!', this.props.dataDelete.message);
@@ -100,6 +112,33 @@ export default class QLKhoaHocComp extends React.Component {
           );
         }
       }
+    }
+  }
+
+  getLocation(buidingID, roomID) {
+    try {
+      if (this.props.dataBuilding.data.length !== undefined) {
+        for (let i = 0; i < this.props.dataBuilding.data.length; i++) {
+          if (this.props.dataBuilding.data[i]._id === buidingID) {
+            for (
+              let j = 0;
+              j < this.props.dataBuilding.data[i].room.length;
+              j++
+            ) {
+              if (this.props.dataBuilding.data[i].room[j]._id === roomID) {
+                const aaa = this.props.dataBuilding.data[i].room[j].location;
+                return ' - ' + aaa;
+              }
+            }
+          } else {
+            return '';
+          }
+        }
+      } else {
+        return '';
+      }
+    } catch (error) {
+      return '';
     }
   }
 
@@ -404,6 +443,14 @@ export default class QLKhoaHocComp extends React.Component {
                   fontWeight: 'bold',
                 }}>
                 {Phong}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {this.getLocation(buildingId, roomId)}
               </Text>
             </View>
           </View>

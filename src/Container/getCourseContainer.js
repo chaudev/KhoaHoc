@@ -1,5 +1,5 @@
 import React from 'react';
-import {getCourseAction} from '../redux/actions/index';
+import {getBuildingRoomAction, getCourseAction} from '../redux/actions/index';
 import {deleteCourseAction} from '../redux/actions/index';
 import {connect} from 'react-redux';
 import QLKhoaHocComp from '../Components/CourseManage';
@@ -21,11 +21,18 @@ const mapDispatchToProps = (dispatch) => {
     deleteCourseAction: (course_id) => {
       dispatch(deleteCourseAction(course_id));
     },
+    getBuildingRoomAction: () => {
+      dispatch(getBuildingRoomAction());
+    },
   };
 };
 
 const mapStateToProps = (state) => {
   return {
+    dataBuilding: state.buildingRoomReducer.data,
+    messageBuilding: state.buildingRoomReducer.message,
+    fetchingBuilding: state.buildingRoomReducer.fetching,
+
     data: state.courseReducer.data,
     message: state.courseReducer.message,
     fetching: state.courseReducer.fetching,

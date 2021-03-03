@@ -66,6 +66,11 @@ export default class ClassManage extends React.Component {
       TenKH: '',
       thoiGianBatDau: new Date(),
       thoiGianKetThuc: new Date(),
+      buildingSelected: '',
+      roomSelected: '',
+      dataBuilding: [],
+      dataRoom: '',
+      Location: '',
     };
   }
 
@@ -131,6 +136,13 @@ export default class ClassManage extends React.Component {
       }
     }
 
+    if (this.props.dataBuilding.type === 'GET_BUILDING_ROOM_SUCCESS') {
+      console.log('GET_BUILDING_ROOM_SUCCESS');
+      // console.log(this.props.dataBuilding);
+      // this.setState({dataBuilding: []});
+      // this.setState({dataBuilding: this.props.dataBuilding.data});
+    }
+
     if (prevProps.dataDelete !== this.props.dataDelete) {
       if (this.props.dataDelete === 'DELETE_CLASS_ERROR') {
         Alert.alert('Lỗi rồi!!!', this.props.dataDelete.message);
@@ -145,6 +157,33 @@ export default class ClassManage extends React.Component {
           );
         }
       }
+    }
+  }
+
+  getLocation(buidingID, roomID) {
+    try {
+      if (this.props.dataBuilding.data.length !== undefined) {
+        for (let i = 0; i < this.props.dataBuilding.data.length; i++) {
+          if (this.props.dataBuilding.data[i]._id === buidingID) {
+            for (
+              let j = 0;
+              j < this.props.dataBuilding.data[i].room.length;
+              j++
+            ) {
+              if (this.props.dataBuilding.data[i].room[j]._id === roomID) {
+                const aaa = this.props.dataBuilding.data[i].room[j].location;
+                return ' - ' + aaa;
+              }
+            }
+          } else {
+            return '';
+          }
+        }
+      } else {
+        return '';
+      }
+    } catch (error) {
+      return '';
     }
   }
 
@@ -489,6 +528,14 @@ export default class ClassManage extends React.Component {
                 }}>
                 {roomName}
               </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {this.getLocation(buildingId, roomId)}
+              </Text>
             </View>
           </View>
           <View
@@ -500,7 +547,7 @@ export default class ClassManage extends React.Component {
             <View style={styles.icon}>
               <FontAwesome5
                 name={'wifi'}
-                color="#14bb87"
+                color="#33ca69"
                 size={Size.h40}
                 // style={[styles.icon]}
               />

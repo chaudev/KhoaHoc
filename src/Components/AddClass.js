@@ -273,6 +273,7 @@ export default class AddClass extends React.Component {
                   backgroundColor: '#fff',
                   paddingVertical: 13,
                   borderColor: '#c2c2c2',
+                  marginTop: '1%',
                 }}>
                 <Text
                   style={{
@@ -313,7 +314,7 @@ export default class AddClass extends React.Component {
                 style={{
                   color: 'red',
                   fontSize: Size.h30,
-                  marginTop: 10,
+                  marginTop: '1%',
                   fontStyle: 'italic',
                 }}>
                 {this.state.strThieuDate}
@@ -346,6 +347,7 @@ export default class AddClass extends React.Component {
                   backgroundColor: '#fff',
                   paddingVertical: 13,
                   borderColor: '#c2c2c2',
+                  marginTop: '1%',
                 }}>
                 <Text
                   style={{
@@ -396,6 +398,7 @@ export default class AddClass extends React.Component {
                   backgroundColor: '#fff',
                   paddingVertical: 13,
                   borderColor: '#c2c2c2',
+                  marginTop: '1%',
                 }}>
                 <Text
                   style={{
@@ -435,7 +438,7 @@ export default class AddClass extends React.Component {
                 style={{
                   color: 'red',
                   fontSize: Size.h30,
-                  marginTop: 10,
+                  marginTop: '1%',
                   fontStyle: 'italic',
                 }}>
                 {this.state.strErrorTime}
@@ -618,27 +621,26 @@ export default class AddClass extends React.Component {
             style={{
               flexDirection: 'column',
               alignItems: 'flex-end',
-              marginBottom: 90,
+              marginBottom: 100,
             }}>
             <TouchableOpacity
               style={styles.button}
               onPress={() => this.onClickSave()}>
-              <Icon name="save" size={18} color="#fff" />
+              <Icon name="save" size={Size.h28} color="#fff" />
               <Text style={{color: '#fff', marginLeft: 5, fontSize: Size.h32}}>
                 LƯU
               </Text>
             </TouchableOpacity>
           </View>
-
-          {/* Màn hình loading */}
-          {this.props.fetching && (
-            <ActivityIndicator
-              size="large"
-              color="#FF0000"
-              style={styles.Indicator}
-            />
-          )}
         </ScrollView>
+        {/* Màn hình loading */}
+        {this.props.fetching && (
+          <ActivityIndicator
+            size="large"
+            color="#FF0000"
+            style={styles.Indicator}
+          />
+        )}
       </View>
     );
   }
@@ -949,7 +951,7 @@ export default class AddClass extends React.Component {
     for (let i = 0; i < this.props.data.data.length; i++) {
       if (this.props.data.data[i]._id === this.state.buildingId) {
         var convertDataRoom = this.props.data.data[i].room.map(function (obj) {
-          return {label: obj.roomName, value: obj._id};
+          return {label: obj.roomName + ' - ' + obj.location, value: obj._id};
         });
 
         if (this.state.flag === 1) {
@@ -998,15 +1000,15 @@ const styles = StyleSheet.create({
     fontSize: Size.h36,
     fontWeight: 'bold',
     color: '#4b5b6b',
-    marginTop: 10,
-    marginBottom: 5,
+    marginTop: '1%',
+    marginBottom: '1%',
   },
   text1: {
     fontSize: Size.h36,
     fontWeight: 'bold',
     color: 'transparent',
-    marginTop: 10,
-    marginBottom: 5,
+    marginTop: '1%',
+    marginBottom: '1%',
   },
   input: {
     borderWidth: 1,
@@ -1019,13 +1021,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
   button: {
-    backgroundColor: '#ffa600',
+    backgroundColor: '#ff9434',
     borderRadius: 5,
-    marginTop: '5%',
+    marginTop: '3%',
     paddingVertical: 7,
-    paddingHorizontal: 25,
+    paddingHorizontal: 30,
     flexDirection: 'row',
-    marginBottom: 10,
+    marginBottom: 30,
+    alignItems: 'center',
   },
   Indicator: {
     position: 'absolute',
@@ -1041,8 +1044,8 @@ const styles = StyleSheet.create({
   textError: {
     fontSize: Size.h30,
     color: 'red',
-    marginTop: 10,
-    marginBottom: 5,
+    marginTop: '1%',
+    marginBottom: '1%',
     marginLeft: 10,
     fontStyle: 'italic',
   },

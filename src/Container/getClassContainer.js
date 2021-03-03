@@ -1,5 +1,5 @@
 import React from 'react';
-import {getClassAction} from '../redux/actions/index';
+import {getBuildingRoomAction, getClassAction} from '../redux/actions/index';
 import {deleteClassAction} from '../redux/actions/index';
 import {connect} from 'react-redux';
 import ClassManage from '../Components/ClassManage';
@@ -21,11 +21,18 @@ const mapDispatchToProps = (dispatch) => {
     deleteClassAction: (classId) => {
       dispatch(deleteClassAction(classId));
     },
+    getBuildingRoomAction: () => {
+      dispatch(getBuildingRoomAction());
+    },
   };
 };
 
 const mapStateToProps = (state) => {
   return {
+    dataBuilding: state.buildingRoomReducer.data,
+    messageBuilding: state.buildingRoomReducer.message,
+    fetchingBuilding: state.buildingRoomReducer.fetching,
+
     data: state.getClassReducer.data,
     message: state.getClassReducer.message,
     fetching: state.getClassReducer.fetching,
