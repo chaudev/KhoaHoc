@@ -19,11 +19,36 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {ScrollView} from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+const formatTime = (value) => {
+  let day = new Date(value);
+  let stringTime =
+    checkLength(day.getHours()) + ':' + checkLength(day.getMinutes()) + '';
+  return stringTime;
+};
+
 const formatDate = (value) => {
   let day = new Date(value);
-  let stringDay =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
-  return stringDay;
+  let stringDate =
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
+  // console.log('dateeeeeeeeeee: ' + stringDate);
+  return stringDate;
+};
+
+const checkLength = (text1) => {
+  // console.log('checkLength chay');
+  // console.log('text ' + text1);
+  let text = text1 + '';
+  // console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 export default class ClassManage extends React.Component {
@@ -219,17 +244,17 @@ export default class ClassManage extends React.Component {
               style={{
                 fontSize: Size.h34,
                 fontWeight: 'bold',
-                color: 'darkslategrey',
+                // color: 'darkslategrey',
                 flex: 15,
                 marginRight: 50,
-                color: '#394e65',
+                color: '#315673',
               }}>
               {className}
             </Text>
             <Menu
               style={{
-                flex: 1,
-                padding: 5,
+                flex: 2,
+                // padding: 5,
               }}
               delete={() => {
                 this.props.deleteClassAction(classId.trim());
@@ -251,158 +276,251 @@ export default class ClassManage extends React.Component {
             />
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'user-tie'}
-              color="#FFD237"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Giảng viên:{' '}
-            </Text>
-            <Text
-              numberOfLines={1}
+            style={{
+              flexDirection: 'row',
+              marginTop: '2%',
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'user-tie'}
+                color="#FFD237"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#0a8dc3',
-                fontSize: Size.h32,
-                flex: 1,
-                marginRight: 50,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {trainer}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Giảng viên:{' '}
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={{
+                  color: '#0a8dc3',
+                  fontSize: Size.h32,
+                  flex: 1,
+                  marginRight: 50,
+                  fontWeight: 'bold',
+                }}>
+                {trainer}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'address-card'}
-              color="#412F4E"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Cán bộ quản lý:{' '}
-            </Text>
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'address-card'}
+                color="#412F4E"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#f19440',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {created_by}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Cán bộ quản lý:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#f19440',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {created_by}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'calendar-check'}
-              color="#42C8FB"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>Ngày: </Text>
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'calendar-check'}
+                color="#42C8FB"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {formatDate(date)}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>Ngày: </Text>
+              <Text
+                style={{
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {formatDate(date)}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <AntDesign
-              name={'clockcircleo'}
-              color="#d43648"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Thời gian:{' '}
-            </Text>
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <AntDesign
+                name={'clockcircleo'}
+                color="#315673"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#d43648',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {startedTime}
-            </Text>
-            <Text
-              style={{
-                color: '#d43648',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
-              }}>
-              {' '}
-              -{' '}
-            </Text>
-            <Text
-              style={{
-                color: '#d43648',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
-              }}>
-              {endedTime}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Thời gian:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {startedTime}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {' '}
+                -{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {endedTime}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'building'}
-              color="#0090D7"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Tòa nhà:{' '}
-            </Text>
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'building'}
+                color="#0090D7"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {buildingName}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Tòa nhà:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {buildingName}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'chalkboard-teacher'}
-              color="#FF9226"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>Phòng: </Text>
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'chalkboard-teacher'}
+                color="#FF9226"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {roomName}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Phòng:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {roomName}
+              </Text>
+            </View>
           </View>
           <View
-            style={{flexDirection: 'row', marginTop: 10, alignItems: 'center'}}>
-            <FontAwesome5
-              name={'wifi'}
-              color="#14bb87"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
-            <Text
+            style={{
+              flexDirection: 'row',
+              // marginTop: 10,
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'wifi'}
+                color="#14bb87"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
+            <View
               style={{
-                flex: 10,
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 7,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {wifi}
-            </Text>
+              <Text
+                style={{
+                  flex: 10,
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {wifi}
+              </Text>
+            </View>
             <View
               style={{
                 flex: 4,
@@ -440,7 +558,7 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: '#fff',
-    padding: '5%',
+    padding: '3%',
     marginVertical: '2%',
     marginHorizontal: '4%',
     borderRadius: 10,
@@ -465,8 +583,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   icon: {
+    flex: 1,
     padding: 5,
-    paddingRight: 20,
+    // paddingRight: 20,
+    // backgroundColor: 'red',
   },
   ContainerMenu: {
     flexDirection: 'row',
@@ -506,7 +626,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#1f4b68',
+    color: '#345173',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },
@@ -514,7 +634,7 @@ const styles = StyleSheet.create({
     fontSize: Size.h34,
     color: '#0a8dc3',
     fontWeight: 'bold',
-    textAlign: 'center',
+    // textAlign: 'center',
     marginVertical: '2%',
     marginHorizontal: '5%',
   },

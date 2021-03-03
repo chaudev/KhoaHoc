@@ -23,9 +23,27 @@ import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
 
 const formatDate = (value) => {
   let day = new Date(value);
-  let stringDay =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
-  return stringDay;
+  let stringDate =
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
+  // console.log('dateeeeeeeeeee: ' + stringDate);
+  return stringDate;
+};
+
+const checkLength = (text1) => {
+  // console.log('checkLength chay');
+  // console.log('text ' + text1);
+  let text = text1 + '';
+  // console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 export default class QLKhoaHocComp extends React.Component {
@@ -164,13 +182,14 @@ export default class QLKhoaHocComp extends React.Component {
           <View
             style={{
               flexDirection: 'row',
+              // alignItems: 'center',
             }}>
             <Text
               numberOfLines={2}
               style={{
-                fontSize: Size.h38,
+                fontSize: Size.h36,
                 fontWeight: 'bold',
-                color: '#394e65',
+                color: '#315673',
                 flex: 15,
                 marginRight: '10%',
               }}>
@@ -178,8 +197,10 @@ export default class QLKhoaHocComp extends React.Component {
             </Text>
             <Menu
               style={{
-                flex: 1,
-                padding: '1%',
+                flex: 2,
+                // padding: '1%',
+                // paddingHorizontal: '1%',
+                // backgroundColor: 'blue',
               }}
               delete={() => {
                 this.props.deleteCourseAction(id.trim());
@@ -203,146 +224,188 @@ export default class QLKhoaHocComp extends React.Component {
           <View
             style={{
               flexDirection: 'row',
-              marginTop: '5%',
+              marginTop: '2%',
               alignItems: 'center',
             }}>
-            <FontAwesome5
-              name={'user-tie'}
-              color="#FFD237"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
+            <View style={styles.icon}>
+              <FontAwesome5 name={'user-tie'} color="#FFD237" size={Size.h40} />
+            </View>
 
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Giảng viên:{' '}
-            </Text>
-            <Text
-              numberOfLines={1}
+            <View
               style={{
-                color: '#0a8dc3',
-                fontSize: Size.h32,
-                flex: 1,
-                // marginLeft: 5,
-                marginRight: '15%',
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {giangVien}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Giảng viên:{' '}
+              </Text>
+              <Text
+                numberOfLines={1}
+                style={{
+                  color: '#0a8dc3',
+                  fontSize: Size.h32,
+                  flex: 1,
+                  // marginLeft: 5,
+                  marginRight: '15%',
+                  fontWeight: 'bold',
+                }}>
+                {giangVien}
+              </Text>
+            </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: '4%',
+              // marginTop: '1%',
               alignItems: 'center',
             }}>
-            <FontAwesome5
-              name={'address-card'}
-              color="#412F4E"
-              size={Size.h40}
-              style={[styles.icon]}
-            />
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'address-card'}
+                color="#412F4E"
+                size={Size.h40}
+                // style={[styles.icon]}
+              />
+            </View>
 
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Cán bộ quản lý:{' '}
-            </Text>
-            <Text
+            <View
               style={{
-                color: '#f19440',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
-                // marginLeft: 5,
-                marginRight: '15%',
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {quanLy}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Cán bộ quản lý:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#f19440',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                  // marginLeft: 5,
+                  marginRight: '15%',
+                  fontWeight: 'bold',
+                }}>
+                {quanLy}
+              </Text>
+            </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: '4%',
+              // marginTop: '4%',
               alignItems: 'center',
             }}>
-            <FontAwesome5
-              name={'calendar-check'}
-              color="#42C8FB"
-              size={Size.h40}
-              style={styles.icon}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Thời gian:{' '}
-            </Text>
-            <Text
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'calendar-check'}
+                color="#42C8FB"
+                size={Size.h40}
+                // style={styles.icon}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {formatDate(thoiGianBatDau)}
-            </Text>
-            <Text
-              style={{
-                fontSize: Size.h32,
-                fontWeight: 'bold',
-                color: '#364966',
-              }}>
-              {' '}
-              -{' '}
-            </Text>
-            <Text
-              style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
-              }}>
-              {formatDate(thoiGianKetThuc)}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Thời gian:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {formatDate(thoiGianBatDau)}
+              </Text>
+              <Text
+                style={{
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                  color: '#315673',
+                }}>
+                {' '}
+                -{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {formatDate(thoiGianKetThuc)}
+              </Text>
+            </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: '4%',
+              // marginTop: '4%',
               alignItems: 'center',
             }}>
-            <FontAwesome5
-              name={'building'}
-              color="#0090D7"
-              size={Size.h40}
-              style={styles.icon}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>
-              Tòa nhà:{' '}
-            </Text>
-            <Text
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'building'}
+                color="#0090D7"
+                size={Size.h40}
+                // style={styles.icon}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {toaNha}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Tòa nhà:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {toaNha}
+              </Text>
+            </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: '4%',
+              // marginTop: '4%',
               alignItems: 'center',
             }}>
-            <FontAwesome5
-              name={'chalkboard-teacher'}
-              color="#FF9226"
-              size={Size.h40}
-              style={styles.icon}
-            />
-            <Text style={{fontSize: Size.h32, color: '#3c5360'}}>Phòng: </Text>
-            <Text
+            <View style={styles.icon}>
+              <FontAwesome5
+                name={'chalkboard-teacher'}
+                color="#FF9226"
+                size={Size.h40}
+                // style={styles.icon}
+              />
+            </View>
+            <View
               style={{
-                color: '#364966',
-                fontSize: Size.h32,
-                fontWeight: 'bold',
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
               }}>
-              {Phong}
-            </Text>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>
+                Phòng:{' '}
+              </Text>
+              <Text
+                style={{
+                  color: '#315673',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {Phong}
+              </Text>
+            </View>
           </View>
         </TouchableOpacity>
       </View>
@@ -360,7 +423,7 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: '#fff',
-    padding: '5%',
+    padding: '3%',
     marginVertical: '2%',
     marginHorizontal: '4%',
     borderRadius: 10,
@@ -377,7 +440,9 @@ const styles = StyleSheet.create({
   },
   icon: {
     padding: 5,
-    paddingRight: 20,
+    // paddingRight: 20,
+    flex: 1,
+    // backgroundColor: 'red',
   },
   ContainerMenu: {
     flexDirection: 'row',
@@ -418,7 +483,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3d5367',
+    color: '#345173',
     paddingVertical: '4%',
   },
 });

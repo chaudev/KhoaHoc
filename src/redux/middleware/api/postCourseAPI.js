@@ -30,7 +30,7 @@ export async function postCourseAPI(
 
   return (
     await fetch(
-      'http://118.69.123.51:5000/fis/api/edu/create_new_course',
+      'http://10.86.224.37:5001/api/edu/create_new_course',
       requestOptions,
     )
   ).json();

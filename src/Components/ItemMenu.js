@@ -67,17 +67,26 @@ export default class menu extends PureComponent {
           ref={this.setMenuRef}
           button={
             <TouchableOpacity
-              style={{alignItems: 'center'}}
+              style={{
+                alignItems: 'center',
+                paddingLeft: 10,
+                paddingBottom: 10,
+                // backgroundColor: 'red',
+              }}
               onPress={this.showMenu}>
-              {/* <FontAwesome5  name={'ellipsis-v'} color="darkslategrey" size={Sizes.h48} /> */}
-              <Image style={{width: 25, height: 25}} source={More} />
+              <FontAwesome5
+                name={'ellipsis-v'}
+                color="#808080"
+                size={Sizes.h40}
+              />
+              {/* <Image style={{width: 25, height: 25}} source={More} /> */}
             </TouchableOpacity>
           }>
           <MenuItem onPress={this.changeMenu}>
-            <Text style={{fontSize: Sizes.h30, color: '#3b556d'}}>Sửa</Text>
+            <Text style={{fontSize: Sizes.h30, color: '#4b5b6b'}}>Sửa</Text>
           </MenuItem>
           <MenuItem onPress={this.xoaOption}>
-            <Text style={{fontSize: Sizes.h30, color: '#3b556d'}}>Xóa</Text>
+            <Text style={{fontSize: Sizes.h30, color: '#4b5b6b'}}>Xóa</Text>
           </MenuItem>
         </Menu>
       </TouchableOpacity>

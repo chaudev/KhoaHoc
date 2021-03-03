@@ -33,9 +33,6 @@ export async function editClassApi(
   };
 
   return (
-    await fetch(
-      'http://118.69.123.51:5000/fis/api/edu/edit_class',
-      requestOptions,
-    )
+    await fetch('http://10.86.224.37:5001/api/edu/edit_class', requestOptions)
   ).json();
 }

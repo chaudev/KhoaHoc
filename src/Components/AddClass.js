@@ -8,6 +8,7 @@ import {
   ToastAndroid,
   Image,
   SafeAreaView,
+  AsyncStorage,
 } from 'react-native';
 import {
   ScrollView,
@@ -17,22 +18,38 @@ import {
 import DropDownPicker from 'react-native-dropdown-picker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import DateTimePicker from '@react-native-community/datetimepicker';
 console.disableYellowBox = true;
 import Size from '../res/Size';
 
+const formatTime = (value) => {
+  let day = new Date(value);
+  let stringTime =
+    checkLength(day.getHours()) + ':' + checkLength(day.getMinutes()) + '';
+  return stringTime;
+};
+
 const formatDate = (value) => {
   let day = new Date(value);
   let stringDate =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
   return stringDate;
 };
 
-const formatTime = (value) => {
-  let day = new Date(value);
-  let stringTime = day.getHours() + ':' + day.getMinutes() + '';
-  return stringTime;
+const checkLength = (text1) => {
+  let text = text1 + '';
+  console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 export default class AddClass extends React.Component {
@@ -41,11 +58,12 @@ export default class AddClass extends React.Component {
 
     this.state = {
       date: new Date(),
-      flagDate: 0,
+      flagDate: 1,
       startedTime: new Date(),
-      flagStart: 0,
+      flagStart: 1,
       endedTime: new Date(),
-      flagEnd: 0,
+      flagEnd: 1,
+      flag: 0,
       mode: 'date',
       modeTime: 'time',
       showDate: false,
@@ -91,6 +109,7 @@ export default class AddClass extends React.Component {
       modelStartVisible: false,
       modelEndVisible: false,
       modelDateVisible: false,
+      defaultRoom: '',
     };
   }
 
@@ -116,6 +135,7 @@ export default class AddClass extends React.Component {
       'some default value',
     );
     this.setState({thoiGianBatDau: thoiGianBatDau});
+    this.setState({stringDate: formatDate(this.state.thoiGianBatDau)});
 
     const thoiGianKetThuc = this.props.navigation.getParam(
       'thoiGianKetThuc',
@@ -123,10 +143,13 @@ export default class AddClass extends React.Component {
     );
     this.setState({thoiGianKetThuc: thoiGianKetThuc});
 
+    this.setState({stringStartTime: formatTime(this.state.startedTime)});
+    this.setState({stringEndTime: formatTime(this.state.endedTime)});
+
     this.props.getBuildingRoomAction();
   }
 
-  componentDidUpdate(prevProps) {
+  async componentDidUpdate(prevProps) {
     if (prevProps.data !== this.props.data) {
       if (this.props.data.type === 'GET_BUILDING_ROOM_ERROR') {
       } else if (this.props.data.type === 'GET_BUILDING_ROOM_SUCCESS') {
@@ -135,6 +158,10 @@ export default class AddClass extends React.Component {
         });
 
         this.setState({dataBuilding: convertDataBuilding});
+
+        const xx = await this.getRememberedBuilding();
+
+        this.setState({buildingId: xx}, () => this.getDataRom());
       }
     } else {
       console.log('addCourse componentDidUpdate -- revProp khong doi');
@@ -256,12 +283,17 @@ export default class AddClass extends React.Component {
                   }}>
                   {this.checkDate(this.state.stringDate)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={Size.h34}
-                  color="#1f4b68"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelDateVisible}
                   mode="date"
@@ -324,12 +356,17 @@ export default class AddClass extends React.Component {
                   }}>
                   {this.checkTime(this.state.stringStartTime)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={Size.h34}
-                  color="#1f4b68"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="time"
@@ -369,12 +406,17 @@ export default class AddClass extends React.Component {
                   }}>
                   {this.checkTime(this.state.stringEndTime)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={Size.h34}
-                  color="#1f4b68"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
                   mode="time"
@@ -442,7 +484,7 @@ export default class AddClass extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -453,13 +495,15 @@ export default class AddClass extends React.Component {
                 paddingLeft: 10,
                 borderRadius: 5,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
                 zIndex: 101,
               }}
               labelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.buildingId}
+              arrowStyle={{marginBottom: 5}}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
@@ -524,7 +568,7 @@ export default class AddClass extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -536,16 +580,18 @@ export default class AddClass extends React.Component {
                 borderRadius: 5,
                 zIndex: 99,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
               }}
               dropDownStyle={{
                 backgroundColor: '#fff',
               }}
               labelStyle={{
                 // color: 'black',
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.defaultRoom}
+              arrowStyle={{marginBottom: 5}}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
@@ -831,31 +877,114 @@ export default class AddClass extends React.Component {
     }
   }
 
+  // local data
+  rememberBuilding = async () => {
+    try {
+      // console.log('rememberBuilding: ' + this.state.buildingSelected);
+      await AsyncStorage.setItem('saveBuildingClass', this.state.buildingId);
+    } catch (error) {
+      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
+    }
+  };
+
+  rememberRoom = async () => {
+    try {
+      // console.log('rememberRoom: chay ' + this.state.roomSelected);
+      await AsyncStorage.setItem('saveRoomClass', this.state.roomId);
+    } catch (error) {
+      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
+    }
+  };
+
+  forgetBuilding = async () => {
+    try {
+      console.log('forgetBuilding : chay');
+      await AsyncStorage.removeItem('saveBuildingClass');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  forgetRoom = async () => {
+    try {
+      console.log('forgetRoom : chay');
+      await AsyncStorage.removeItem('saveRoomClass');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  getRememberedBuilding = async () => {
+    try {
+      const saveBuilding = await AsyncStorage.getItem('saveBuildingClass');
+      if (saveBuilding !== null) {
+        // We have username!!
+        return saveBuilding;
+      } else {
+        return '';
+      }
+    } catch (error) {
+      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
+    }
+  };
+
+  getRememberedRoom = async () => {
+    try {
+      const passWord = await AsyncStorage.getItem('saveRoomClass');
+      if (passWord !== null) {
+        // We have username!!
+        return passWord;
+      } else {
+        return '';
+      }
+    } catch (error) {
+      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
+    }
+  };
+
+  async getDataRom() {
+    this.controller.state.choice.label = null;
+    this.setState({roomId: ''});
+    this.setState({dataRoom: []});
+    for (let i = 0; i < this.props.data.data.length; i++) {
+      if (this.props.data.data[i]._id === this.state.buildingId) {
+        var convertDataRoom = this.props.data.data[i].room.map(function (obj) {
+          return {label: obj.roomName, value: obj._id};
+        });
+
+        if (this.state.flag === 1) {
+          this.forgetRoom();
+        }
+
+        this.setState({dataRoom: convertDataRoom});
+      }
+    }
+
+    if (this.state.flag === 0) {
+      this.setState({flag: 1});
+
+      const xnxx = await this.getRememberedRoom();
+
+      this.setState({roomId: xnxx}, () => {
+        this.setState({defaultRoom: xnxx});
+      });
+    }
+  }
+
   // Chọn toàn nhà
-  onChangeDataBuilding(item) {
+  async onChangeDataBuilding(item) {
+    this.forgetBuilding();
     if (this.state.buildingId !== item.value) {
       this.setState({buildingId: item.value}, () => {
-        this.controller.state.choice.label = null;
-        this.setState({roomId: ''});
-        this.setState({dataRoom: []});
-        for (let i = 0; i < this.props.data.data.length; i++) {
-          if (this.props.data.data[i]._id === this.state.buildingId) {
-            var convertDataRoom = this.props.data.data[i].room.map(function (
-              obj,
-            ) {
-              return {label: obj.roomName, value: obj._id};
-            });
-
-            this.setState({dataRoom: convertDataRoom});
-          }
-        }
+        this.rememberBuilding();
+        this.getDataRom();
       });
     }
   }
 
   // Chọn phòng
   onChangeDataRoom(item) {
-    this.setState({roomId: item.value});
+    this.setState({roomId: item.value}, () => this.rememberRoom());
   }
 }
 
@@ -868,21 +997,21 @@ const styles = StyleSheet.create({
   text: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#094c8d',
+    color: '#4b5b6b',
     marginTop: 10,
     marginBottom: 5,
   },
   text1: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#ff0303',
+    color: 'transparent',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
     borderRadius: 5,
-    color: '#3b556d',
+    color: '#4b5b6b',
     borderColor: '#c2c2c2',
     fontSize: Size.h30,
     paddingLeft: 15,
@@ -973,7 +1102,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3b5369',
+    color: '#345173',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },

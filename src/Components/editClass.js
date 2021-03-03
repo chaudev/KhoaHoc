@@ -18,23 +18,42 @@ import {
 } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 import DateTimePicker from '@react-native-community/datetimepicker';
 console.disableYellowBox = true;
 
+const formatTime = (value) => {
+  let day = new Date(value);
+  let stringTime =
+    checkLength(day.getHours()) + ':' + checkLength(day.getMinutes()) + '';
+  return stringTime;
+};
+
 const formatDate = (value) => {
   let day = new Date(value);
   let stringDate =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
+  // console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
 };
 
-const formatTime = (value) => {
-  let day = new Date(value);
-  let stringTime = day.getHours() + ':' + day.getMinutes() + '';
-  return stringTime;
+const checkLength = (text1) => {
+  // console.log('checkLength chay');
+  // console.log('text ' + text1);
+  let text = text1 + '';
+  // console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 const stringToTime = (time) => {
@@ -340,16 +359,21 @@ export default class EditClass extends React.Component {
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.checkDate(this.state.date)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={18}
-                  color="black"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelDateVisible}
                   mode="date"
@@ -408,16 +432,21 @@ export default class EditClass extends React.Component {
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.checkTime(this.state.startedTime)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={18}
-                  color="black"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="time"
@@ -454,16 +483,21 @@ export default class EditClass extends React.Component {
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.checkTime(this.state.endedTime)}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={18}
-                  color="black"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
               </TouchableOpacity>
               <DateTimePickerModal
                 isVisible={this.state.modelEndVisible}
@@ -531,7 +565,7 @@ export default class EditClass extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -542,13 +576,14 @@ export default class EditClass extends React.Component {
                 paddingLeft: 10,
                 borderRadius: 5,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
                 zIndex: 101,
               }}
               labelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              arrowStyle={{marginBottom: 5}}
               defaultValue={this.state.buildingId}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
@@ -625,16 +660,17 @@ export default class EditClass extends React.Component {
                 borderRadius: 5,
                 zIndex: 99,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
               }}
               placeholderStyle={{
                 color: 'gray',
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              arrowStyle={{marginBottom: 5}}
               defaultValue={this.state.defaultRoom}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
@@ -955,21 +991,21 @@ const styles = StyleSheet.create({
   text: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#094c8d',
+    color: '#4b5b6b',
     marginTop: 10,
     marginBottom: 5,
   },
   text1: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#ff0303',
+    color: 'transparent',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
     borderRadius: 5,
-    color: '#3b556d',
+    color: '#4b5b6b',
     borderColor: '#c2c2c2',
     fontSize: Size.h30,
     paddingLeft: 15,
@@ -1060,7 +1096,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3b556d',
+    color: '#345173',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },

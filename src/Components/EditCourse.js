@@ -19,7 +19,7 @@ import {
 } from 'react-native-gesture-handler';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import DropDownPicker from 'react-native-dropdown-picker';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 console.disableYellowBox = true;
@@ -27,8 +27,26 @@ console.disableYellowBox = true;
 const formatDate = (value) => {
   let day = new Date(value);
   let stringDate =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
+  // console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
+};
+
+const checkLength = (text1) => {
+  // console.log('checkLength chay');
+  // console.log('text ' + text1);
+  let text = text1 + '';
+  // console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 export default class EditCourse extends React.Component {
@@ -264,11 +282,21 @@ export default class EditCourse extends React.Component {
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.state.strDateStart}
                 </Text>
-
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="date"
@@ -305,12 +333,22 @@ export default class EditCourse extends React.Component {
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                     marginLeft: 10,
                   }}>
                   {this.state.strDateEnd}
                 </Text>
-
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
                   mode="date"
@@ -379,7 +417,7 @@ export default class EditCourse extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -390,13 +428,14 @@ export default class EditCourse extends React.Component {
                 paddingLeft: 10,
                 borderRadius: 5,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
                 zIndex: 101,
               }}
               labelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              arrowStyle={{marginBottom: 5}}
               defaultValue={this.state.buildingSelected}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
@@ -462,7 +501,7 @@ export default class EditCourse extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -474,16 +513,17 @@ export default class EditCourse extends React.Component {
                 borderRadius: 5,
                 zIndex: 99,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
               }}
               dropDownStyle={{
                 backgroundColor: '#fff',
               }}
               labelStyle={{
                 // color: 'black',
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              arrowStyle={{marginBottom: 5}}
               defaultValue={this.state.defaultRoom}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
@@ -715,6 +755,7 @@ export default class EditCourse extends React.Component {
           return {label: obj.roomName, value: obj._id};
         });
 
+        // this()
         this.setState({dataRoom: convertDataRoom});
       }
     }
@@ -755,21 +796,21 @@ const styles = StyleSheet.create({
   text: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#094c8d',
+    color: '#4b5b6b',
     marginTop: 10,
     marginBottom: 5,
   },
   text1: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#ff0303',
+    color: 'transparent',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
     borderRadius: 5,
-    color: '#3b556d',
+    color: '#4b5b6b',
     borderColor: '#c2c2c2',
     fontSize: Size.h30,
     paddingLeft: 15,
@@ -849,7 +890,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3b556d',
+    color: '#345173',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },

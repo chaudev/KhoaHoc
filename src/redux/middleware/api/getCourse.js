@@ -16,7 +16,7 @@ export async function get_Course() {
 
   return (
     await fetch(
-      'http://118.69.123.51:5000/fis/api/edu/get_all_course',
+      'http://10.86.224.37:5001/api/edu/get_all_course',
       requestOptions,
     )
   ).json();

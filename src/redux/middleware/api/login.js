@@ -1,4 +1,4 @@
-api = 'http://118.69.123.51:5000/fis/api/';
+api = 'http://10.86.224.37:5001/api/';
 
 export function postLogin(user, pass) {
   return fetch(api + 'login', {

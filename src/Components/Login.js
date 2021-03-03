@@ -67,8 +67,8 @@ export default class LoginComponent extends React.Component {
       if (this.props.data.resultCode === -1) {
         this.setState({thongBaoLoi: this.props.data.message});
         Alert.alert(
-          'Đăng nhập thất bại',
-          '\nNhập sai tài khoản hoặc mật khẩu \n\nVui lòng kiểm tra và nhập lại!',
+          'Đăng nhập không thành công',
+          '\n' + this.props.data.message,
         );
       } else if (this.props.data.resultCode === 1) {
         user_profile.token =
@@ -87,25 +87,25 @@ export default class LoginComponent extends React.Component {
           justifyContent: 'flex-end',
           alignItems: 'center',
           flexGrow: 1,
-          backgroundColor: '#f4f7fc',
+          backgroundColor: '#f4f8fb',
         }}>
         <SafeAreaView />
         <View style={style.container}>
           {/* LOGO */}
           <View style={style.logoContainer}>
             <Image
-              source={require('../res/images/ic_logo.png')}
+              source={require('../res/images/logo.png')}
               style={{
                 resizeMode: 'contain',
                 height: undefined,
-                aspectRatio: 6,
+                aspectRatio: 9,
                 marginTop: '10%',
               }}
             />
             {/* Dòng chữ */}
             <Text
               style={{
-                fontSize: Size.h42,
+                fontSize: Size.h44,
                 fontWeight: 'bold',
                 color: '#335271',
                 marginTop: '5%',

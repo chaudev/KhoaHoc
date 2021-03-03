@@ -1,8 +1,8 @@
 import {user_profile} from '../../../Components/config';
 
 export async function deleteCourseApi(course_id) {
-
-  let url = `http://118.69.123.51:5000/fis/api/edu/delete_course?courseId=${course_id.course_id}`;
+  let urlpublic = `http://118.69.123.51:5000/fis/api/edu/delete_course?courseId=${course_id.course_id}`;
+  let url = `http://10.86.224.37:5001/api/edu/delete_course?courseId=${course_id.course_id}`;
 
   var myHeaders = new Headers();
   myHeaders.append('Authorization', `Bearer ${user_profile.token}`);

@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3d5367',
+    color: '#345173',
     paddingVertical: '4%',
   },
   ContainerMenu: {

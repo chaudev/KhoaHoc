@@ -9,6 +9,7 @@ import {
   Image,
   ActivityIndicator,
   ToastAndroid,
+  AsyncStorage,
   SafeAreaView,
 } from 'react-native';
 import {
@@ -19,7 +20,7 @@ import {
 // import ionicons from 'react-native-ionicons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DropDownPicker from 'react-native-dropdown-picker';
-import Icon from 'react-native-vector-icons/AntDesign';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 console.disableYellowBox = true;
@@ -27,8 +28,26 @@ console.disableYellowBox = true;
 const formatDate = (value) => {
   let day = new Date(value);
   let stringDate =
-    day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear() + '';
+    checkLength(day.getDate()) +
+    '/' +
+    checkLength(day.getMonth() + 1) +
+    '/' +
+    day.getFullYear() +
+    '';
+  console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
+};
+
+const checkLength = (text1) => {
+  console.log('checkLength chay');
+  console.log('text ' + text1);
+  let text = text1 + '';
+  console.log('length ' + text.length);
+  if (text.length === 1) {
+    return '0' + text;
+  } else {
+    return text;
+  }
 };
 
 export default class AddCourse extends React.Component {
@@ -37,8 +56,9 @@ export default class AddCourse extends React.Component {
 
     this.state = {
       dateStart: new Date(),
-      flagDateStart: 0,
-      flagDateEnd: 0,
+      flagDateStart: 1,
+      flagDateEnd: 1,
+      flag: 0,
       dateEnd: new Date(),
       mode: 'date',
       showStart: false,
@@ -72,6 +92,7 @@ export default class AddCourse extends React.Component {
       errorRoom: false,
       modelStartVisible: false,
       modelEndVisible: false,
+      defaultRoom: '',
     };
   }
 
@@ -85,12 +106,15 @@ export default class AddCourse extends React.Component {
     });
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.props.getBuildingRoomAction();
+    this.setState({strDateStart: formatDate(this.state.dateStart)});
+    this.setState({strDateEnd: formatDate(this.state.dateEnd)});
   }
 
-  componentDidUpdate(prevProps) {
+  async componentDidUpdate(prevProps) {
     if (prevProps.data !== this.props.data) {
+      console.log('addCourse componentDidUpdate -- revProp thay doi');
       if (this.props.data.type === 'GET_BUILDING_ROOM_ERROR') {
       } else if (this.props.data.type === 'GET_BUILDING_ROOM_SUCCESS') {
         var convertDataBuilding = this.props.data.data.map(function (obj) {
@@ -98,6 +122,10 @@ export default class AddCourse extends React.Component {
         });
 
         this.setState({dataBuilding: convertDataBuilding});
+
+        const xx = await this.getRememberedBuilding();
+
+        this.setState({buildingSelected: xx}, () => this.getDataRom());
       }
     } else {
       console.log('addCourse componentDidUpdate -- revProp khong doi');
@@ -105,6 +133,8 @@ export default class AddCourse extends React.Component {
   }
 
   render() {
+    // console.log('render buildingSelected: ' + this.state.buildingSelected);
+    // console.log('render roomSelected: ' + this.state.roomSelected);
     return (
       <View style={styles.container}>
         <SafeAreaView />
@@ -216,26 +246,28 @@ export default class AddCourse extends React.Component {
                   backgroundColor: '#fff',
                   paddingVertical: 13,
                   borderColor: '#c2c2c2',
+                  alignItems: 'center',
                 }}>
                 <Text
                   style={{
                     flex: 1,
                     textAlign: 'center',
                     fontSize: Size.h30,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.state.strDateStart}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={Size.h34}
-                  color="#1f4b68"
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
                   style={{
                     marginLeft: 5,
                     marginRight: 10,
+                    marginBottom: 5,
                     justifyContent: 'flex-end',
                   }}
-                /> */}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
                   mode="date"
@@ -274,16 +306,21 @@ export default class AddCourse extends React.Component {
                     textAlign: 'center',
                     fontSize: Size.h30,
                     marginLeft: 10,
-                    color: '#3b556d',
+                    color: '#4b5b6b',
                   }}>
                   {this.state.strDateEnd}
                 </Text>
-                {/* <Icon
-                  name="down"
-                  size={Size.h34}
-                  color="#1f4b68"
-                  style={{marginLeft: 5, marginRight: 10}}
-                /> */}
+                <Icon
+                  name="sort-down"
+                  size={Size.h36}
+                  color="#4b5b6b"
+                  style={{
+                    marginLeft: 5,
+                    marginRight: 10,
+                    marginBottom: 5,
+                    justifyContent: 'flex-end',
+                  }}
+                />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
                   mode="date"
@@ -310,7 +347,6 @@ export default class AddCourse extends React.Component {
               </Text>
             )}
           </View>
-
           {/* Chọn tòa nhà */}
           <View
             style={{
@@ -352,7 +388,7 @@ export default class AddCourse extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -361,15 +397,17 @@ export default class AddCourse extends React.Component {
                 backgroundColor: '#fff',
                 marginBottom: 5,
                 paddingLeft: 10,
-                borderRadius: 5,
+                // borderRadius: 5,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
                 zIndex: 101,
               }}
               labelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.buildingSelected}
+              arrowStyle={{marginBottom: 5}}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
@@ -434,7 +472,7 @@ export default class AddCourse extends React.Component {
                 fontSize: Size.h30,
               }}
               selectedLabelStyle={{
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
               itemStyle={{
@@ -446,16 +484,18 @@ export default class AddCourse extends React.Component {
                 borderRadius: 5,
                 zIndex: 99,
                 fontSize: Size.h30,
-                color: '#3b556d',
+                color: '#4b5b6b',
               }}
               dropDownStyle={{
                 backgroundColor: '#fff',
               }}
               labelStyle={{
                 // color: 'black',
-                color: '#3b556d',
+                color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
+              defaultValue={this.state.defaultRoom}
+              arrowStyle={{marginBottom: 5}}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
@@ -506,6 +546,70 @@ export default class AddCourse extends React.Component {
       </View>
     );
   }
+
+  rememberBuilding = async () => {
+    try {
+      // console.log('rememberBuilding: ' + this.state.buildingSelected);
+      await AsyncStorage.setItem('saveBuilding', this.state.buildingSelected);
+    } catch (error) {
+      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
+    }
+  };
+
+  rememberRoom = async () => {
+    try {
+      console.log('rememberRoom: chay ' + this.state.roomSelected);
+      await AsyncStorage.setItem('saveRoom', this.state.roomSelected);
+    } catch (error) {
+      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
+    }
+  };
+
+  forgetBuilding = async () => {
+    try {
+      console.log('forgetBuilding : chay');
+      await AsyncStorage.removeItem('saveBuilding');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  forgetRoom = async () => {
+    try {
+      console.log('forgetRoom : chay');
+      await AsyncStorage.removeItem('saveRoom');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  getRememberedBuilding = async () => {
+    try {
+      const saveBuilding = await AsyncStorage.getItem('saveBuilding');
+      if (saveBuilding !== null) {
+        // We have username!!
+        return saveBuilding;
+      } else {
+        return '';
+      }
+    } catch (error) {
+      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
+    }
+  };
+
+  getRememberedRoom = async () => {
+    try {
+      const passWord = await AsyncStorage.getItem('saveRoom');
+      if (passWord !== null) {
+        // We have username!!
+        return passWord;
+      } else {
+        return '';
+      }
+    } catch (error) {
+      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
+    }
+  };
 
   // Ngay bat dau
   showDatePickerStart() {
@@ -690,31 +794,49 @@ export default class AddCourse extends React.Component {
     }
   }
 
+  async getDataRom() {
+    this.controller.state.choice.label = null;
+    this.setState({roomSelected: ''});
+    this.setState({dataRoom: []});
+    for (let i = 0; i < this.props.data.data.length; i++) {
+      if (this.props.data.data[i]._id === this.state.buildingSelected) {
+        var convertDataRoom = this.props.data.data[i].room.map(function (obj) {
+          return {label: obj.roomName, value: obj._id};
+        });
+
+        if (this.state.flag === 1) {
+          this.forgetRoom();
+        }
+
+        this.setState({dataRoom: convertDataRoom});
+      }
+    }
+
+    if (this.state.flag === 0) {
+      this.setState({flag: 1});
+
+      const xnxx = await this.getRememberedRoom();
+
+      this.setState({roomSelected: xnxx}, () => {
+        this.setState({defaultRoom: xnxx});
+      });
+    }
+  }
+
   // Chọn toàn nhà
-  onChangeDataBuilding(item) {
+  async onChangeDataBuilding(item) {
+    this.forgetBuilding();
     if (this.state.buildingSelected !== item.value) {
       this.setState({buildingSelected: item.value}, () => {
-        this.controller.state.choice.label = null;
-        this.setState({roomSelected: ''});
-        this.setState({dataRoom: []});
-        for (let i = 0; i < this.props.data.data.length; i++) {
-          if (this.props.data.data[i]._id === this.state.buildingSelected) {
-            var convertDataRoom = this.props.data.data[i].room.map(function (
-              obj,
-            ) {
-              return {label: obj.roomName, value: obj._id};
-            });
-
-            this.setState({dataRoom: convertDataRoom});
-          }
-        }
+        this.rememberBuilding();
+        this.getDataRom();
       });
     }
   }
 
   // Chọn phòng
   onChangeDataRoom(item) {
-    this.setState({roomSelected: item.value});
+    this.setState({roomSelected: item.value}, () => this.rememberRoom());
   }
 }
 
@@ -729,21 +851,21 @@ const styles = StyleSheet.create({
   text: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#094c8d',
+    color: '#4b5b6b',
     marginTop: 10,
     marginBottom: 5,
   },
   text1: {
     fontSize: Size.h36,
     fontWeight: 'bold',
-    color: '#ff0303',
+    color: 'transparent',
     marginTop: 10,
     marginBottom: 5,
   },
   input: {
     borderWidth: 1,
     borderRadius: 5,
-    color: '#3b556d',
+    color: '#4b5b6b',
     borderColor: '#c2c2c2',
     fontSize: Size.h30,
     paddingLeft: 15,
@@ -823,7 +945,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: Size.h38,
     fontWeight: 'bold',
-    color: '#3b556d',
+    color: '#345173',
     paddingVertical: '4%',
     // backgroundColor: 'red',
   },
