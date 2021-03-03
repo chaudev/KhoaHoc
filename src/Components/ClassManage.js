@@ -175,8 +175,6 @@ export default class ClassManage extends React.Component {
                 return ' - ' + aaa;
               }
             }
-          } else {
-            return '';
           }
         }
       } else {

@@ -118,7 +118,7 @@ export default class QLKhoaHocComp extends React.Component {
   getLocation(buidingID, roomID) {
     try {
       if (this.props.dataBuilding.data.length !== undefined) {
-        for (let i = 0; i < this.props.dataBuilding.data.length; i++) {
+        for (let i = 0; i <= this.props.dataBuilding.data.length; i++) {
           if (this.props.dataBuilding.data[i]._id === buidingID) {
             for (
               let j = 0;
@@ -130,8 +130,6 @@ export default class QLKhoaHocComp extends React.Component {
                 return ' - ' + aaa;
               }
             }
-          } else {
-            return '';
           }
         }
       } else {
