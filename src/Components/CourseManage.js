@@ -30,15 +30,11 @@ const formatDate = (value) => {
     '/' +
     day.getFullYear() +
     '';
-  // console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
 };
 
 const checkLength = (text1) => {
-  // console.log('checkLength chay');
-  // console.log('text ' + text1);
   let text = text1 + '';
-  // console.log('length ' + text.length);
   if (text.length === 1) {
     return '0' + text;
   } else {

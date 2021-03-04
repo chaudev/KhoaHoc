@@ -35,15 +35,11 @@ const formatDate = (value) => {
     '/' +
     day.getFullYear() +
     '';
-  // console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
 };
 
 const checkLength = (text1) => {
-  // console.log('checkLength chay');
-  // console.log('text ' + text1);
   let text = text1 + '';
-  // console.log('length ' + text.length);
   if (text.length === 1) {
     return '0' + text;
   } else {
@@ -568,7 +564,7 @@ export default class ClassManage extends React.Component {
             </View>
             <View
               style={{
-                flex: 4,
+                flex: 3,
                 alignItems: 'center',
                 borderRadius: 50,
                 backgroundColor: '#e7ebee',

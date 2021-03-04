@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>QLKH.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>9349CC69D8C4535017FBFAC0FE570955D2DBE888</string>
+				<key>dateExpires</key>
+				<string>08/02/2023</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>537V83MWQH.fis.tdc.QLKH</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>537V83MWQH</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>537V83MWQH.fis.tdc.QLKH</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>QLKH.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>4c0766d9-5489-4103-9eb3-c91740f034e1</string>
+				<key>name</key>
+				<string>iOS Team Inhouse Provisioning Profile: fis.tdc.QLKH</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>537V83MWQH</string>
+				<key>name</key>
+				<string>FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

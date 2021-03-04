@@ -1,0 +1,893 @@
+2021-03-03 14:57:57 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7f8fb9ff82b0; archive(resolved)='<IDEArchive: 0x7f8f694a1870>', distributionTask(resolved)='2', distributionDestination(resolved)='1', distributionMethod(resolved)='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	Chain (14, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7f8fb9ff82b0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7f8fae0764e0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8f70866a10; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8fba25a3d0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8fba285020; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8f6fa33e40; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8f6f967af0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8fba261190; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8f6f49a1f0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7f8ff7a88d70; teamID='537V83MWQH', teamName='FPT TECHNOLOGY SOLUTIONS COMPANY LIMITED', teamType='Enterprise', username='linhtn23@fpt.com.vn', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7f8fba24dd60; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='(null)'>
+	<IDEDistributionContext: 0x7f8fba20eed0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='(null)'>
+	<IDEDistributionContext: 0x7f8fba261a50; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='(null)'>
+	<IDEDistributionContext: 0x7f8f706cfd20; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='<IDEDistributionMethodiOSEnterprise: 0x7f8fba315540>', team='(null)'>
+	<IDEDistributionContext: 0x7f8fba1702c0; archive = '<IDEArchive: 0x7f8f694a1870>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7f8fb9ff82b0>
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionCreateDestRootStep
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionCopyItemStep
+2021-03-03 14:57:57 +0000  Running /usr/bin/ditto '-V' '/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app'
+2021-03-03 14:57:57 +0000  >>> Copying /Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app 
+2021-03-03 14:57:57 +0000  copying file ./_CodeSignature/CodeResources ... 
+2021-03-03 14:57:57 +0000  27504 bytes for ./_CodeSignature/CodeResources
+2021-03-03 14:57:57 +0000  copying file ./Fontisto.ttf ... 
+2021-03-03 14:57:57 +0000  313528 bytes for ./Fontisto.ttf
+copying file ./Octicons.ttf ... 
+2021-03-03 14:57:57 +0000  28364 bytes for ./Octicons.ttf
+copying file ./Feather.ttf ... 
+2021-03-03 14:57:57 +0000  56024 bytes for ./Feather.ttf
+copying file ./AppIcon20x20@2x.png ... 
+2021-03-03 14:57:57 +0000  1638 bytes for ./AppIcon20x20@2x.png
+copying file ./Entypo.ttf ... 
+2021-03-03 14:57:57 +0000  65584 bytes for ./Entypo.ttf
+copying file ./AppIcon20x20@3x.png ... 
+2021-03-03 14:57:57 +0000  2606 bytes for ./AppIcon20x20@3x.png
+copying file ./FontAwesome5_Brands.ttf ... 
+2021-03-03 14:57:57 +0000  132728 bytes for ./FontAwesome5_Brands.ttf
+copying file ./AppIcon29x29.png ... 
+2021-03-03 14:57:57 +0000  1152 bytes for ./AppIcon29x29.png
+copying file ./MaterialCommunityIcons.ttf ... 
+2021-03-03 14:57:57 +0000  899432 bytes for ./MaterialCommunityIcons.ttf
+copying file ./AppIcon60x60@2x.png ... 
+2021-03-03 14:57:57 +0000  5533 bytes for ./AppIcon60x60@2x.png
+copying file ./AppIcon29x29@2x.png ... 
+2021-03-03 14:57:57 +0000  2498 bytes for ./AppIcon29x29@2x.png
+copying file ./AntDesign.ttf ... 
+2021-03-03 14:57:57 +0000  70344 bytes for ./AntDesign.ttf
+copying file ./AppIcon40x40@3x.png ... 
+2021-03-03 14:57:57 +0000  5533 bytes for ./AppIcon40x40@3x.png
+copying file ./Foundation.ttf ... 
+2021-03-03 14:57:57 +0000  56976 bytes for ./Foundation.ttf
+copying file ./AppIcon29x29~ipad.png ... 
+2021-03-03 14:57:57 +0000  1152 bytes for ./AppIcon29x29~ipad.png
+copying file ./Ionicons.ttf ... 
+2021-03-03 14:57:57 +0000  247192 bytes for ./Ionicons.ttf
+copying file ./FontAwesome5_Solid.ttf ... 
+2021-03-03 14:57:57 +0000  202616 bytes for ./FontAwesome5_Solid.ttf
+copying file ./QLKH ... 
+2021-03-03 14:57:57 +0000  43729856 bytes for ./QLKH
+copying file ./AppIcon40x40@2x.png ... 
+2021-03-03 14:57:57 +0000  3792 bytes for ./AppIcon40x40@2x.png
+copying file ./FontAwesome5_Regular.ttf ... 
+2021-03-03 14:57:57 +0000  34092 bytes for ./FontAwesome5_Regular.ttf
+copying file ./AppIcon29x29@3x.png ... 
+2021-03-03 14:57:57 +0000  3998 bytes for ./AppIcon29x29@3x.png
+2021-03-03 14:57:57 +0000  copying file ./AccessibilityResources.bundle/en.lproj/Localizable.strings ... 
+2021-03-03 14:57:57 +0000  530 bytes for ./AccessibilityResources.bundle/en.lproj/Localizable.strings
+2021-03-03 14:57:57 +0000  copying file ./AccessibilityResources.bundle/Info.plist ... 
+2021-03-03 14:57:57 +0000  743 bytes for ./AccessibilityResources.bundle/Info.plist
+2021-03-03 14:57:57 +0000  copying file ./AppIcon60x60@3x.png ... 
+2021-03-03 14:57:57 +0000  8036 bytes for ./AppIcon60x60@3x.png
+copying file ./FontAwesome.ttf ... 
+2021-03-03 14:57:57 +0000  165548 bytes for ./FontAwesome.ttf
+copying file ./Zocial.ttf ... 
+2021-03-03 14:57:57 +0000  25552 bytes for ./Zocial.ttf
+copying file ./Assets.car ... 
+2021-03-03 14:57:57 +0000  122584 bytes for ./Assets.car
+copying file ./AppIcon40x40@2x~ipad.png ... 
+2021-03-03 14:57:57 +0000  3792 bytes for ./AppIcon40x40@2x~ipad.png
+copying file ./EvilIcons.ttf ... 
+2021-03-03 14:57:57 +0000  13456 bytes for ./EvilIcons.ttf
+copying file ./AppIcon76x76@2x~ipad.png ... 
+2021-03-03 14:57:57 +0000  6927 bytes for ./AppIcon76x76@2x~ipad.png
+copying file ./main.jsbundle ... 
+2021-03-03 14:57:57 +0000  1634246 bytes for ./main.jsbundle
+copying file ./AppIcon83.5x83.5@2x~ipad.png ... 
+2021-03-03 14:57:57 +0000  7500 bytes for ./AppIcon83.5x83.5@2x~ipad.png
+copying file ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib ... 
+2021-03-03 14:57:57 +0000  4136 bytes for ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib
+copying file ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2021-03-03 14:57:57 +0000  4254 bytes for ./LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+2021-03-03 14:57:57 +0000  copying file ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib ... 
+2021-03-03 14:57:57 +0000  896 bytes for ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib
+copying file ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2021-03-03 14:57:57 +0000  896 bytes for ./LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+2021-03-03 14:57:57 +0000  copying file ./LaunchScreen.storyboardc/Info.plist ... 
+2021-03-03 14:57:57 +0000  258 bytes for ./LaunchScreen.storyboardc/Info.plist
+copying file ./AppIcon29x29@2x~ipad.png ... 
+2021-03-03 14:57:57 +0000  2498 bytes for ./AppIcon29x29@2x~ipad.png
+copying file ./AppIcon40x40~ipad.png ... 
+2021-03-03 14:57:57 +0000  1638 bytes for ./AppIcon40x40~ipad.png
+2021-03-03 14:57:57 +0000  copying file ./Frameworks/libswiftCoreImage.dylib ... 
+2021-03-03 14:57:57 +0000  466560 bytes for ./Frameworks/libswiftCoreImage.dylib
+copying file ./Frameworks/libswiftObjectiveC.dylib ... 
+2021-03-03 14:57:57 +0000  679680 bytes for ./Frameworks/libswiftObjectiveC.dylib
+copying file ./Frameworks/libswiftCore.dylib ... 
+2021-03-03 14:57:57 +0000  95497584 bytes for ./Frameworks/libswiftCore.dylib
+copying file ./Frameworks/libswiftCoreGraphics.dylib ... 
+2021-03-03 14:57:57 +0000  2041040 bytes for ./Frameworks/libswiftCoreGraphics.dylib
+copying file ./Frameworks/libswiftUIKit.dylib ... 
+2021-03-03 14:57:57 +0000  1608800 bytes for ./Frameworks/libswiftUIKit.dylib
+copying file ./Frameworks/libswiftMetal.dylib ... 
+2021-03-03 14:57:57 +0000  724416 bytes for ./Frameworks/libswiftMetal.dylib
+copying file ./Frameworks/libswiftDispatch.dylib ... 
+2021-03-03 14:57:57 +0000  4056896 bytes for ./Frameworks/libswiftDispatch.dylib
+copying file ./Frameworks/libswiftos.dylib ... 
+2021-03-03 14:57:57 +0000  857184 bytes for ./Frameworks/libswiftos.dylib
+copying file ./Frameworks/libswiftCoreFoundation.dylib ... 
+2021-03-03 14:57:57 +0000  450384 bytes for ./Frameworks/libswiftCoreFoundation.dylib
+copying file ./Frameworks/libswiftDarwin.dylib ... 
+2021-03-03 14:57:57 +0000  1091440 bytes for ./Frameworks/libswiftDarwin.dylib
+copying file ./Frameworks/libswiftQuartzCore.dylib ... 
+2021-03-03 14:57:57 +0000  486336 bytes for ./Frameworks/libswiftQuartzCore.dylib
+copying file ./Frameworks/libswiftFoundation.dylib ... 
+2021-03-03 14:57:57 +0000  43094320 bytes for ./Frameworks/libswiftFoundation.dylib
+copying file ./AppIcon20x20~ipad.png ... 
+2021-03-03 14:57:57 +0000  780 bytes for ./AppIcon20x20~ipad.png
+copying file ./SimpleLineIcons.ttf ... 
+2021-03-03 14:57:57 +0000  54056 bytes for ./SimpleLineIcons.ttf
+copying file ./embedded.mobileprovision ... 
+2021-03-03 14:57:57 +0000  104180 bytes for ./embedded.mobileprovision
+2021-03-03 14:57:57 +0000  copying file ./assets/app.json ... 
+2021-03-03 14:57:57 +0000  45 bytes for ./assets/app.json
+2021-03-03 14:57:57 +0000  copying file ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@3x.png ... 
+2021-03-03 14:57:57 +0000  761 bytes for ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@3x.png
+copying file ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@2x.png ... 
+2021-03-03 14:57:57 +0000  405 bytes for ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@2x.png
+copying file ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon.png ... 
+2021-03-03 14:57:57 +0000  290 bytes for ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon.png
+copying file ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon-mask.png ... 
+2021-03-03 14:57:57 +0000  913 bytes for ./assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon-mask.png
+2021-03-03 14:57:57 +0000  copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json ... 
+2021-03-03 14:57:57 +0000  106287 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json ... 
+2021-03-03 14:57:57 +0000  27903 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json ... 
+2021-03-03 14:57:57 +0000  38522 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json ... 
+2021-03-03 14:57:57 +0000  6303 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json ... 
+2021-03-03 14:57:57 +0000  32278 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json ... 
+2021-03-03 14:57:57 +0000  6080 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json
+copying file ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json ... 
+2021-03-03 14:57:57 +0000  151816 bytes for ./assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json
+2021-03-03 14:57:57 +0000  copying file ./assets/src/res/images/info.png ... 
+2021-03-03 14:57:57 +0000  5311 bytes for ./assets/src/res/images/info.png
+copying file ./assets/src/res/images/ic_fis.png ... 
+2021-03-03 14:57:57 +0000  10028 bytes for ./assets/src/res/images/ic_fis.png
+copying file ./assets/src/res/images/ic_avatar.png ... 
+2021-03-03 14:57:57 +0000  9522 bytes for ./assets/src/res/images/ic_avatar.png
+copying file ./assets/src/res/images/swipe.png ... 
+2021-03-03 14:57:57 +0000  28672 bytes for ./assets/src/res/images/swipe.png
+copying file ./assets/src/res/images/logo.png ... 
+2021-03-03 14:57:57 +0000  64989 bytes for ./assets/src/res/images/logo.png
+copying file ./assets/src/res/images/ic_logo.png ... 
+2021-03-03 14:57:57 +0000  27420 bytes for ./assets/src/res/images/ic_logo.png
+copying file ./assets/src/res/images/ao.png ... 
+2021-03-03 14:57:57 +0000  2314 bytes for ./assets/src/res/images/ao.png
+copying file ./assets/src/res/images/ic_menu.png ... 
+2021-03-03 14:57:57 +0000  2083 bytes for ./assets/src/res/images/ic_menu.png
+copying file ./assets/src/res/images/more.png ... 
+2021-03-03 14:57:57 +0000  5360 bytes for ./assets/src/res/images/more.png
+copying file ./assets/src/res/images/stripe.png ... 
+2021-03-03 14:57:57 +0000  337 bytes for ./assets/src/res/images/stripe.png
+2021-03-03 14:57:57 +0000  copying file ./AppIcon20x20@2x~ipad.png ... 
+2021-03-03 14:57:57 +0000  1638 bytes for ./AppIcon20x20@2x~ipad.png
+copying file ./Info.plist ... 
+2021-03-03 14:57:57 +0000  1847 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2021-03-03 14:57:57 +0000  8 bytes for ./PkgInfo
+copying file ./MaterialIcons.ttf ... 
+2021-03-03 14:57:57 +0000  230384 bytes for ./MaterialIcons.ttf
+copying file ./AppIcon76x76~ipad.png ... 
+2021-03-03 14:57:57 +0000  3548 bytes for ./AppIcon76x76~ipad.png
+2021-03-03 14:57:57 +0000  /usr/bin/ditto exited with 0
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionEmbedProfileStep
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70554e50; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705d6670; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f90211d8600>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70566480; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6f89b470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f902114a2e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70883760; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90133c1c70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f749393d0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f7056b450; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9023f396a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f749869f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f705c75a0; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8ff6ab78b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f736ba5b0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8fe0ac1420; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fe616b6f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fb6db2960>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70593e40; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90049d03c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f90349dc060>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70818180; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fc6d402f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f901438fbe0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f7089c970; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7066ff50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe271e540>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70828260; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7058dc80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6678f5e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f7325c4a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70610e60; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fb9d5cda0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f74995c30>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Skipping profile for item: <IDEDistributionItem: 0x7f8f70824160; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6ef34e00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f749376f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionInfoPlistStep
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/QLKH' '-r' '-o' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/QLKH'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip exited with 0
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionCopyBCSymbolMapsStep because it said so
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionSymbolsStep
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionAppThinningStep
+2021-03-03 14:57:57 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2021-03-03 14:57:57 +0000  Processing step: IDEDistributionArchThinningStep
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftCore.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftCoreFoundation.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftCoreGraphics.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftCoreImage.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftDarwin.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftDispatch.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftFoundation.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftMetal.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftObjectiveC.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftQuartzCore.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib'
+2021-03-03 14:57:57 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:57 +0000  Successfully thinned item "libswiftUIKit.dylib", arch "arm64e"
+2021-03-03 14:57:57 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib' '-verify_arch' 'arm64e'
+2021-03-03 14:57:58 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:58 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib' '-remove' 'arm64e' '-output' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib'
+2021-03-03 14:57:58 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 0
+2021-03-03 14:57:58 +0000  Successfully thinned item "libswiftos.dylib", arch "arm64e"
+2021-03-03 14:57:58 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/QLKH' '-verify_arch' 'arm64e'
+2021-03-03 14:57:58 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2021-03-03 14:57:58 +0000  Skipping architecture thinning for item "QLKH" because arch "arm64e" wasn't found
+2021-03-03 14:57:58 +0000  Processing step: IDEDistributionODRStep
+2021-03-03 14:57:58 +0000  Processing step: IDEDistributionStripXattrsStep
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70554e50; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705d6670; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe6348b70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70566480; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6f89b470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f90133e24a0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70883760; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90133c1c70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe74c1cf0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f7056b450; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9023f396a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013380730>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f705c75a0; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8ff6ab78b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013380730>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8fe0ac1420; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fe616b6f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013389ec0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70593e40; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90049d03c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe749ae30>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70818180; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fc6d402f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013393bd0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f7089c970; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7066ff50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013389ec0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70828260; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7058dc80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fba55c4e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70610e60; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fb9d5cda0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9013393bd0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Skipping stripping extended attributes of item: <IDEDistributionItem: 0x7f8f70824160; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6ef34e00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f7497fd10>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>
+2021-03-03 14:57:58 +0000  Running /usr/bin/xattr '-crs' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app'
+2021-03-03 14:57:58 +0000  /usr/bin/xattr exited with 0
+2021-03-03 14:57:58 +0000  Processing step: IDEDistributionCodesignStep
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70554e50; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705d6670; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9021148e40; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f74938be0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70554e50; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705d6670; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fba350740; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a0f210>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:58 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70554e50; bundleID='com.apple.dt.runtime.swiftCore', path='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705d6670; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f70432ed0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe0ee40>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCore', executablePath='<DVTFilePath:0x7f8f6f5ac510:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCore.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~YUHJKa
+2021-03-03 14:57:58 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~YUHJKa' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib'
+2021-03-03 14:57:58 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCore]
+2021-03-03 14:57:58 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70566480; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6f89b470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9021148e40; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f90136ded20>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70566480; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6f89b470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f90215f5850; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe22a70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:58 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70566480; bundleID='com.apple.dt.runtime.swiftCoreFoundation', path='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6f89b470; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704c8b70; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a4ad80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreFoundation', executablePath='<DVTFilePath:0x7f8f6f4a79a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~u7QrXM
+2021-03-03 14:57:58 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~u7QrXM' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'
+2021-03-03 14:57:58 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreFoundation]
+2021-03-03 14:57:58 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70883760; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90133c1c70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fba350740; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024ab5e70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:58 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70883760; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90133c1c70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f66a85c20; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fc699d3f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:58 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70883760; bundleID='com.apple.dt.runtime.swiftCoreGraphics', path='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90133c1c70; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f70552570; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fc69cd210>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreGraphics', executablePath='<DVTFilePath:0x7f8fba359680:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~UFC8m6
+2021-03-03 14:57:58 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~UFC8m6' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'
+2021-03-03 14:57:58 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreGraphics]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7056b450; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9023f396a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fba350740; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a7c900>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7056b450; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9023f396a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704ce1e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fc69fb8e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f7056b450; bundleID='com.apple.dt.runtime.swiftCoreImage', path='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f9023f396a0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fb9d623e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fc69f8f80>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftCoreImage', executablePath='<DVTFilePath:0x7f8f6fd0e410:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftCoreImage.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~6ZYJ95
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~6ZYJ95' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftCoreImage]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f705c75a0; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8ff6ab78b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f74914300>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f705c75a0; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8ff6ab78b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6f8dbc10; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff4e7ef00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f705c75a0; bundleID='com.apple.dt.runtime.swiftDarwin', path='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8ff6ab78b0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f70414780; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a71ae0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDarwin', executablePath='<DVTFilePath:0x7f8f6f4ae600:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDarwin.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~EfwYyZ
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~EfwYyZ' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDarwin]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8fe0ac1420; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fe616b6f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9023c5e110; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6a77ba0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8fe0ac1420; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fe616b6f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6f8dbc10; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe09f00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8fe0ac1420; bundleID='com.apple.dt.runtime.swiftDispatch', path='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fe616b6f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704d1710; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a1afe0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftDispatch', executablePath='<DVTFilePath:0x7f8f6f4ad530:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftDispatch.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~mrzYit
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~mrzYit' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftDispatch]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70593e40; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90049d03c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9023c5e110; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6a771f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70593e40; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90049d03c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fb9feb8c0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f74914300>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70593e40; bundleID='com.apple.dt.runtime.swiftFoundation', path='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f90049d03c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fba350740; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff31ec860>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftFoundation', executablePath='<DVTFilePath:0x7f8f6f4b7000:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftFoundation.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~NfPk6i
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~NfPk6i' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftFoundation]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70818180; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fc6d402f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fe6406400; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f74938920>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70818180; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fc6d402f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f90139b1270; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff4ef9a50>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70818180; bundleID='com.apple.dt.runtime.swiftMetal', path='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fc6d402f0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f70540bd0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024ac5040>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftMetal', executablePath='<DVTFilePath:0x7f8f73116110:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftMetal.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~Cgtvdm
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~Cgtvdm' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftMetal]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7089c970; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7066ff50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9023c5e110; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6a4ae10>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7089c970; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7066ff50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f90139b1270; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe22a70>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f7089c970; bundleID='com.apple.dt.runtime.swiftObjectiveC', path='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7066ff50; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f705be880; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a97a90>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftObjectiveC', executablePath='<DVTFilePath:0x7f8f6ef5ead0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~sJRuwL
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~sJRuwL' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib'
+2021-03-03 14:57:59 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftObjectiveC]
+2021-03-03 14:57:59 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70828260; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7058dc80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9023c5e110; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6a14690>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:57:59 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70828260; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7058dc80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f90139b1270; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff4e31ae0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:57:59 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70828260; bundleID='com.apple.dt.runtime.swiftQuartzCore', path='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f7058dc80; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704d4010; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a88bb0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftQuartzCore', executablePath='<DVTFilePath:0x7f8f6f4b4c00:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~5Bproo
+2021-03-03 14:57:59 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~5Bproo' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib'
+2021-03-03 14:58:00 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftQuartzCore]
+2021-03-03 14:58:00 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70610e60; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fb9d5cda0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9023c5e110; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6a1d6e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70610e60; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fb9d5cda0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f90139b1270; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe09f00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:58:00 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70610e60; bundleID='com.apple.dt.runtime.swiftUIKit', path='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8fb9d5cda0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704d11e0; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024ac22f0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftUIKit', executablePath='<DVTFilePath:0x7f8f6f5e0960:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftUIKit.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~9dij3M
+2021-03-03 14:58:00 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~9dij3M' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib'
+2021-03-03 14:58:00 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftUIKit]
+2021-03-03 14:58:00 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70824160; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6ef34e00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6f1cf770; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe7066d00>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'>: {
+}
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f70824160; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6ef34e00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6f8dbc10; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6eb0a6c0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'> are: {
+}
+2021-03-03 14:58:00 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f70824160; bundleID='com.apple.dt.runtime.swiftos', path='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f6ef34e00; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f704bef40; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f9024a1afe0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='(null)', teamID='537V83MWQH', identifier='com.apple.dt.runtime.swiftos', executablePath='<DVTFilePath:0x7f90120ab860:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/Frameworks/libswiftos.dylib'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~NWj5XW
+2021-03-03 14:58:00 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~NWj5XW' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib'
+2021-03-03 14:58:00 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib: signed Mach-O universal (armv7 armv7s arm64) [com.apple.dt.runtime.swiftos]
+2021-03-03 14:58:00 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7054a140; bundleID='fis.tdc.QLKH', path='<DVTFilePath:0x7f8f6fe226a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705436c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f9033c28800; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8ff6aca430>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='{
+    "application-identifier" = "537V83MWQH.fis.tdc.QLKH";
+    "com.apple.developer.team-identifier" = 537V83MWQH;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "537V83MWQH.fis.tdc.QLKH"
+    );
+}', teamID='537V83MWQH', identifier='fis.tdc.QLKH', executablePath='<DVTFilePath:0x7f8f6fd28050:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/QLKH'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "537V83MWQH.fis.tdc.QLKH";
+    "com.apple.developer.team-identifier" = 537V83MWQH;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "537V83MWQH.fis.tdc.QLKH"
+    );
+}
+2021-03-03 14:58:00 +0000  Entitlements for <IDEDistributionItem: 0x7f8f7054a140; bundleID='fis.tdc.QLKH', path='<DVTFilePath:0x7f8f6fe226a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705436c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8fb9fab490; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8fe7543b50>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='{
+    "application-identifier" = "537V83MWQH.fis.tdc.QLKH";
+    "com.apple.developer.team-identifier" = 537V83MWQH;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "537V83MWQH.fis.tdc.QLKH"
+    );
+}', teamID='537V83MWQH', identifier='fis.tdc.QLKH', executablePath='<DVTFilePath:0x7f8f6fd28050:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/QLKH'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "537V83MWQH.fis.tdc.QLKH";
+    "com.apple.developer.team-identifier" = 537V83MWQH;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "537V83MWQH.fis.tdc.QLKH"
+    );
+}
+2021-03-03 14:58:00 +0000  Writing entitlements for <IDEDistributionItem: 0x7f8f7054a140; bundleID='fis.tdc.QLKH', path='<DVTFilePath:0x7f8f6fe226a0:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7f8f705436c0; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7f8f6f8dbc10; name='Apple Development: LInh Tran (DCU56H8GZX)', hash='012958FB37638012CEAE702355FBD487741D45DD', serialNumber='<DVTSigningCertificateSerialNumber: 0x7f8f6fe082e0>', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2020-08-17 05:35:39 +0000''>', entitlements='{
+    "application-identifier" = "537V83MWQH.fis.tdc.QLKH";
+    "com.apple.developer.team-identifier" = 537V83MWQH;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "537V83MWQH.fis.tdc.QLKH"
+    );
+}', teamID='537V83MWQH', identifier='fis.tdc.QLKH', executablePath='<DVTFilePath:0x7f8f6fd28050:'/Users/hcmtdc/Library/Developer/Xcode/Archives/2021-03-03/QLKH 03-03-2021, 21.56.xcarchive/Products/Applications/QLKH.app/QLKH'>', hardenedRuntime='0'>'> to: /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~g0yCNw
+2021-03-03 14:58:00 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '9349CC69D8C4535017FBFAC0FE570955D2DBE888' '--entitlements' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/entitlements~~~g0yCNw' '--preserve-metadata=identifier,flags,runtime' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app'
+2021-03-03 14:58:00 +0000  /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app: signed app bundle with Mach-O universal (armv7 arm64) [fis.tdc.QLKH]
+2021-03-03 14:58:00 +0000  /usr/bin/codesign exited with 0
+2021-03-03 14:58:00 +0000  Processing step: IDEDistributionZipODRItemStep
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2021-03-03 14:58:00 +0000  Processing step: IDEDistributionCreateIPAStep
+2021-03-03 14:58:00 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root' '/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Packages/QLKH.ipa'
+2021-03-03 14:58:00 +0000  >>> Copying /var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root 
+2021-03-03 14:58:00 +0000  copying file ./Payload/QLKH.app/_CodeSignature/CodeResources ... 
+2021-03-03 14:58:00 +0000  27504 bytes for ./Payload/QLKH.app/_CodeSignature/CodeResources
+copying file ./Payload/QLKH.app/Fontisto.ttf ... 
+2021-03-03 14:58:00 +0000  313528 bytes for ./Payload/QLKH.app/Fontisto.ttf
+copying file ./Payload/QLKH.app/Octicons.ttf ... 
+2021-03-03 14:58:00 +0000  28364 bytes for ./Payload/QLKH.app/Octicons.ttf
+copying file ./Payload/QLKH.app/Feather.ttf ... 
+2021-03-03 14:58:00 +0000  56024 bytes for ./Payload/QLKH.app/Feather.ttf
+copying file ./Payload/QLKH.app/AppIcon20x20@2x.png ... 
+2021-03-03 14:58:00 +0000  1638 bytes for ./Payload/QLKH.app/AppIcon20x20@2x.png
+copying file ./Payload/QLKH.app/Entypo.ttf ... 
+2021-03-03 14:58:00 +0000  65584 bytes for ./Payload/QLKH.app/Entypo.ttf
+copying file ./Payload/QLKH.app/AppIcon20x20@3x.png ... 
+2021-03-03 14:58:00 +0000  2606 bytes for ./Payload/QLKH.app/AppIcon20x20@3x.png
+copying file ./Payload/QLKH.app/FontAwesome5_Brands.ttf ... 
+2021-03-03 14:58:00 +0000  132728 bytes for ./Payload/QLKH.app/FontAwesome5_Brands.ttf
+copying file ./Payload/QLKH.app/AppIcon29x29.png ... 
+2021-03-03 14:58:00 +0000  1152 bytes for ./Payload/QLKH.app/AppIcon29x29.png
+copying file ./Payload/QLKH.app/MaterialCommunityIcons.ttf ... 
+2021-03-03 14:58:00 +0000  899432 bytes for ./Payload/QLKH.app/MaterialCommunityIcons.ttf
+copying file ./Payload/QLKH.app/AppIcon60x60@2x.png ... 
+2021-03-03 14:58:00 +0000  5533 bytes for ./Payload/QLKH.app/AppIcon60x60@2x.png
+copying file ./Payload/QLKH.app/AppIcon29x29@2x.png ... 
+2021-03-03 14:58:00 +0000  2498 bytes for ./Payload/QLKH.app/AppIcon29x29@2x.png
+copying file ./Payload/QLKH.app/AntDesign.ttf ... 
+2021-03-03 14:58:00 +0000  70344 bytes for ./Payload/QLKH.app/AntDesign.ttf
+copying file ./Payload/QLKH.app/AppIcon40x40@3x.png ... 
+2021-03-03 14:58:00 +0000  5533 bytes for ./Payload/QLKH.app/AppIcon40x40@3x.png
+copying file ./Payload/QLKH.app/Foundation.ttf ... 
+2021-03-03 14:58:00 +0000  56976 bytes for ./Payload/QLKH.app/Foundation.ttf
+copying file ./Payload/QLKH.app/AppIcon29x29~ipad.png ... 
+2021-03-03 14:58:00 +0000  1152 bytes for ./Payload/QLKH.app/AppIcon29x29~ipad.png
+copying file ./Payload/QLKH.app/Ionicons.ttf ... 
+2021-03-03 14:58:00 +0000  247192 bytes for ./Payload/QLKH.app/Ionicons.ttf
+copying file ./Payload/QLKH.app/FontAwesome5_Solid.ttf ... 
+2021-03-03 14:58:00 +0000  202616 bytes for ./Payload/QLKH.app/FontAwesome5_Solid.ttf
+copying file ./Payload/QLKH.app/QLKH ... 
+2021-03-03 14:58:01 +0000  5530400 bytes for ./Payload/QLKH.app/QLKH
+copying file ./Payload/QLKH.app/AppIcon40x40@2x.png ... 
+2021-03-03 14:58:01 +0000  3792 bytes for ./Payload/QLKH.app/AppIcon40x40@2x.png
+copying file ./Payload/QLKH.app/FontAwesome5_Regular.ttf ... 
+2021-03-03 14:58:01 +0000  34092 bytes for ./Payload/QLKH.app/FontAwesome5_Regular.ttf
+copying file ./Payload/QLKH.app/AppIcon29x29@3x.png ... 
+2021-03-03 14:58:01 +0000  3998 bytes for ./Payload/QLKH.app/AppIcon29x29@3x.png
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/AccessibilityResources.bundle/en.lproj/Localizable.strings ... 
+530 bytes for ./Payload/QLKH.app/AccessibilityResources.bundle/en.lproj/Localizable.strings
+copying file ./Payload/QLKH.app/AccessibilityResources.bundle/Info.plist ... 
+2021-03-03 14:58:01 +0000  743 bytes for ./Payload/QLKH.app/AccessibilityResources.bundle/Info.plist
+copying file ./Payload/QLKH.app/AppIcon60x60@3x.png ... 
+2021-03-03 14:58:01 +0000  8036 bytes for ./Payload/QLKH.app/AppIcon60x60@3x.png
+copying file ./Payload/QLKH.app/FontAwesome.ttf ... 
+2021-03-03 14:58:01 +0000  165548 bytes for ./Payload/QLKH.app/FontAwesome.ttf
+copying file ./Payload/QLKH.app/Zocial.ttf ... 
+2021-03-03 14:58:01 +0000  25552 bytes for ./Payload/QLKH.app/Zocial.ttf
+copying file ./Payload/QLKH.app/Assets.car ... 
+2021-03-03 14:58:01 +0000  122584 bytes for ./Payload/QLKH.app/Assets.car
+copying file ./Payload/QLKH.app/AppIcon40x40@2x~ipad.png ... 
+2021-03-03 14:58:01 +0000  3792 bytes for ./Payload/QLKH.app/AppIcon40x40@2x~ipad.png
+copying file ./Payload/QLKH.app/EvilIcons.ttf ... 
+2021-03-03 14:58:01 +0000  13456 bytes for ./Payload/QLKH.app/EvilIcons.ttf
+copying file ./Payload/QLKH.app/AppIcon76x76@2x~ipad.png ... 
+2021-03-03 14:58:01 +0000  6927 bytes for ./Payload/QLKH.app/AppIcon76x76@2x~ipad.png
+copying file ./Payload/QLKH.app/main.jsbundle ... 
+2021-03-03 14:58:01 +0000  1634246 bytes for ./Payload/QLKH.app/main.jsbundle
+copying file ./Payload/QLKH.app/AppIcon83.5x83.5@2x~ipad.png ... 
+2021-03-03 14:58:01 +0000  7500 bytes for ./Payload/QLKH.app/AppIcon83.5x83.5@2x~ipad.png
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib ... 
+2021-03-03 14:58:01 +0000  4136 bytes for ./Payload/QLKH.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-11.0+.nib
+copying file ./Payload/QLKH.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2021-03-03 14:58:01 +0000  4254 bytes for ./Payload/QLKH.app/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+copying file ./Payload/QLKH.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib ... 
+2021-03-03 14:58:01 +0000  896 bytes for ./Payload/QLKH.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-11.0+.nib
+copying file ./Payload/QLKH.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2021-03-03 14:58:01 +0000  896 bytes for ./Payload/QLKH.app/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/QLKH.app/LaunchScreen.storyboardc/Info.plist
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/AppIcon29x29@2x~ipad.png ... 
+2498 bytes for ./Payload/QLKH.app/AppIcon29x29@2x~ipad.png
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/AppIcon40x40~ipad.png ... 
+2021-03-03 14:58:01 +0000  1638 bytes for ./Payload/QLKH.app/AppIcon40x40~ipad.png
+copying file ./Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib ... 
+2021-03-03 14:58:01 +0000  253664 bytes for ./Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib ... 
+2021-03-03 14:58:01 +0000  302656 bytes for ./Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftCore.dylib ... 
+2021-03-03 14:58:01 +0000  16915056 bytes for ./Payload/QLKH.app/Frameworks/libswiftCore.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib ... 
+2021-03-03 14:58:01 +0000  646864 bytes for ./Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftUIKit.dylib ... 
+2021-03-03 14:58:01 +0000  477168 bytes for ./Payload/QLKH.app/Frameworks/libswiftUIKit.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftMetal.dylib ... 
+2021-03-03 14:58:01 +0000  298112 bytes for ./Payload/QLKH.app/Frameworks/libswiftMetal.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftDispatch.dylib ... 
+2021-03-03 14:58:01 +0000  1018928 bytes for ./Payload/QLKH.app/Frameworks/libswiftDispatch.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftos.dylib ... 
+2021-03-03 14:58:01 +0000  299440 bytes for ./Payload/QLKH.app/Frameworks/libswiftos.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib ... 
+2021-03-03 14:58:01 +0000  253808 bytes for ./Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftDarwin.dylib ... 
+2021-03-03 14:58:01 +0000  369744 bytes for ./Payload/QLKH.app/Frameworks/libswiftDarwin.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib ... 
+2021-03-03 14:58:01 +0000  256880 bytes for ./Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib
+copying file ./Payload/QLKH.app/Frameworks/libswiftFoundation.dylib ... 
+2021-03-03 14:58:01 +0000  8479568 bytes for ./Payload/QLKH.app/Frameworks/libswiftFoundation.dylib
+copying file ./Payload/QLKH.app/AppIcon20x20~ipad.png ... 
+2021-03-03 14:58:01 +0000  780 bytes for ./Payload/QLKH.app/AppIcon20x20~ipad.png
+copying file ./Payload/QLKH.app/SimpleLineIcons.ttf ... 
+2021-03-03 14:58:01 +0000  54056 bytes for ./Payload/QLKH.app/SimpleLineIcons.ttf
+copying file ./Payload/QLKH.app/embedded.mobileprovision ... 
+2021-03-03 14:58:01 +0000  9381 bytes for ./Payload/QLKH.app/embedded.mobileprovision
+copying file ./Payload/QLKH.app/assets/app.json ... 
+2021-03-03 14:58:01 +0000  45 bytes for ./Payload/QLKH.app/assets/app.json
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@3x.png ... 
+2021-03-03 14:58:01 +0000  761 bytes for ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@3x.png
+copying file ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@2x.png ... 
+2021-03-03 14:58:01 +0000  405 bytes for ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon@2x.png
+copying file ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon.png ... 
+2021-03-03 14:58:01 +0000  290 bytes for ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon.png
+copying file ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon-mask.png ... 
+2021-03-03 14:58:01 +0000  913 bytes for ./Payload/QLKH.app/assets/node_modules/react-navigation-stack/lib/module/vendor/views/assets/back-icon-mask.png
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json ... 
+2021-03-03 14:58:01 +0000  106287 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/Ionicons.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json ... 
+2021-03-03 14:58:01 +0000  27903 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free_meta.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json ... 
+2021-03-03 14:58:01 +0000  38522 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialIcons.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json ... 
+2021-03-03 14:58:01 +0000  6303 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/AntDesign.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json ... 
+2021-03-03 14:58:01 +0000  32278 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/FontAwesome5Free.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json ... 
+2021-03-03 14:58:01 +0000  6080 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/Feather.json
+copying file ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json ... 
+2021-03-03 14:58:01 +0000  151816 bytes for ./Payload/QLKH.app/assets/node_modules/react-native-vector-icons/glyphmaps/MaterialCommunityIcons.json
+2021-03-03 14:58:01 +0000  copying file ./Payload/QLKH.app/assets/src/res/images/info.png ... 
+2021-03-03 14:58:01 +0000  5311 bytes for ./Payload/QLKH.app/assets/src/res/images/info.png
+copying file ./Payload/QLKH.app/assets/src/res/images/ic_fis.png ... 
+2021-03-03 14:58:01 +0000  10028 bytes for ./Payload/QLKH.app/assets/src/res/images/ic_fis.png
+copying file ./Payload/QLKH.app/assets/src/res/images/ic_avatar.png ... 
+2021-03-03 14:58:01 +0000  9522 bytes for ./Payload/QLKH.app/assets/src/res/images/ic_avatar.png
+copying file ./Payload/QLKH.app/assets/src/res/images/swipe.png ... 
+2021-03-03 14:58:01 +0000  28672 bytes for ./Payload/QLKH.app/assets/src/res/images/swipe.png
+copying file ./Payload/QLKH.app/assets/src/res/images/logo.png ... 
+2021-03-03 14:58:01 +0000  64989 bytes for ./Payload/QLKH.app/assets/src/res/images/logo.png
+copying file ./Payload/QLKH.app/assets/src/res/images/ic_logo.png ... 
+2021-03-03 14:58:01 +0000  27420 bytes for ./Payload/QLKH.app/assets/src/res/images/ic_logo.png
+copying file ./Payload/QLKH.app/assets/src/res/images/ao.png ... 
+2021-03-03 14:58:01 +0000  2314 bytes for ./Payload/QLKH.app/assets/src/res/images/ao.png
+copying file ./Payload/QLKH.app/assets/src/res/images/ic_menu.png ... 
+2021-03-03 14:58:01 +0000  2083 bytes for ./Payload/QLKH.app/assets/src/res/images/ic_menu.png
+copying file ./Payload/QLKH.app/assets/src/res/images/more.png ... 
+2021-03-03 14:58:01 +0000  5360 bytes for ./Payload/QLKH.app/assets/src/res/images/more.png
+copying file ./Payload/QLKH.app/assets/src/res/images/stripe.png ... 
+2021-03-03 14:58:01 +0000  337 bytes for ./Payload/QLKH.app/assets/src/res/images/stripe.png
+copying file ./Payload/QLKH.app/AppIcon20x20@2x~ipad.png ... 
+2021-03-03 14:58:01 +0000  1638 bytes for ./Payload/QLKH.app/AppIcon20x20@2x~ipad.png
+copying file ./Payload/QLKH.app/Info.plist ... 
+2021-03-03 14:58:01 +0000  1847 bytes for ./Payload/QLKH.app/Info.plist
+copying file ./Payload/QLKH.app/PkgInfo ... 
+2021-03-03 14:58:01 +0000  8 bytes for ./Payload/QLKH.app/PkgInfo
+copying file ./Payload/QLKH.app/MaterialIcons.ttf ... 
+2021-03-03 14:58:01 +0000  230384 bytes for ./Payload/QLKH.app/MaterialIcons.ttf
+copying file ./Payload/QLKH.app/AppIcon76x76~ipad.png ... 
+2021-03-03 14:58:01 +0000  3548 bytes for ./Payload/QLKH.app/AppIcon76x76~ipad.png
+2021-03-03 14:58:01 +0000  copying file ./AppThinning.plist ... 
+228 bytes for ./AppThinning.plist
+2021-03-03 14:58:01 +0000  /usr/bin/ditto exited with 0
+2021-03-03 14:58:01 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2021-03-03 14:58:01 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2021-03-03 14:58:01 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a4020:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a4020:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftUIKit.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a9d60:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a9d60:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftQuartzCore.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a7e40:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a7e40:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreFoundation.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a8e00:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a8e00:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDarwin.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f6f8e6690:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f6f8e6690:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreImage.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a5ee0:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a5ee0:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftFoundation.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a30a0:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a30a0:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCoreGraphics.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f6f8e6250:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f6f8e6250:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftObjectiveC.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a4f80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a4f80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftMetal.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f6f8e5a80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f6f8e5a80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftCore.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f7043db80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f7043db80:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftDispatch.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8f704a6f00:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib'>
+2021-03-03 14:58:01 +0000  [OPTIONAL] Can't have a profile, not a bundle at <DVTFilePath:0x7f8f704a6f00:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app/Frameworks/libswiftos.dylib'>
+2021-03-03 14:58:01 +0000  IDEDistributionItem init <DVTFilePath:0x7f8fae29efd0:'/var/folders/vg/38t8wkyx2871y8x2y21d06nr0000gn/T/XcodeDistPipeline.~~~zkuUyj/Root/Payload/QLKH.app'>
+2021-03-03 14:58:01 +0000  Processing step: IDEDistributionCreateManifestStep

@@ -30,6 +30,7 @@ function* getBuildingRoom(action) {
       });
     }
   } else {
+    console.log('Loi ket noi : ---------');
     yield put({
       type: GET_BUILDING_ROOM_ERROR,
       data: null,

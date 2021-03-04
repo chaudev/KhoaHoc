@@ -33,15 +33,11 @@ const formatDate = (value) => {
     '/' +
     day.getFullYear() +
     '';
-  // console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
 };
 
 const checkLength = (text1) => {
-  // console.log('checkLength chay');
-  // console.log('text ' + text1);
   let text = text1 + '';
-  // console.log('length ' + text.length);
   if (text.length === 1) {
     return '0' + text;
   } else {
@@ -255,6 +251,7 @@ export default class EditCourse extends React.Component {
           <View
             style={{
               flexDirection: 'row',
+              marginTop: '0.5%',
             }}>
             {/* Chọn ngày bắt đầu */}
             <View
@@ -274,7 +271,8 @@ export default class EditCourse extends React.Component {
                   borderWidth: 1,
                   borderRadius: 5,
                   backgroundColor: '#fff',
-                  paddingVertical: 13,
+                  paddingVertical: 12,
+                  alignItems: 'center',
                   borderColor: '#c2c2c2',
                   marginTop: '1%',
                 }}>
@@ -326,7 +324,8 @@ export default class EditCourse extends React.Component {
                   borderWidth: 1,
                   borderRadius: 5,
                   backgroundColor: '#fff',
-                  paddingVertical: 13,
+                  paddingVertical: 12,
+                  alignItems: 'center',
                   borderColor: '#c2c2c2',
                   marginTop: '1%',
                 }}>
@@ -579,12 +578,10 @@ export default class EditCourse extends React.Component {
 
   // Ngay bat dau
   showDatePickerStart() {
-    console.log('showDatePickerTest : chay');
     this.setState({modelStartVisible: true});
   }
 
   hideDatePickerStart() {
-    console.log('hideDatePickertest : chay');
     this.setState({modelStartVisible: false});
   }
 
@@ -911,5 +908,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2.22,
 
     elevation: 3,
+    marginBottom: '1.5%',
   },
 });

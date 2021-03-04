@@ -411,7 +411,7 @@ const style = StyleSheet.create({
     paddingVertical: 10,
     // paddingHorizontal: 80,
     fontSize: Size.h36,
-    // backgroundColor: 'green',
+    // backgroundColor: 'green',sssasd
   },
   button: {
     alignItems: 'center',
@@ -422,7 +422,7 @@ const style = StyleSheet.create({
   copyRight: {
     color: '#adb3bc',
     fontSize: Size.h26,
-    marginBottom: '2%',
+    marginBottom: '5%',
     // backgroundColor: 'red',
     textAlign: 'center',
   },

@@ -34,15 +34,11 @@ const formatDate = (value) => {
     '/' +
     day.getFullYear() +
     '';
-  console.log('dateeeeeeeeeee: ' + stringDate);
   return stringDate;
 };
 
 const checkLength = (text1) => {
-  console.log('checkLength chay');
-  console.log('text ' + text1);
   let text = text1 + '';
-  console.log('length ' + text.length);
   if (text.length === 1) {
     return '0' + text;
   } else {
@@ -125,7 +121,9 @@ export default class AddCourse extends React.Component {
 
         const xx = await this.getRememberedBuilding();
 
-        this.setState({buildingSelected: xx}, () => this.getDataRom());
+        if (this.state.flag === 0) {
+          this.setState({buildingSelected: xx}, () => this.getDataRom());
+        }
       }
     } else {
       console.log('addCourse componentDidUpdate -- revProp khong doi');
@@ -133,8 +131,6 @@ export default class AddCourse extends React.Component {
   }
 
   render() {
-    // console.log('render buildingSelected: ' + this.state.buildingSelected);
-    // console.log('render roomSelected: ' + this.state.roomSelected);
     return (
       <View style={styles.container}>
         <SafeAreaView />
@@ -225,6 +221,7 @@ export default class AddCourse extends React.Component {
           <View
             style={{
               flexDirection: 'row',
+              marginTop: '0.5%',
             }}>
             {/* Chọn ngày bắt đầu */}
             <View
@@ -244,7 +241,7 @@ export default class AddCourse extends React.Component {
                   borderWidth: 1,
                   borderRadius: 5,
                   backgroundColor: '#fff',
-                  paddingVertical: 13,
+                  paddingVertical: 12,
                   borderColor: '#c2c2c2',
                   alignItems: 'center',
                   marginTop: '1%',
@@ -297,7 +294,7 @@ export default class AddCourse extends React.Component {
                   borderWidth: 1,
                   borderRadius: 5,
                   backgroundColor: '#fff',
-                  paddingVertical: 13,
+                  paddingVertical: 12,
                   borderColor: '#c2c2c2',
                   alignItems: 'center',
                   marginTop: '1%',
@@ -550,7 +547,6 @@ export default class AddCourse extends React.Component {
 
   rememberBuilding = async () => {
     try {
-      // console.log('rememberBuilding: ' + this.state.buildingSelected);
       await AsyncStorage.setItem('saveBuilding', this.state.buildingSelected);
     } catch (error) {
       Alert.alert('Lỗi', 'Không thể lưu tài khoản');
@@ -559,7 +555,6 @@ export default class AddCourse extends React.Component {
 
   rememberRoom = async () => {
     try {
-      console.log('rememberRoom: chay ' + this.state.roomSelected);
       await AsyncStorage.setItem('saveRoom', this.state.roomSelected);
     } catch (error) {
       Alert.alert('Lỗi', 'Không thể lưu tài khoản');
@@ -614,12 +609,10 @@ export default class AddCourse extends React.Component {
 
   // Ngay bat dau
   showDatePickerStart() {
-    console.log('showDatePickerTest : chay');
     this.setState({modelStartVisible: true});
   }
 
   hideDatePickerStart() {
-    console.log('hideDatePickertest : chay');
     this.setState({modelStartVisible: false});
   }
 
@@ -818,8 +811,8 @@ export default class AddCourse extends React.Component {
 
       const xnxx = await this.getRememberedRoom();
 
-      this.setState({roomSelected: xnxx}, () => {
-        this.setState({defaultRoom: xnxx});
+      this.setState({defaultRoom: xnxx}, () => {
+        this.setState({roomSelected: xnxx});
       });
     }
   }
@@ -966,5 +959,6 @@ const styles = StyleSheet.create({
     shadowRadius: 2.22,
 
     elevation: 3,
+    marginBottom: '1.5%',
   },
 });
