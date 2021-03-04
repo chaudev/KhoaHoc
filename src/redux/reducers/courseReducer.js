@@ -35,7 +35,6 @@ export const courseReducer = (state = initialState, action) => {
         return state;
     }
   } catch (error) {
-    console.log('courseReducer: catch');
     return state;
   }
 };

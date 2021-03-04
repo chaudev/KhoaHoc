@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import allReducers from './redux/reducers';
-import AppContainer from './Container/AppContainer';
+import AppContainer from './container/AppContainer';
 import rootSaga from './redux/middleware/sagas/rootSagas';
 
 const sagaMiddleware = createSagaMiddleware();

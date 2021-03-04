@@ -7,9 +7,7 @@ import {call, takeEvery, put} from 'redux-saga/effects';
 import {getClassApi} from '../api/getClassApi';
 
 function* getClassSaga(action) {
-  const course_id = action.data;
-
-  const response = yield getClassApi(course_id);
+  const response = yield getClassApi(action.data);
 
   if (response !== undefined) {
     if (response.resultCode == 1) {
@@ -29,7 +27,7 @@ function* getClassSaga(action) {
     yield put({
       type: GET_CLASS_ERROR,
       data: null,
-      message: 'Lỗi kết nối!!!',
+      message: 'Kết nối không thành công',
     });
   }
 }

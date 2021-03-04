@@ -3,23 +3,27 @@ import {
   StyleSheet,
   View,
   Text,
-  Image,
   TouchableOpacity,
   FlatList,
   Alert,
-  ActivityIndicator,
   ToastAndroid,
   RefreshControl,
-  TouchableHighlightBase,
-  TouchableOpacityBase,
-  Touchable,
+  ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
-import {conDate} from './config';
-import Size from '../res/Size';
+import Size from '../../res/Size';
+import Menu from '../ItemMenu';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import Menu from './ItemMenu';
-import {ScrollView, TouchableHighlight} from 'react-native-gesture-handler';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import {ScrollView} from 'react-native-gesture-handler';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+const formatTime = (value) => {
+  let day = new Date(value);
+  let stringTime =
+    checkLength(day.getHours()) + ':' + checkLength(day.getMinutes()) + '';
+  return stringTime;
+};
 
 const formatDate = (value) => {
   let day = new Date(value);
@@ -42,7 +46,7 @@ const checkLength = (text1) => {
   }
 };
 
-export default class QLKhoaHocComp extends React.Component {
+export default class ClassManage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -53,22 +57,62 @@ export default class QLKhoaHocComp extends React.Component {
       dayEnd: new Date(),
       key: 1,
       refreshing: false,
+      courseId: '',
+      TenKH: '',
+      thoiGianBatDau: new Date(),
+      thoiGianKetThuc: new Date(),
       buildingSelected: '',
       roomSelected: '',
       dataBuilding: [],
       dataRoom: '',
       Location: '',
+      StrError: 'Đã xảy ra lỗi',
     };
   }
 
   componentDidMount() {
     const {navigation} = this.props;
     this.focusListener = navigation.addListener('didFocus', () => {
-      this.props.getBuildingRoomAction();
-      this.props.getCourseAction();
+      const courseId = this.props.navigation.getParam(
+        'id',
+        'some default value',
+      );
+      this.setState({courseId: courseId});
+
+      const thoiGianBatDau = this.props.navigation.getParam(
+        'thoiGianBatDau',
+        'some default value',
+      );
+      this.setState({thoiGianBatDau: thoiGianBatDau});
+
+      const thoiGianKetThuc = this.props.navigation.getParam(
+        'thoiGianKetThuc',
+        'some default value',
+      );
+      this.setState({thoiGianKetThuc: thoiGianKetThuc});
+
+      this.props.getClassAction(courseId);
     });
 
-    this.props.getCourseAction();
+    const courseId = this.props.navigation.getParam('id', 'some default value');
+    this.setState({courseId: courseId});
+
+    const thoiGianBatDau = this.props.navigation.getParam(
+      'thoiGianBatDau',
+      'some default value',
+    );
+    this.setState({thoiGianBatDau: thoiGianBatDau});
+
+    const thoiGianKetThuc = this.props.navigation.getParam(
+      'thoiGianKetThuc',
+      'some default value',
+    );
+    this.setState({thoiGianKetThuc: thoiGianKetThuc});
+
+    const TenKH = this.props.navigation.getParam('title', 'some default value');
+    this.setState({TenKH: TenKH});
+
+    this.props.getClassAction(courseId);
   }
 
   componentWillUnmount() {
@@ -77,29 +121,26 @@ export default class QLKhoaHocComp extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (prevProps.isFocused !== this.props.isFocused) {
-      this.props.getCourseAction();
+      this.props.getClassAction(this.state.courseId);
     }
 
     if (prevProps.data !== this.props.data) {
-      if (this.props.data.type === 'GET_COURSE_ERROR') {
-        Alert.alert('Lỗi rồi!!!', this.props.data.message);
-      } else if (this.props.data.type === 'GET_COURSE_SUCCESS') {
+      if (this.props.data.type === 'GET_CLASS_ERROR') {
+        Alert.alert(this.state.StrError, this.props.data.message);
+      } else if (this.props.data.type === 'GET_CLASS_SUCCESS') {
         this.setState({data: this.props.data.data});
       }
     }
 
     if (this.props.dataBuilding.type === 'GET_BUILDING_ROOM_SUCCESS') {
-      console.log('GET_BUILDING_ROOM_SUCCESS');
-      // console.log(this.props.dataBuilding);
-      // this.setState({dataBuilding: []});
-      // this.setState({dataBuilding: this.props.dataBuilding.data});
     }
+
     if (prevProps.dataDelete !== this.props.dataDelete) {
-      if (this.props.dataDelete === 'DELETE_COURSE_ERROR') {
-        Alert.alert('Lỗi rồi!!!', this.props.dataDelete.message);
+      if (this.props.dataDelete === 'DELETE_CLASS_ERROR') {
+        Alert.alert(this.state.StrError, this.props.dataDelete.message);
       } else if (this.props.dataDelete !== null) {
-        if (this.props.dataDelete.type === 'DELETE_COURSE_SUCCESS') {
-          this.props.getCourseAction();
+        if (this.props.dataDelete.type === 'DELETE_CLASS_SUCCESS') {
+          this.props.getClassAction(this.state.courseId);
 
           ToastAndroid.showWithGravity(
             'Xóa thành công!',
@@ -114,7 +155,7 @@ export default class QLKhoaHocComp extends React.Component {
   getLocation(buidingID, roomID) {
     try {
       if (this.props.dataBuilding.data.length !== undefined) {
-        for (let i = 0; i <= this.props.dataBuilding.data.length; i++) {
+        for (let i = 0; i < this.props.dataBuilding.data.length; i++) {
           if (this.props.dataBuilding.data[i]._id === buidingID) {
             for (
               let j = 0;
@@ -139,117 +180,109 @@ export default class QLKhoaHocComp extends React.Component {
   render() {
     return (
       <View style={styles.containerx}>
-        <SafeAreaView style={{margin: 0}} />
+        <SafeAreaView />
         <View style={styles.ContainerMenu}>
           <TouchableOpacity
             style={styles.Menu}
-            onPress={() => this.props.navigation.openDrawer()}>
-            <Image
-              source={require('../res/images/ic_menu.png')}
-              style={styles.Image}
-            />
+            onPress={() => this.props.navigation.goBack()}>
+            <Ionicons name="chevron-back" color="#d4d5d8" size={Size.h52} />
           </TouchableOpacity>
-          <Text style={styles.Title}>QUẢN LÝ KHÓA HỌC</Text>
+          <Text style={styles.Title}>QUẢN LÝ BUỔI HỌC</Text>
           <TouchableOpacity
             style={styles.Plus}
-            onPress={() => this.props.navigation.navigate('AddCourse')}>
-            {/* <Image
-              source={require('../res/images/ic_plus.png')}
-              style={styles.Image}
-            /> */}
-            <FontAwesome5
-              name={'plus'}
-              color="#d4d5d8"
-              size={Size.h42}
-              // style={[styles.Image]}
-            />
+            onPress={() => {
+              this.props.navigation.navigate('AddClass', {
+                courseId: this.state.courseId,
+                thoiGianBatDau: this.state.thoiGianBatDau,
+                thoiGianKetThuc: this.state.thoiGianKetThuc,
+              });
+            }}>
+            <FontAwesome5 name={'plus'} color="#d4d5d8" size={Size.h40} />
           </TouchableOpacity>
         </View>
-        <ScrollView>
+        <View>
+          <Text numberOfLines={2} style={styles.TenKH}>
+            {this.state.TenKH}
+          </Text>
+        </View>
+        <ScrollView
+          style={{
+            paddingBottom: '4%',
+          }}>
           <FlatList
             refreshControl={
               <RefreshControl
                 refreshing={this.state.refreshing}
                 onRefresh={() => {
-                  this.props.getCourseAction();
+                  this.props.getClassAction(this.state.courseId);
                 }}
               />
             }
+            style={{
+              marginBottom: '2%',
+            }}
             data={this.state.data}
-            style={{marginVertical: '2%'}}
             renderItem={(item) => this.renderItem(item)}
             extraData={this.state}
             keyExtractor={(item) => {
-              return item.course_id;
+              return item.classId;
             }}
           />
         </ScrollView>
+        {/* Màn hình loading */}
+        {this.props.fetching && (
+          <ActivityIndicator
+            size="large"
+            color="#FF0000"
+            style={styles.Indicator}
+          />
+        )}
       </View>
     );
   }
 
   renderItem = ({item}) => {
-    let id = item.course_id;
-    let title = item.courseName;
-    let giangVien = item.trainer;
-    let quanLy = item.created_by;
-    let thoiGianBatDau = item.startedDate;
-    let thoiGianKetThuc = item.endedDate;
-    let toaNha = item.buildingName;
-    let Phong = item.roomName;
     let buildingId = item.buildingId;
+    let buildingName = item.buildingName;
+    let classId = item.classId;
+    let className = item.className;
+    let code = item.code;
+    let created_by = item.created_by;
+    let date = item.date;
+    let endedTime = item.endedTime;
     let roomId = item.roomId;
+    let roomName = item.roomName;
+    let startedTime = item.startedTime;
+    let trainer = item.trainer;
+    let wifi = item.wifi;
 
     return (
       <View style={styles.item}>
-        <TouchableOpacity
-          onPress={() => {
-            console.log('id : ', id),
-              this.props.navigation.navigate('GetClass', {
-                id: id.trim(),
-                title: title,
-                thoiGianBatDau: thoiGianBatDau,
-                thoiGianKetThuc: thoiGianKetThuc,
-              });
-          }}>
+        <TouchableOpacity>
           <View
             style={{
               flexDirection: 'row',
-              // alignItems: 'center',
             }}>
-            <Text
-              numberOfLines={2}
-              style={{
-                fontSize: Size.h36,
-                fontWeight: 'bold',
-                color: '#315673',
-                flex: 15,
-                marginRight: '10%',
-              }}>
-              {title}
+            <Text numberOfLines={2} style={styles.itemTitle}>
+              {className}
             </Text>
             <Menu
-              style={{
-                flex: 2,
-                // padding: '1%',
-                // paddingHorizontal: '1%',
-                // backgroundColor: 'blue',
-              }}
+              style={styles.itemMenu}
               delete={() => {
-                this.props.deleteCourseAction(id.trim());
+                this.props.deleteClassAction(classId.trim());
               }}
               edit={() => {
-                this.props.navigation.navigate('EditCourse', {
-                  id: id.trim(),
-                  title: title,
-                  giangVien: giangVien,
-                  quanLy: quanLy,
-                  thoiGianBatDau: thoiGianBatDau,
-                  thoiGianKetThuc: thoiGianKetThuc,
-                  toaNha: toaNha,
-                  Phong: Phong,
+                this.props.navigation.navigate('EditClass', {
+                  classId: classId.trim(),
+                  className: className,
+                  trainer: trainer,
+                  date: date,
+                  startedTime: startedTime,
+                  endedTime: endedTime,
                   buildingId: buildingId,
                   roomId: roomId,
+                  thoiGianBatDau: this.state.thoiGianBatDau,
+                  thoiGianKetThuc: this.state.thoiGianKetThuc,
                 });
               }}
             />
@@ -263,7 +296,6 @@ export default class QLKhoaHocComp extends React.Component {
             <View style={styles.icon}>
               <FontAwesome5 name={'user-tie'} color="#FFD237" size={Size.h40} />
             </View>
-
             <View
               style={{
                 flex: 11,
@@ -279,18 +311,16 @@ export default class QLKhoaHocComp extends React.Component {
                   color: '#0a8dc3',
                   fontSize: Size.h32,
                   flex: 1,
-                  // marginLeft: 5,
-                  marginRight: '15%',
+                  marginRight: 50,
                   fontWeight: 'bold',
                 }}>
-                {giangVien}
+                {trainer}
               </Text>
             </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              // marginTop: '1%',
               alignItems: 'center',
             }}>
             <View style={styles.icon}>
@@ -298,10 +328,8 @@ export default class QLKhoaHocComp extends React.Component {
                 name={'address-card'}
                 color="#412F4E"
                 size={Size.h40}
-                // style={[styles.icon]}
               />
             </View>
-
             <View
               style={{
                 flex: 11,
@@ -316,18 +344,14 @@ export default class QLKhoaHocComp extends React.Component {
                   color: '#f19440',
                   fontSize: Size.h32,
                   fontWeight: 'bold',
-                  // marginLeft: 5,
-                  marginRight: '15%',
-                  fontWeight: 'bold',
                 }}>
-                {quanLy}
+                {created_by}
               </Text>
             </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              // marginTop: '4%',
               alignItems: 'center',
             }}>
             <View style={styles.icon}>
@@ -335,7 +359,35 @@ export default class QLKhoaHocComp extends React.Component {
                 name={'calendar-check'}
                 color="#42C8FB"
                 size={Size.h40}
-                // style={styles.icon}
+              />
+            </View>
+            <View
+              style={{
+                flex: 11,
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+              <Text style={{fontSize: Size.h32, color: '#315673'}}>Ngày: </Text>
+              <Text
+                style={{
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {formatDate(date)}
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <AntDesign
+                name={'clockcircleo'}
+                color="#315673"
+                size={Size.h40}
               />
             </View>
             <View
@@ -353,13 +405,13 @@ export default class QLKhoaHocComp extends React.Component {
                   fontSize: Size.h32,
                   fontWeight: 'bold',
                 }}>
-                {formatDate(thoiGianBatDau)}
+                {startedTime}
               </Text>
               <Text
                 style={{
+                  color: '#315673',
                   fontSize: Size.h32,
                   fontWeight: 'bold',
-                  color: '#315673',
                 }}>
                 {' '}
                 -{' '}
@@ -370,23 +422,17 @@ export default class QLKhoaHocComp extends React.Component {
                   fontSize: Size.h32,
                   fontWeight: 'bold',
                 }}>
-                {formatDate(thoiGianKetThuc)}
+                {endedTime}
               </Text>
             </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              // marginTop: '4%',
               alignItems: 'center',
             }}>
             <View style={styles.icon}>
-              <FontAwesome5
-                name={'building'}
-                color="#0090D7"
-                size={Size.h40}
-                // style={styles.icon}
-              />
+              <FontAwesome5 name={'building'} color="#0090D7" size={Size.h40} />
             </View>
             <View
               style={{
@@ -399,18 +445,17 @@ export default class QLKhoaHocComp extends React.Component {
               </Text>
               <Text
                 style={{
-                  color: '#315673',
+                  color: '#364966',
                   fontSize: Size.h32,
                   fontWeight: 'bold',
                 }}>
-                {toaNha}
+                {buildingName}
               </Text>
             </View>
           </View>
           <View
             style={{
               flexDirection: 'row',
-              // marginTop: '4%',
               alignItems: 'center',
             }}>
             <View style={styles.icon}>
@@ -418,7 +463,6 @@ export default class QLKhoaHocComp extends React.Component {
                 name={'chalkboard-teacher'}
                 color="#FF9226"
                 size={Size.h40}
-                // style={styles.icon}
               />
             </View>
             <View
@@ -432,11 +476,11 @@ export default class QLKhoaHocComp extends React.Component {
               </Text>
               <Text
                 style={{
-                  color: '#315673',
+                  color: '#364966',
                   fontSize: Size.h32,
                   fontWeight: 'bold',
                 }}>
-                {Phong}
+                {roomName}
               </Text>
               <Text
                 style={{
@@ -445,6 +489,51 @@ export default class QLKhoaHocComp extends React.Component {
                   fontWeight: 'bold',
                 }}>
                 {this.getLocation(buildingId, roomId)}
+              </Text>
+            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <View style={styles.icon}>
+              <FontAwesome5 name={'wifi'} color="#33ca69" size={Size.h40} />
+            </View>
+            <View
+              style={{
+                flex: 7,
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{
+                  flex: 10,
+                  color: '#364966',
+                  fontSize: Size.h32,
+                  fontWeight: 'bold',
+                }}>
+                {wifi}
+              </Text>
+            </View>
+            <View
+              style={{
+                flex: 3,
+                alignItems: 'center',
+                borderRadius: 50,
+                backgroundColor: '#e7ebee',
+              }}>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  justifyContent: 'flex-end',
+                  fontWeight: 'bold',
+                  paddingHorizontal: 15,
+                  paddingVertical: 7,
+                  color: '#d67e3e',
+                  fontSize: Size.h32,
+                }}>
+                {code}
               </Text>
             </View>
           </View>
@@ -479,11 +568,18 @@ const styles = StyleSheet.create({
 
     elevation: 3,
   },
+  title: {
+    fontSize: Size.h34,
+    fontWeight: 'bold',
+    color: 'darkslategrey',
+  },
+  data: {
+    fontSize: Size.h32,
+    fontWeight: 'bold',
+  },
   icon: {
-    padding: 5,
-    // paddingRight: 20,
     flex: 1,
-    // backgroundColor: 'red',
+    padding: 5,
   },
   ContainerMenu: {
     flexDirection: 'row',
@@ -505,7 +601,6 @@ const styles = StyleSheet.create({
     width: 5,
     height: 5,
     padding: 10,
-    // backgroundColor: 'red',
   },
   Menu: {
     justifyContent: 'flex-start',
@@ -526,5 +621,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#345173',
     paddingVertical: '4%',
+  },
+  TenKH: {
+    fontSize: Size.h34,
+    color: '#0a8dc3',
+    fontWeight: 'bold',
+    marginVertical: '2%',
+    marginHorizontal: '5%',
+  },
+  itemTitle: {
+    fontSize: Size.h36,
+    fontWeight: 'bold',
+    color: '#315673',
+    flex: 15,
+    marginRight: '10%',
+  },
+  itemMenu: {
+    flex: 2,
+  },
+  Indicator: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    opacity: 0.7,
+    backgroundColor: '#e8e9ec',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

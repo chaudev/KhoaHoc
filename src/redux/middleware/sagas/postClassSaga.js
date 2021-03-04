@@ -43,6 +43,11 @@ function* postClassSaga(action) {
         message: response.message,
       });
     }
+  } else {
+    yield put({
+      type: POST_CLASS_ERROR,
+      message: 'Kết nối không thành công',
+    });
   }
 }
 

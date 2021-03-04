@@ -1,13 +1,10 @@
 import React from 'react';
-import LoginComponent from '../Components/Login';
-import {loginAction} from '../redux/actions/index';
+import LoginComponent from '../../components/login/Login';
+import {loginAction} from '../../redux/actions/index';
 import {connect} from 'react-redux';
 
 class LoginContainer extends React.Component {
   render() {
-    console.log(
-      '\n-----------------------------------------LoginContainer-------------------------',
-    );
     return <LoginComponent {...this.props} />;
   }
 }

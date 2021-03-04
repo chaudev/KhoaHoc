@@ -1,15 +1,15 @@
 import React from 'react';
-import {getBuildingRoomAction, getCourseAction} from '../redux/actions/index';
-import {deleteCourseAction} from '../redux/actions/index';
+import {
+  getBuildingRoomAction,
+  getCourseAction,
+} from '../../redux/actions/index';
+import CourseManage from '../../components/course/CourseManage';
+import {deleteCourseAction} from '../../redux/actions/index';
 import {connect} from 'react-redux';
-import QLKhoaHocComp from '../Components/CourseManage';
 
-class getCourseContainer extends React.Component {
+class GetCourseContainer extends React.Component {
   render() {
-    console.log(
-      '\n-----------------------------------------getCourseContainer-------------------------',
-    );
-    return <QLKhoaHocComp {...this.props} />;
+    return <CourseManage {...this.props} />;
   }
 }
 
@@ -43,4 +43,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(getCourseContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(GetCourseContainer);

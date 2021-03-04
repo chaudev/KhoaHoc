@@ -1,4 +1,4 @@
-import {user_profile} from '../../../Components/config';
+import {user_profile, URL} from '../../../config/config';
 
 export async function postClassApi(
   courseId,
@@ -10,19 +10,21 @@ export async function postClassApi(
   buildingId,
   roomId,
 ) {
+  let api = URL + 'create_new_class';
+
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Authorization', `Bearer ${user_profile.token}`);
 
   var raw = JSON.stringify({
-    courseId: courseId,
-    className: className,
-    trainer: trainer,
-    date: date,
-    startedTime: startedTime,
-    endedTime: endedTime,
-    buildingId: buildingId,
-    roomId: roomId,
+    courseId,
+    className,
+    trainer,
+    date,
+    startedTime,
+    endedTime,
+    buildingId,
+    roomId,
   });
 
   var requestOptions = {
@@ -32,10 +34,5 @@ export async function postClassApi(
     redirect: 'follow',
   };
 
-  return (
-    await fetch(
-      'http://10.86.224.37:5001/api/edu/create_new_class',
-      requestOptions,
-    )
-  ).json();
+  return (await fetch(api, requestOptions)).json();
 }

@@ -41,6 +41,11 @@ function* editCourse(action) {
         message: response.message,
       });
     }
+  } else {
+    yield put({
+      type: EDIT_COURSE_ERROR,
+      message: 'Kết nối không thành công',
+    });
   }
 }
 

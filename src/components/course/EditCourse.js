@@ -1,28 +1,26 @@
 import React from 'react';
-import Size from '../res/Size';
 import {
   StyleSheet,
   View,
   Text,
   Alert,
   Platform,
-  Image,
   ActivityIndicator,
   ToastAndroid,
-  AsyncStorage,
+  Image,
   SafeAreaView,
 } from 'react-native';
+import Size from '../../res/Size';
+
 import {
   ScrollView,
   TextInput,
   TouchableOpacity,
 } from 'react-native-gesture-handler';
-// import ionicons from 'react-native-ionicons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import DropDownPicker from 'react-native-dropdown-picker';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import DropDownPicker from '../DropDownPicker';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 console.disableYellowBox = true;
 
 const formatDate = (value) => {
@@ -46,38 +44,39 @@ const checkLength = (text1) => {
   }
 };
 
-export default class AddCourse extends React.Component {
+export default class EditCourse extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       dateStart: new Date(),
-      flagDateStart: 1,
-      flagDateEnd: 1,
-      flag: 0,
       dateEnd: new Date(),
       mode: 'date',
       showStart: false,
       showEnd: false,
-      countries: 'uk',
       tenKhoaHoc: '',
+      flagDateStart: 0,
+      flagDateEnd: 0,
       tenGiangVien: '',
       dataBuilding: [],
       dataRoom: [],
       buildingSelected: '',
       roomSelected: '',
-      xxx: [],
+      buildingSelectedName: '',
+      roomSelectedName: '',
+      courseId: '',
       strThieuTen: '',
       strThieuGV: '',
       strThieuToaNha: '',
       strThieuPhong: '',
-      colorStart: 'black',
-      colorEnd: 'black',
+      defaultRoom: '',
+      flag: 0,
       errorDate: false,
-      colorDate: 'black',
       strDateStart: 'Chọn ngày',
       strDateEnd: 'Chọn ngày',
       errorText: 'Ngày bắt đầu không được lớn hơn ngày kết thúc',
+      isVisibleA: false,
+      isVisibleB: false,
       showBuilding: false,
       showRoom: false,
       isVisibleA: false,
@@ -88,7 +87,6 @@ export default class AddCourse extends React.Component {
       errorRoom: false,
       modelStartVisible: false,
       modelEndVisible: false,
-      defaultRoom: '',
     };
   }
 
@@ -102,15 +100,42 @@ export default class AddCourse extends React.Component {
     });
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.props.getBuildingRoomAction();
-    this.setState({strDateStart: formatDate(this.state.dateStart)});
-    this.setState({strDateEnd: formatDate(this.state.dateEnd)});
+
+    const courseId = this.props.navigation.getParam('id', 'some default value');
+    this.setState({courseId: courseId});
+    const tenKhoaHoc = this.props.navigation.getParam(
+      'title',
+      'some default value',
+    );
+    this.setState({tenKhoaHoc: tenKhoaHoc});
+    const tenGiangVien = this.props.navigation.getParam(
+      'giangVien',
+      'some default value',
+    );
+    this.setState({tenGiangVien: tenGiangVien});
+    const dateStart = this.props.navigation.getParam(
+      'thoiGianBatDau',
+      'some default value',
+    );
+    this.setState({dateStart: new Date(dateStart)});
+    this.setState({strDateStart: formatDate(new Date(dateStart))});
+    const dateEnd = this.props.navigation.getParam(
+      'thoiGianKetThuc',
+      'some default value',
+    );
+    this.setState({dateEnd: new Date(dateEnd)});
+    this.setState({strDateEnd: formatDate(new Date(dateEnd))});
+    const toaNha = this.props.navigation.getParam(
+      'toaNha',
+      'some default value',
+    );
+    this.setState({buildingSelectedName: toaNha});
   }
 
-  async componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps) {
     if (prevProps.data !== this.props.data) {
-      console.log('addCourse componentDidUpdate -- revProp thay doi');
       if (this.props.data.type === 'GET_BUILDING_ROOM_ERROR') {
       } else if (this.props.data.type === 'GET_BUILDING_ROOM_SUCCESS') {
         var convertDataBuilding = this.props.data.data.map(function (obj) {
@@ -119,14 +144,13 @@ export default class AddCourse extends React.Component {
 
         this.setState({dataBuilding: convertDataBuilding});
 
-        const xx = await this.getRememberedBuilding();
-
-        if (this.state.flag === 0) {
-          this.setState({buildingSelected: xx}, () => this.getDataRom());
-        }
+        const buildingId = this.props.navigation.getParam(
+          'buildingId',
+          'some default value',
+        );
+        this.setState({buildingSelected: buildingId}, () => this.getDataRom());
       }
     } else {
-      console.log('addCourse componentDidUpdate -- revProp khong doi');
     }
   }
 
@@ -140,19 +164,15 @@ export default class AddCourse extends React.Component {
             onPress={() => this.props.navigation.goBack()}>
             <Ionicons name="chevron-back" color="#d4d5d8" size={Size.h52} />
           </TouchableOpacity>
-          <Text style={styles.Title}>TẠO MỚI KHÓA HỌC</Text>
+          <Text style={styles.Title}>SỬA KHÓA HỌC</Text>
           <TouchableOpacity style={styles.Plus}>
             <Image
-              source={require('../res/images/ao.png')}
+              source={require('../../res/images/ao.png')}
               style={styles.Image}
             />
           </TouchableOpacity>
         </View>
-        <ScrollView
-          style={{
-            backgroundColor: 'f4f7fc',
-            paddingHorizontal: '4%',
-          }}>
+        <ScrollView style={{backgroundColor: 'f4f7fc', paddingHorizontal: 10}}>
           {/* Nhập tên khóa học */}
           <View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -166,22 +186,13 @@ export default class AddCourse extends React.Component {
               }
               placeholder="Nhập tên khóa học"
               onChangeText={(text) => this.setState({tenKhoaHoc: text})}
+              value={this.state.tenKhoaHoc}
             />
           </View>
-
           {/* Báo lỗi khóa học */}
           <View>
             {this.state.errorName && (
-              <Text
-                style={{
-                  color: 'red',
-                  fontSize: Size.h30,
-                  marginTop: '1%',
-                  fontStyle: 'italic',
-                  textAlign: 'left',
-                }}>
-                {this.state.strThieuTen}
-              </Text>
+              <Text style={styles.textErrorRed}>{this.state.strThieuTen}</Text>
             )}
           </View>
 
@@ -198,22 +209,13 @@ export default class AddCourse extends React.Component {
               }
               placeholder="Nhập tên giảng viên"
               onChangeText={(text) => this.setState({tenGiangVien: text})}
+              value={this.state.tenGiangVien}
             />
           </View>
-
           {/* Báo lỗi giảng viên */}
           <View>
             {this.state.errorGV && (
-              <Text
-                style={{
-                  color: 'red',
-                  fontSize: Size.h30,
-                  marginTop: '1%',
-                  fontStyle: 'italic',
-                  textAlign: 'left',
-                }}>
-                {this.state.strThieuGV}
-              </Text>
+              <Text style={styles.textErrorRed}>{this.state.strThieuGV}</Text>
             )}
           </View>
 
@@ -235,36 +237,15 @@ export default class AddCourse extends React.Component {
               </View>
               <TouchableOpacity
                 onPress={() => this.showDatePickerStart()}
-                style={{
-                  flex: 1,
-                  flexDirection: 'row',
-                  borderWidth: 1,
-                  borderRadius: 5,
-                  backgroundColor: '#fff',
-                  paddingVertical: 12,
-                  borderColor: '#c2c2c2',
-                  alignItems: 'center',
-                  marginTop: '1%',
-                }}>
-                <Text
-                  style={{
-                    flex: 1,
-                    textAlign: 'center',
-                    fontSize: Size.h30,
-                    color: '#4b5b6b',
-                  }}>
+                style={styles.DateTimePickerStart}>
+                <Text style={styles.textDateTimePicker}>
                   {this.state.strDateStart}
                 </Text>
                 <Icon
                   name="sort-down"
                   size={Size.h36}
                   color="#4b5b6b"
-                  style={{
-                    marginLeft: 5,
-                    marginRight: 10,
-                    marginBottom: 5,
-                    justifyContent: 'flex-end',
-                  }}
+                  style={styles.iconDateTimePicker}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelStartVisible}
@@ -288,37 +269,15 @@ export default class AddCourse extends React.Component {
               </View>
               <TouchableOpacity
                 onPress={() => this.showDatePickerEnd()}
-                style={{
-                  flex: 1,
-                  flexDirection: 'row',
-                  borderWidth: 1,
-                  borderRadius: 5,
-                  backgroundColor: '#fff',
-                  paddingVertical: 12,
-                  borderColor: '#c2c2c2',
-                  alignItems: 'center',
-                  marginTop: '1%',
-                }}>
-                <Text
-                  style={{
-                    flex: 1,
-                    textAlign: 'center',
-                    fontSize: Size.h30,
-                    marginLeft: 10,
-                    color: '#4b5b6b',
-                  }}>
+                style={styles.DateTimePickerEnd}>
+                <Text style={styles.textDateTimePicker}>
                   {this.state.strDateEnd}
                 </Text>
                 <Icon
                   name="sort-down"
                   size={Size.h36}
                   color="#4b5b6b"
-                  style={{
-                    marginLeft: 5,
-                    marginRight: 10,
-                    marginBottom: 5,
-                    justifyContent: 'flex-end',
-                  }}
+                  style={styles.iconDateTimePicker}
                 />
                 <DateTimePickerModal
                   isVisible={this.state.modelEndVisible}
@@ -335,17 +294,10 @@ export default class AddCourse extends React.Component {
           {/* Báo lỗi ngày */}
           <View>
             {this.state.errorDate && (
-              <Text
-                style={{
-                  color: 'red',
-                  fontSize: Size.h30,
-                  marginTop: '2%',
-                  fontStyle: 'italic',
-                }}>
-                {this.state.errorText}
-              </Text>
+              <Text style={styles.textErrorRed}>{this.state.errorText}</Text>
             )}
           </View>
+
           {/* Chọn tòa nhà */}
           <View
             style={{
@@ -396,7 +348,7 @@ export default class AddCourse extends React.Component {
                 backgroundColor: '#fff',
                 marginBottom: 5,
                 paddingLeft: 10,
-                // borderRadius: 5,
+                borderRadius: 5,
                 fontSize: Size.h30,
                 color: '#4b5b6b',
                 zIndex: 101,
@@ -405,8 +357,8 @@ export default class AddCourse extends React.Component {
                 color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
-              defaultValue={this.state.buildingSelected}
               arrowStyle={{marginBottom: 5}}
+              defaultValue={this.state.buildingSelected}
               activeLabelStyle={{color: 'blue'}}
               dropDownStyle={{backgroundColor: '#fff'}}
               onChangeItem={(item) => this.onChangeDataBuilding(item)}
@@ -416,14 +368,7 @@ export default class AddCourse extends React.Component {
           {/* Báo lỗi tòa nhà */}
           <View>
             {this.state.errorBuilding && (
-              <Text
-                style={{
-                  color: 'red',
-                  fontSize: Size.h30,
-                  marginTop: '1%',
-                  fontStyle: 'italic',
-                  textAlign: 'left',
-                }}>
+              <Text style={styles.textErrorRed}>
                 {this.state.strThieuToaNha}
               </Text>
             )}
@@ -489,12 +434,11 @@ export default class AddCourse extends React.Component {
                 backgroundColor: '#fff',
               }}
               labelStyle={{
-                // color: 'black',
                 color: '#4b5b6b',
                 fontSize: Size.h30,
               }}
-              defaultValue={this.state.defaultRoom}
               arrowStyle={{marginBottom: 5}}
+              defaultValue={this.state.defaultRoom}
               activeLabelStyle={{color: 'blue'}}
               onChangeItem={(item) => this.onChangeDataRoom(item)}
             />
@@ -503,14 +447,7 @@ export default class AddCourse extends React.Component {
           {/* Báo lỗi phòng */}
           <View>
             {this.state.errorRoom && (
-              <Text
-                style={{
-                  color: 'red',
-                  fontSize: Size.h30,
-                  marginTop: '1%',
-                  fontStyle: 'italic',
-                  textAlign: 'left',
-                }}>
+              <Text style={styles.textErrorRed}>
                 {this.state.strThieuPhong}
               </Text>
             )}
@@ -525,7 +462,7 @@ export default class AddCourse extends React.Component {
             }}>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => this.onClickSaveButton()}>
+              onPress={() => this.onClickSave()}>
               <Icon name="save" size={Size.h28} color="#fff" />
               <Text style={{color: '#fff', marginLeft: 5, fontSize: Size.h32}}>
                 LƯU
@@ -545,69 +482,7 @@ export default class AddCourse extends React.Component {
     );
   }
 
-  rememberBuilding = async () => {
-    try {
-      await AsyncStorage.setItem('saveBuilding', this.state.buildingSelected);
-    } catch (error) {
-      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
-    }
-  };
-
-  rememberRoom = async () => {
-    try {
-      await AsyncStorage.setItem('saveRoom', this.state.roomSelected);
-    } catch (error) {
-      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
-    }
-  };
-
-  forgetBuilding = async () => {
-    try {
-      console.log('forgetBuilding : chay');
-      await AsyncStorage.removeItem('saveBuilding');
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  forgetRoom = async () => {
-    try {
-      console.log('forgetRoom : chay');
-      await AsyncStorage.removeItem('saveRoom');
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  getRememberedBuilding = async () => {
-    try {
-      const saveBuilding = await AsyncStorage.getItem('saveBuilding');
-      if (saveBuilding !== null) {
-        // We have username!!
-        return saveBuilding;
-      } else {
-        return '';
-      }
-    } catch (error) {
-      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
-    }
-  };
-
-  getRememberedRoom = async () => {
-    try {
-      const passWord = await AsyncStorage.getItem('saveRoom');
-      if (passWord !== null) {
-        // We have username!!
-        return passWord;
-      } else {
-        return '';
-      }
-    } catch (error) {
-      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
-    }
-  };
-
-  // Ngay bat dau
+  // Chọn ngày bắt đầu
   showDatePickerStart() {
     this.setState({modelStartVisible: true});
   }
@@ -624,7 +499,7 @@ export default class AddCourse extends React.Component {
     this.setState({flagDateStart: 1});
   }
 
-  // Ngay ket thuc
+  // Chọn ngày kết thúc
   showDatePickerEnd() {
     this.setState({modelEndVisible: true});
   }
@@ -641,12 +516,7 @@ export default class AddCourse extends React.Component {
     this.setState({flagDateEnd: 1});
   }
 
-  // Nhấn nút lưu
-  onClickSaveButton() {
-    this.onClickSave();
-  }
-
-  //Check 2 khoảng trắng gần nhau
+  // Check 2 khoảng trắng gần nhau
   checkTrim(text) {
     let dem = 0;
     for (let i = 0; i < text.length - 1; i++) {
@@ -673,27 +543,7 @@ export default class AddCourse extends React.Component {
     return textF.trim();
   }
 
-  // Hiện tất cả dữ liệu đã nhập
-  showData() {
-    Alert.alert(
-      'Thông tin',
-      'Tên khóa học: ' +
-        this.state.tenKhoaHoc +
-        '\nTên Giảng viên: ' +
-        this.state.tenGiangVien +
-        '\nNgày bắt đầu: ' +
-        this.state.dateStart +
-        '\nNgày kết thúc: ' +
-        this.state.dateEnd +
-        '\nTòa nhà: ' +
-        this.state.buildingSelected +
-        '\nPhòng: ' +
-        this.state.roomSelected,
-    );
-    // }
-  }
-
-  // Check time
+  // Kiểm tra ngày bắt đầu và kết thúc
   checkTimeStartEnd() {
     if (this.state.dateStart > this.state.dateEnd) {
       return false;
@@ -711,20 +561,19 @@ export default class AddCourse extends React.Component {
     this.setState({errorGV: false});
 
     this.setState({strThieuToaNha: ''});
-    this.setState({errorBuilding: false});
+    this.setState({errorRoom: false});
 
     this.setState({strThieuPhong: ''});
-    this.setState({errorRoom: false});
+    this.setState({errorBuilding: false});
 
     this.setState({errorDate: false});
     this.setState({colorStart: 'black'});
     this.setState({colorEnd: 'black'});
+
     if (
       this.state.tenKhoaHoc.trim() !== '' &&
       this.state.tenGiangVien.trim() !== '' &&
       this.state.buildingSelected.trim() !== '' &&
-      this.state.flagDateEnd !== 0 &&
-      this.state.flagDateStart !== 0 &&
       this.state.roomSelected.trim() !== '' &&
       this.checkTimeStartEnd() !== false
     ) {
@@ -734,7 +583,7 @@ export default class AddCourse extends React.Component {
     }
   }
 
-  //Lưu khóa học
+  // Lưu khóa học
   onClickSave() {
     this.setState({isVisibleA: false, isVisibleB: false});
     if (this.checkAllInfo() === false) {
@@ -753,15 +602,6 @@ export default class AddCourse extends React.Component {
       if (this.state.roomSelected.trim() === '') {
         this.setState({strThieuPhong: 'Vui lòng chọn phòng'});
         this.setState({errorRoom: true});
-      }
-      if (this.state.flagDateStart === 0) {
-        this.setState({colorStart: 'red'});
-        this.setState({errorDate: true});
-        this.setState({errorText: 'Vui lòng chọn ngày bắt đầu'});
-      } else if (this.state.flagDateEnd === 0) {
-        this.setState({colorEnd: 'red'});
-        this.setState({errorDate: true});
-        this.setState({errorText: 'Vui lòng chọn ngày kết thúc'});
       } else if (this.checkTimeStartEnd() === false) {
         this.setState({errorDate: true});
         this.setState({colorEnd: 'red'});
@@ -771,7 +611,8 @@ export default class AddCourse extends React.Component {
         });
       }
     } else {
-      this.props.postCourseAction(
+      this.props.editCourseAction(
+        this.superTrim(this.state.courseId),
         this.superTrim(this.state.tenKhoaHoc),
         this.superTrim(this.state.tenGiangVien),
         this.state.dateStart,
@@ -780,7 +621,7 @@ export default class AddCourse extends React.Component {
         this.state.roomSelected.trim(),
       );
       ToastAndroid.showWithGravity(
-        'Thêm thành công!',
+        'Sửa thành công!',
         ToastAndroid.SHORT,
         ToastAndroid.BOTTOM,
       );
@@ -788,7 +629,8 @@ export default class AddCourse extends React.Component {
     }
   }
 
-  async getDataRom() {
+  // Lấy dữ liệu phòng và tự chọn khi mới vào
+  getDataRom() {
     this.controller.state.choice.label = null;
     this.setState({roomSelected: ''});
     this.setState({dataRoom: []});
@@ -798,31 +640,26 @@ export default class AddCourse extends React.Component {
           return {label: obj.roomName + ' - ' + obj.location, value: obj._id};
         });
 
-        if (this.state.flag === 1) {
-          this.forgetRoom();
-        }
-
         this.setState({dataRoom: convertDataRoom});
       }
     }
 
     if (this.state.flag === 0) {
       this.setState({flag: 1});
-
-      const xnxx = await this.getRememberedRoom();
-
-      this.setState({defaultRoom: xnxx}, () => {
-        this.setState({roomSelected: xnxx});
+      const roomId = this.props.navigation.getParam(
+        'roomId',
+        'some default value',
+      );
+      this.setState({roomSelected: roomId}, () => {
+        this.setState({defaultRoom: roomId});
       });
     }
   }
 
-  // Chọn toàn nhà
-  async onChangeDataBuilding(item) {
-    this.forgetBuilding();
+  // Chọn tòa nhà
+  onChangeDataBuilding(item) {
     if (this.state.buildingSelected !== item.value) {
       this.setState({buildingSelected: item.value}, () => {
-        this.rememberBuilding();
         this.getDataRom();
       });
     }
@@ -830,7 +667,7 @@ export default class AddCourse extends React.Component {
 
   // Chọn phòng
   onChangeDataRoom(item) {
-    this.setState({roomSelected: item.value}, () => this.rememberRoom());
+    this.setState({roomSelected: item.value});
   }
 }
 
@@ -839,8 +676,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // paddingHorizontal: 10,
-    // paddingBottom: 200,
   },
   text: {
     fontSize: Size.h36,
@@ -882,40 +717,32 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
-    opacity: 0.8,
+    opacity: 0.7,
     backgroundColor: '#e8e9ec',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textError: {
-    fontSize: Size.h30,
-    color: 'red',
-    marginTop: '1%',
-    marginBottom: '1%',
-    marginLeft: 10,
-    fontStyle: 'italic',
-  },
   DateTimePickerStart: {
-    borderWidth: 1,
-    padding: 5,
-    backgroundColor: '#fff',
-    color: '#fff',
+    flex: 1,
     flexDirection: 'row',
-    borderColor: '#c2c2c2',
-    alignItems: 'center',
+    borderWidth: 1,
     borderRadius: 5,
-    paddingVertical: 11,
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    alignItems: 'center',
+    borderColor: '#c2c2c2',
+    marginTop: '1%',
   },
   DateTimePickerEnd: {
-    borderWidth: 1,
-    padding: 5,
-    backgroundColor: '#fff',
-    color: '#fff',
+    flex: 1,
     flexDirection: 'row',
-    borderColor: '#c2c2c2',
-    alignItems: 'center',
+    borderWidth: 1,
     borderRadius: 5,
-    paddingVertical: 11,
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    alignItems: 'center',
+    borderColor: '#c2c2c2',
+    marginTop: '1%',
   },
   Image: {
     width: 5,
@@ -927,7 +754,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10,
     alignItems: 'flex-start',
-    // backgroundColor: 'yellow',
   },
   Plus: {
     justifyContent: 'flex-start',
@@ -942,7 +768,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#345173',
     paddingVertical: '4%',
-    // backgroundColor: 'red',
   },
   ContainerMenu: {
     flexDirection: 'row',
@@ -960,5 +785,24 @@ const styles = StyleSheet.create({
 
     elevation: 3,
     marginBottom: '1.5%',
+  },
+  textErrorRed: {
+    color: 'red',
+    fontSize: Size.h30,
+    marginTop: '1%',
+    fontStyle: 'italic',
+    textAlign: 'left',
+  },
+  textDateTimePicker: {
+    flex: 1,
+    textAlign: 'center',
+    fontSize: Size.h30,
+    color: '#4b5b6b',
+  },
+  iconDateTimePicker: {
+    marginLeft: 5,
+    marginRight: 10,
+    marginBottom: 5,
+    justifyContent: 'flex-end',
   },
 });

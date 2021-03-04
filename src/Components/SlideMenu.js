@@ -11,7 +11,7 @@ import {
   Image,
   AsyncStorage,
 } from 'react-native';
-import {user_profile} from './config';
+import {user_profile} from '../config/config';
 import Size from '../res/Size';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 

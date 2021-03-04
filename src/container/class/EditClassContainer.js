@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import AddClass from '../Components/AddClass';
-import {getBuildingRoomAction, postClassAction} from '../redux/actions/index';
+import EditClass from '../../components/class/EditClass';
+import {
+  getBuildingRoomAction,
+  editClassAction,
+} from '../../redux/actions/index';
 
-class AddClassContainer extends React.Component {
+class EditClassContainer extends React.Component {
   render() {
-    console.log(
-      '\n-----------------------------------------AddClassContainer-------------------------',
-    );
-    return <AddClass {...this.props} />;
+    return <EditClass {...this.props} />;
   }
 }
 
@@ -17,8 +17,8 @@ const mapDispatchToProps = (dispatch) => {
     getBuildingRoomAction: () => {
       dispatch(getBuildingRoomAction());
     },
-    postClassAction: (
-      courseId,
+    editClassAction: (
+      classId,
       className,
       trainer,
       date,
@@ -28,8 +28,8 @@ const mapDispatchToProps = (dispatch) => {
       roomId,
     ) => {
       dispatch(
-        postClassAction(
-          courseId,
+        editClassAction(
+          classId,
           className,
           trainer,
           date,
@@ -49,10 +49,10 @@ const mapStateToProps = (state) => {
     message: state.buildingRoomReducer.message,
     fetching: state.buildingRoomReducer.fetching,
 
-    dataAdd: state.postClassReducer.data,
-    messageAdd: state.postClassReducer.message,
-    fetchingAdd: state.postClassReducer.fetching,
+    dataEdit: state.editClassReducer.data,
+    messageEdit: state.editClassReducer.message,
+    fetchingEdit: state.editClassReducer.fetching,
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddClassContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(EditClassContainer);

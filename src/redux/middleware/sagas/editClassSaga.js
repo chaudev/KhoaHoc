@@ -43,6 +43,11 @@ function* editClass(action) {
         message: response.message,
       });
     }
+  } else {
+    yield put({
+      type: EDIT_CLASS_ERROR,
+      message: 'Kết nối không thành công',
+    });
   }
 }
 

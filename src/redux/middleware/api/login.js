@@ -1,13 +1,18 @@
-api = 'http://10.86.224.37:5001/api/';
+import {LoginURL} from '../../../config/config';
 
-export function postLogin(user, pass) {
-  return fetch(api + 'login', {
+export async function postLogin(user, pass) {
+  let api = LoginURL + 'login';
+  var myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
+
+  let raw = 'username=' + user + '&password=' + pass;
+
+  var requestOptions = {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    },
-    body: 'username=' + user + '&password=' + pass,
-  }).then((response) => {
-    return response.json();
-  });
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  };
+
+  return (await fetch(api, requestOptions)).json();
 }

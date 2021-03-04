@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import AddCourse from '../Components/AddCourse';
-import {getBuildingRoomAction, postCourseAction} from '../redux/actions/index';
+import EditCourse from '../../components/course/EditCourse';
+import {
+  getBuildingRoomAction,
+  editCourseAction,
+} from '../../redux/actions/index';
 
-class AddCourseContainer extends React.Component {
+class EditCourseContainer extends React.Component {
   render() {
-    console.log(
-      '\n-----------------------------------------getBuildingRoomContainer-------------------------',
-    );
-    return <AddCourse {...this.props} />;
+    return <EditCourse {...this.props} />;
   }
 }
 
@@ -17,7 +17,8 @@ const mapDispatchToProps = (dispatch) => {
     getBuildingRoomAction: () => {
       dispatch(getBuildingRoomAction());
     },
-    postCourseAction: (
+    editCourseAction: (
+      courseId,
       courseName,
       trainer,
       startedDate,
@@ -26,7 +27,8 @@ const mapDispatchToProps = (dispatch) => {
       roomId,
     ) => {
       dispatch(
-        postCourseAction(
+        editCourseAction(
+          courseId,
           courseName,
           trainer,
           startedDate,
@@ -45,10 +47,13 @@ const mapStateToProps = (state) => {
     message: state.buildingRoomReducer.message,
     fetching: state.buildingRoomReducer.fetching,
 
-    data_postCourse: state.postCourseReducer.data,
-    message_postCourse: state.postCourseReducer.message,
-    fetching_postCourse: state.postCourseReducer.fetching,
+    dataEdit: state.editCourseReducer.data,
+    messageEdit: state.editCourseReducer.message,
+    fetchingEdit: state.editCourseReducer.fetching,
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddCourseContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(EditCourseContainer);

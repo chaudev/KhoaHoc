@@ -2,9 +2,6 @@ import {
   POST_LOGIN,
   POST_LOGIN_SUCCESS,
   POST_LOGIN_ERROR,
-  GET_COURSE,
-  GET_COURSE_SUCCESS,
-  GET_COURSE_ERROR,
 } from '../actions/actionTypes';
 
 const initialState = {

@@ -39,6 +39,11 @@ function* postCourse(action) {
         message: response.message,
       });
     }
+  } else {
+    yield put({
+      type: POST_COURSE_ERROR,
+      message: 'Kết nối không thành công',
+    });
   }
 }
 

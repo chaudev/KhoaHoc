@@ -1,19 +1,18 @@
-import {user_profile} from '../../../Components/config';
+import {user_profile, URL} from '../../../config/config';
 
 export async function deleteClassApi(classId) {
-  let urlpublic = `http://118.69.123.51:5000/fis/api/edu/delete_class?classId=${classId.classId}`;
-  let url = `http://10.86.224.37:5001/api/edu/delete_class?classId=${classId.classId}`;
+  let api = URL + `delete_class?classId=${classId.classId}`;
 
   var myHeaders = new Headers();
   myHeaders.append('Authorization', `Bearer ${user_profile.token}`);
 
   var requestOptions = {
     method: 'GET',
-    headers: myHeaders, 
+    headers: myHeaders,
     redirect: 'follow',
   };
 
-  const response = await (await fetch(url, requestOptions)).json();
+  const response = await (await fetch(api, requestOptions)).json();
 
   return response;
 }

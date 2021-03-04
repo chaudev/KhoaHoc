@@ -10,10 +10,10 @@ import {
   GET_BUILDING_ROOM_ERROR,
 } from '../../actions/actionTypes';
 import {call, takeEvery, put} from 'redux-saga/effects';
-import {get_BuildingRoom} from '../api/getBuildingRoom';
+import {getBuildingRoomApi} from '../api/getBuildingRoom';
 
 function* getBuildingRoom(action) {
-  let response = yield get_BuildingRoom();
+  let response = yield getBuildingRoomApi();
 
   if (response !== undefined) {
     if (response.resultCode === 1) {
@@ -30,11 +30,10 @@ function* getBuildingRoom(action) {
       });
     }
   } else {
-    console.log('Loi ket noi : ---------');
     yield put({
       type: GET_BUILDING_ROOM_ERROR,
       data: null,
-      message: 'Không thể kết nối..',
+      message: 'Kết nối không thành công',
     });
   }
 }

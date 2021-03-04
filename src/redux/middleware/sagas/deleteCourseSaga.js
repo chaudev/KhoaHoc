@@ -7,10 +7,7 @@ import {call, takeEvery, put} from 'redux-saga/effects';
 import {deleteCourseApi} from '../api/deleteCourseApi';
 
 function* deleteCourse(action) {
-
-  const course_id = action.data;
-
-  const response = yield deleteCourseApi(course_id);
+  const response = yield deleteCourseApi(action.data);
 
   if (response !== undefined) {
     if (response.resultCode == 1) {
@@ -27,7 +24,7 @@ function* deleteCourse(action) {
   } else {
     yield put({
       type: DELETE_COURSE_ERROR,
-      message: 'Lỗi kết nối',
+      message: 'Kết nối không thành công',
     });
   }
 }

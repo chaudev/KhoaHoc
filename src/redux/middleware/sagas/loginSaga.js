@@ -34,7 +34,7 @@ function* signInFlow(action) {
     yield put({
       type: POST_LOGIN_ERROR,
       data: null,
-      message: 'Không kết nối được',
+      message: 'Kết nối không thành công',
     });
   }
 }

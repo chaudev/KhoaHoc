@@ -7,12 +7,10 @@ import {
   GET_COURSE_ERROR,
 } from '../../actions/actionTypes';
 import {call, takeEvery, put} from 'redux-saga/effects';
-import {get_Course} from '../api/getCourse';
+import {getCourseApi} from '../api/getCourse';
 
 function* getCourse(action) {
-  var response = yield get_Course();
-
-  const error = response.message;
+  var response = yield getCourseApi();
 
   if (response !== undefined) {
     if (response.resultCode === 1) {
@@ -32,7 +30,7 @@ function* getCourse(action) {
     yield put({
       type: GET_COURSE_ERROR,
       data: null,
-      message: 'Lỗi kết nối!!!',
+      message: 'Kết nối không thành công',
     });
   }
 }

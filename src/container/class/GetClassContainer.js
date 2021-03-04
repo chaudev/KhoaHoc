@@ -1,14 +1,11 @@
 import React from 'react';
-import {getBuildingRoomAction, getClassAction} from '../redux/actions/index';
-import {deleteClassAction} from '../redux/actions/index';
+import {getBuildingRoomAction, getClassAction} from '../../redux/actions/index';
+import {deleteClassAction} from '../../redux/actions/index';
 import {connect} from 'react-redux';
-import ClassManage from '../Components/ClassManage';
+import ClassManage from '../../components/class/ClassManage';
 
-class getClassContainer extends React.Component {
+class GetClassContainer extends React.Component {
   render() {
-    console.log(
-      '\n-----------------------------------------getClassContainer-------------------------',
-    );
     return <ClassManage {...this.props} />;
   }
 }
@@ -43,4 +40,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(getClassContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(GetClassContainer);

@@ -1,4 +1,4 @@
-import {user_profile} from '../../../Components/config';
+import {user_profile, URL} from '../../../config/config';
 
 export async function editClassApi(
   classId,
@@ -10,6 +10,8 @@ export async function editClassApi(
   buildingId,
   roomId,
 ) {
+  let api = URL + 'edit_class';
+
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   myHeaders.append('Authorization', `Bearer ${user_profile.token}`);
@@ -32,7 +34,5 @@ export async function editClassApi(
     redirect: 'follow',
   };
 
-  return (
-    await fetch('http://10.86.224.37:5001/api/edu/edit_class', requestOptions)
-  ).json();
+  return (await fetch(api, requestOptions)).json();
 }

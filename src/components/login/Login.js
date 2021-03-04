@@ -11,17 +11,11 @@ import {
   Alert,
   AsyncStorage,
 } from 'react-native';
-import Logo from '../res/images/ic_logo.png';
-import DauGach from '../res/images/stripe.png';
-import Icon from 'react-native-vector-icons/AntDesign';
-import IconAcc from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
-import {user_profile} from './config';
-// import {} from '@react-native-async-storage/async-storage';
-import Size from '../res/Size';
+import {user_profile} from '../../config/config';
+import Size from '../../res/Size';
 import {SafeAreaView} from 'react-navigation';
-import Sizes from '../res/Size';
+import Sizes from '../../res/Size';
 
 export default class LoginComponent extends React.Component {
   constructor(props) {
@@ -30,14 +24,16 @@ export default class LoginComponent extends React.Component {
     this.state = {
       userName: '',
       passWord: '',
-      sttShowPass: true,
       show: 'eye-slash',
       thongBaoLoi: '',
       data: [],
       check: 'circle',
       checked: 'check-circle',
       sttCheck: false,
-      title: 'Login',
+      sttShowPass: true,
+      strLoginFail: 'Đăng nhập không thành công \n',
+      strLoginFailNull: 'Vui lòng nhập đầy đủ thông tin!',
+      strCopyright: 'Copyright © 2019, FPT Information System',
     };
   }
 
@@ -66,13 +62,9 @@ export default class LoginComponent extends React.Component {
       this.setState({data: this.props.data});
       if (this.props.data.resultCode === -1) {
         this.setState({thongBaoLoi: this.props.data.message});
-        Alert.alert(
-          'Đăng nhập không thành công',
-          '\n' + this.props.data.message,
-        );
+        Alert.alert(this.state.strLoginFail, this.props.data.message);
       } else if (this.props.data.resultCode === 1) {
-        user_profile.token =
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmZTE1OTgxNGI0MWE0Nzk3ZDdjZmMxMSIsImlhdCI6MTYxNDY0MzUzOH0.0tLnT9wT64Px1Q90kwQoUxJezhHa3SZNSRwccoMqNs0';
+        user_profile.token = this.props.data.data.token;
         user_profile.fullName = this.props.data.data.fullName;
         user_profile.email = this.props.data.data.email;
         this.props.navigation.replace('MenuDrawer');
@@ -82,68 +74,30 @@ export default class LoginComponent extends React.Component {
 
   render() {
     return (
-      <ScrollView
-        contentContainerStyle={{
-          justifyContent: 'flex-end',
-          alignItems: 'center',
-          flexGrow: 1,
-          backgroundColor: '#f4f8fb',
-        }}>
+      <ScrollView contentContainerStyle={style.ScrollView}>
         <SafeAreaView />
         <View style={style.container}>
           {/* LOGO */}
           <View style={style.logoContainer}>
             <Image
-              source={require('../res/images/logo.png')}
-              style={{
-                resizeMode: 'contain',
-                height: undefined,
-                aspectRatio: 9,
-                marginTop: '10%',
-              }}
+              source={require('../../res/images/logo.png')}
+              style={style.logoFis}
             />
-            {/* Dòng chữ */}
-            <Text
-              style={{
-                fontSize: Size.h44,
-                fontWeight: 'bold',
-                color: '#335271',
-                marginTop: '5%',
-              }}>
-              FIS INSIGHT PORTAL
-            </Text>
+            {/* Dòng chữ FIS INSIGHT PORTAL*/}
+            <Text style={style.textFis}>FIS INSIGHT PORTAL</Text>
             {/* 3 dau gach */}
             <Image
-              source={require('../res/images/stripe.png')}
-              style={{
-                resizeMode: 'contain',
-                height: undefined,
-                aspectRatio: 70,
-                marginVertical: '4%',
-              }}
+              source={require('../../res/images/stripe.png')}
+              style={style.stripe}
             />
             {/* Chữ đăng nhập hệ thống */}
-            <Text
-              style={{
-                fontSize: Size.h38,
-                fontWeight: 'bold',
-                color: '#ff9f24',
-                marginBottom: '4%',
-              }}>
-              ĐĂNG NHẬP HỆ THỐNG
-            </Text>
+            <Text style={style.textLogin}>ĐĂNG NHẬP HỆ THỐNG</Text>
           </View>
+
           <View style={style.inputContainer}>
             {/* Khung nhập tài khoản*/}
             <View style={style.textInputContainer}>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  marginLeft: '3%',
-                  // backgroundColor: 'red',
-                }}>
+              <View style={style.textInputView}>
                 <FontAwesome5
                   style={style.icon}
                   name={'user'}
@@ -152,7 +106,6 @@ export default class LoginComponent extends React.Component {
                   size={Sizes.h34}
                 />
               </View>
-
               <TextInput
                 value={this.state.userName}
                 placeholder="Tài khoản"
@@ -160,12 +113,10 @@ export default class LoginComponent extends React.Component {
                 onChangeText={(text) => this.setState({userName: text})}
                 style={[style.textInput]}
               />
-              {/* </View> */}
               <View
                 style={{
                   flex: 1,
                   alignItems: 'center',
-                  // backgroundColor: 'red',
                 }}>
                 <FontAwesome5
                   style={style.showHidePassword}
@@ -179,13 +130,7 @@ export default class LoginComponent extends React.Component {
 
             {/* Khung nhập mật khẩu */}
             <View style={style.textInputContainer}>
-              <View
-                style={{
-                  flex: 1,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  marginLeft: '3%',
-                }}>
+              <View style={style.textInputView}>
                 <FontAwesome5
                   style={style.icon}
                   name={'lock'}
@@ -193,7 +138,6 @@ export default class LoginComponent extends React.Component {
                   size={Sizes.h34}
                 />
               </View>
-
               <TextInput
                 keyboardType="default"
                 secureTextEntry={this.state.sttShowPass}
@@ -203,14 +147,11 @@ export default class LoginComponent extends React.Component {
                 style={[style.textInput]}
                 value={this.state.passWord}
               />
-              {/* </View> */}
-
               <View
                 style={{
                   flex: 1,
                   flexDirection: 'row',
                   alignItems: 'center',
-                  // marginRight: '2%'
                 }}>
                 <FontAwesome5
                   onPress={() => {
@@ -225,14 +166,10 @@ export default class LoginComponent extends React.Component {
               </View>
             </View>
           </View>
+
           <View>
             {/* Nút nhớ mật khẩu */}
-            <View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                marginBottom: '4%',
-              }}>
+            <View style={style.Remember}>
               <TouchableOpacity
                 onPress={() => {
                   this.ClickCheckBox(this.state.sttCheck);
@@ -247,15 +184,7 @@ export default class LoginComponent extends React.Component {
                   color="#ff9335"
                   size={Size.h40}
                 />
-                <Text
-                  style={{
-                    fontSize: Size.h30,
-                    color: '#ff9335',
-                    fontStyle: 'italic',
-                    marginLeft: '4%',
-                  }}>
-                  Ghi nhớ đăng nhập
-                </Text>
+                <Text style={style.textRemember}>Ghi nhớ đăng nhập</Text>
               </TouchableOpacity>
             </View>
 
@@ -263,17 +192,7 @@ export default class LoginComponent extends React.Component {
             <TouchableOpacity
               style={style.button}
               onPress={() => this.checkRemember()}>
-              <Text
-                style={{
-                  color: '#fff',
-                  fontSize: Size.h32,
-                  paddingVertical: 12,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  // backgroundColor: 'red',
-                }}>
-                ĐĂNG NHẬP
-              </Text>
+              <Text style={style.textButton}>ĐĂNG NHẬP</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -291,15 +210,13 @@ export default class LoginComponent extends React.Component {
               height: undefined,
               aspectRatio: 1.5,
             }}
-            source={require('../res/images/swipe.png')}
+            source={require('../../res/images/swipe.png')}
           />
         </View>
 
         {/* Dòng chữ Copyright */}
         <View style={style.Footer}>
-          <Text style={style.copyRight}>
-            Copyright © 2019, FPT Information System
-          </Text>
+          <Text style={style.copyRight}>{this.state.strCopyright}</Text>
         </View>
         {/* Màn hình loading */}
         {this.props.fetching && (
@@ -313,12 +230,7 @@ export default class LoginComponent extends React.Component {
     );
   }
 
-  checkRememberIcon() {
-    if (this.state.sttCheck === false) {
-      return this.state.check;
-    } else return this.state.checked;
-  }
-
+  // Thay đổi trạng thái hiện mật khẩu
   ClickShowPass() {
     if (this.state.show == 'eye-slash') {
       this.setState({show: 'eye'});
@@ -329,6 +241,7 @@ export default class LoginComponent extends React.Component {
     }
   }
 
+  // Thay đổi trạng thái lưu mật khẩu
   ClickCheckBox(stt) {
     if (stt == false) {
       this.setState({check: 'check-circle'});
@@ -339,6 +252,14 @@ export default class LoginComponent extends React.Component {
     }
   }
 
+  // Kiểm tra nút lưu mật khẩu
+  checkRememberIcon() {
+    if (this.state.sttCheck === false) {
+      return this.state.check;
+    } else return this.state.checked;
+  }
+
+  // Kiểm tra và lưu mật khẩu
   checkRemember() {
     if (this.state.userName !== '' && this.state.passWord !== '') {
       if (this.state.sttCheck === true) {
@@ -348,50 +269,44 @@ export default class LoginComponent extends React.Component {
       }
       this.Login();
     } else {
-      Alert.alert('Đăng nhập thất bại', 'Vui lòng nhập đầy đủ thông tin!');
+      Alert.alert(this.state.strLoginFail, this.state.strLoginFailNull);
     }
   }
 
+  // Lưu tài khoản và mật khẩu
   rememberUser = async () => {
     try {
       await AsyncStorage.setItem('userName', this.state.userName);
       await AsyncStorage.setItem('passWord', this.state.passWord);
-    } catch (error) {
-      Alert.alert('Lỗi', 'Không thể lưu tài khoản');
-    }
+    } catch (error) {}
   };
 
+  // Xóa tài khoản và mật khẩu đã lưu
   forgetUser = async () => {
     try {
       await AsyncStorage.removeItem('userName');
       await AsyncStorage.removeItem('passWord');
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
+  // Lấy tài khoản đã lưu
   getRememberedUser = async () => {
     try {
       const userName = await AsyncStorage.getItem('userName');
       if (userName !== null) {
-        // We have username!!
         return userName;
       }
-    } catch (error) {
-      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
-    }
+    } catch (error) {}
   };
 
+  // Lấy mật khẩu đã lưu
   getRememberedPass = async () => {
     try {
       const passWord = await AsyncStorage.getItem('passWord');
       if (passWord !== null) {
-        // We have username!!
         return passWord;
       }
-    } catch (error) {
-      // Alert.alert('Lỗi', 'Không thể lấy tài khoản');
-    }
+    } catch (error) {}
   };
 }
 
@@ -402,28 +317,23 @@ const style = StyleSheet.create({
     justifyContent: 'flex-end',
     width: '80%',
     flexDirection: 'column',
-    // backgroundColor:'red'
   },
   textInput: {
     flex: 8,
     color: '#335271',
     textAlign: 'center',
     paddingVertical: 10,
-    // paddingHorizontal: 80,
     fontSize: Size.h36,
-    // backgroundColor: 'green',sssasd
   },
   button: {
     alignItems: 'center',
     backgroundColor: '#ff9335',
     borderRadius: 5,
-    // paddingVertical: 1,
   },
   copyRight: {
     color: '#adb3bc',
     fontSize: Size.h26,
     marginBottom: '5%',
-    // backgroundColor: 'red',
     textAlign: 'center',
   },
   failText: {
@@ -466,13 +376,64 @@ const style = StyleSheet.create({
   },
   icon: {
     position: 'absolute',
-    // backgroundColor: 'transparent',
-    // backgroundColor: 'blue',
     marginLeft: '3%',
   },
   showHidePassword: {
     position: 'relative',
-    // backgroundColor: 'red',
     marginRight: '3%',
+  },
+  ScrollView: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    flexGrow: 1,
+    backgroundColor: '#f4f8fb',
+  },
+  logoFis: {
+    resizeMode: 'contain',
+    height: undefined,
+    aspectRatio: 9,
+    marginTop: '10%',
+  },
+  textFis: {
+    fontSize: Size.h44,
+    fontWeight: 'bold',
+    color: '#335271',
+    marginTop: '5%',
+  },
+  stripe: {
+    resizeMode: 'contain',
+    height: undefined,
+    aspectRatio: 70,
+    marginVertical: '4%',
+  },
+  textLogin: {
+    fontSize: Size.h38,
+    fontWeight: 'bold',
+    color: '#ff9f24',
+    marginBottom: '4%',
+  },
+  textInputView: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: '3%',
+  },
+  Remember: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: '4%',
+  },
+  textRemember: {
+    fontSize: Size.h30,
+    color: '#ff9335',
+    fontStyle: 'italic',
+    marginLeft: '4%',
+  },
+  textButton: {
+    color: '#fff',
+    fontSize: Size.h32,
+    paddingVertical: 12,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
