@@ -1,7 +1,7 @@
-import {user_profile, URL} from '../../../config/config';
+import {user_profile, URLPublic} from '../../../config/config';
 
 export async function getBuildingRoomApi() {
-  let api = URL + 'get_building';
+  let api = URLPublic + 'get_building';
   var myHeaders = new Headers();
   myHeaders.append('Authorization', `Bearer ${user_profile.token}`);
 

@@ -1,7 +1,7 @@
-import {LoginURL} from '../../../config/config';
+import {LoginURLPublic} from '../../../config/config';
 
 export async function postLogin(user, pass) {
-  let api = LoginURL + 'login';
+  let api = LoginURLPublic + 'login';
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/x-www-form-urlencoded');
 

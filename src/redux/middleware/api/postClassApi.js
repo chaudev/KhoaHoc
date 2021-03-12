@@ -1,4 +1,4 @@
-import {user_profile, URL} from '../../../config/config';
+import {user_profile, URLPublic} from '../../../config/config';
 
 export async function postClassApi(
   courseId,
@@ -10,7 +10,7 @@ export async function postClassApi(
   buildingId,
   roomId,
 ) {
-  let api = URL + 'create_new_class';
+  let api = URLPublic + 'create_new_class';
 
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');

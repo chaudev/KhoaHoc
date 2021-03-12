@@ -1,7 +1,7 @@
-import {user_profile, URL} from '../../../config/config';
+import {user_profile, URLPublic} from '../../../config/config';
 
 export async function getCourseApi() {
-  let api = URL + 'get_all_course';
+  let api = URLPublic + 'get_all_course';
 
   var myHeader = new Headers();
   myHeader.append('Authorization', `Bearer ${user_profile.token}`);

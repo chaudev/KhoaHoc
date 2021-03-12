@@ -1,4 +1,4 @@
-import {user_profile, URL} from '../../../config/config';
+import {user_profile, URLPublic} from '../../../config/config';
 
 export async function editClassApi(
   classId,
@@ -10,7 +10,7 @@ export async function editClassApi(
   buildingId,
   roomId,
 ) {
-  let api = URL + 'edit_class';
+  let api = URLPublic + 'edit_class';
 
   var myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
